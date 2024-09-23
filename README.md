@@ -8,6 +8,7 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
  - Gabriel Victor Souza Lopes
  - Nico Jobski Andrade
  - Pedro Eduardo Pimenta
+ - Tiago Alves Benevenuto
  - Yurajyánay Correia Andaluz
 
 ## Professores responsáveis
