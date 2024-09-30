@@ -63,6 +63,7 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 <p align="center"><img alt="Persona 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Userflow.png"/></p>
 
 ## Wireframes
+<a href="https://www.figma.com/design/AtERkdTTcbSxXVRLa6dXWR/Untitled?node-id=12-527&t=jCjKjBCQm7NMpeAr-1" target="_blank">Protótipo Interativo</a>
 
 ### Home
 <p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Wireframe%2001%20-%20Desktop%20-%20Home.png"/></p>
