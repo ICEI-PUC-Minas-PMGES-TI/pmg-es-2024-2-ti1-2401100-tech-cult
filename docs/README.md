@@ -58,7 +58,9 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 | O sistema deve permitir que um agente cultural se cadastre em uma categoria especifica (ex: música, culinária, etc) |
 
 
-## User Flow
+## Fluxo do Usuário
+
+<a href="https://www.canva.com/design/DAGR6VrDhaI/or-X0sNmlUD-Qqz6jQlAmg/edit?utm_content=DAGR6VrDhaI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Userflow no Canva</a>
 
 <p align="center"><img alt="Persona 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Userflow.png"/></p>
 
