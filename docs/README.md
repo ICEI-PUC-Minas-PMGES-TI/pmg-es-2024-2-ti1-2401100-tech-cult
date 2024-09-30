@@ -1,6 +1,4 @@
-# Documentação do Projeto (TIDocs)
-
-Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
+# Documentação do Projeto - Culturar
 
 A documentação do projeto inclui as seguintes seções:
 
@@ -12,17 +10,13 @@ A documentação do projeto inclui as seguintes seções:
 6. FAQ (Questões frequentes)
 7. Referências Bibliográficas
 
-O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
-
 # Orientações gerais
 
 Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+A falta de acesso à cultura resulta em exclusão social, dificultando o desenvolvimento intelectual e emocional de parte da população. Eventos culturais, bibliotecas, galerias de arte e museus, frequentemente, estão concentrados em áreas urbanas e são inacessíveis para comunidades mais afastadas, seja por distância geográfica ou por falta de recursos financeiros.
 
 **Links Úteis**:
 
@@ -32,32 +26,17 @@ Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Think
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
-
-**Links Úteis**:
-
-- [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo deste projeto é desenvolver uma aplicação web que conecte os cidadãos a oportunidades culturais, oferecendo uma plataforma acessível onde possam encontrar eventos culturais gratuitos ou a preços acessíveis, além de disponibilizar conteúdos educacionais e artísticos online.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A cultura é um elemento essencial na formação de cidadãos conscientes e críticos. No entanto, o acesso à cultura ainda é limitado para grande parte da população brasileira. Ao propor uma solução tecnológica, visa-se criar um ambiente que facilite o acesso a atividades culturais, fortalecendo o impacto positivo que a cultura pode ter na sociedade.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-**Links Úteis**:
-
-- [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público-alvo principal da aplicação são jovens e adultos que vivem em áreas periféricas e rurais com pouco acesso a atividades culturais, além de professores e educadores que desejam promover a cultura em suas comunidades.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
-
-**Links Úteis**:
-
-- [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-- [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 ## Personas
 
@@ -72,28 +51,30 @@ Relacione as personas identificadas no seu projeto e os respectivos mapas de emp
 
 ## Histórias de Usuários
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+| Id | História de Usuário |
+|----|----------------|
+| 1 | Eu, como usuário, **desejo** encontrar eventos culturais gratuitos próximos de mim, para que eu possa participar e expandir meus conhecimentos artísticos. |
+| 2 |  Eu, como professor, **quero** acessar conteúdos culturais digitais, como vídeos, exposições virtuais e materiais didáticos, para incluir em minhas aulas e enriquecer a educação de meus alunos. |
+| 3 | Eu, como um organizador de eventos culturais, **preciso** divulgar meus eventos na plataforma, para atrair mais participantes, especialmente aqueles que não possuem acesso a outros meios de divulgação.|
 
-**Links Úteis**:
-
-- [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-- [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
+| Requisitos Funcionais | Requisitos Não Funcionais|
+|----------------|----------------|
+| O sistema deve permitir que o agente cultural se cadastre na plataforma | O sistema deve ser acessível aos usuários que tem dificuldade em utilizar aparelhos eletrônicos (ex: idosos) aplicando métricas de acessibilidade no design da plataforma |
+| O sistema deve permitir que o usuário se cadastre na plataforma caso ele queira | O sistema deve estar alinhado aos padrões de usabilidade do mercado, e à QMP 1 da ISO 9001 (foco no cliente), proporcionando maior qualidade na experiência do usuário |
+| O sistema deve permitir que o usuário salve os eventos no qual planeja ir | O sistema deve ser passível de manutenção|
+| O sistema deve permitir que o usuário tenha a opção de avaliar o evento, e comentar sobre ele | O sistema deve permitir que o usuário complete uma tarefa de cadastro de evento em menos de 5 minutos|
+| Em um sistema de promoção de eventos culturais devem ser amazenadas as datas do evento, uma breve descrição, o local e quem são os agentes culturais envolvidos (organizadores) | O sistema deve carregar em menos de 3 segundos em redes móveis e Wi-Fi.|
+| O sistema deve permitir que o usuário tenha a opção de avaliar o evento, e comentar sobre ele |  O sistema deve ser escalável, suportando o crescimento da quantidade de usuários sem perda de desempenho|
+| O sistema deve permitir formas de filtros, para que os eventos possuam categorias. | O sistema deve ser responsivo, funcionando em celulares, tablets e desktops|
+| O sistema deve possuir um feed com os eventos adicionados por diferentes usuários | O sistema deve ser compatível com a Lei Geral de Proteção de Dados|
+| O sistema deve possuir um tutorial para que os usuários possam entender como usá-los |
+| O sistema deve possuir uma opção de favoritar eventos |
+| O sistema deve possuir integração com agendas externas como Google Calendar, para que a pessoa acompanhe os eventos que irá participar |
+| O sistema deve possuir uma funcionalidade de denúncia de perfil, caso um usuário esteja impersonando outro |
+| O sistema deve permitir que um agente cultural se cadastre em uma categoria especifica (ex: música, culinária, etc) |
 
-Os requisitos de um projeto são classificados em dois grupos:
-
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
-
-Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-**Links Úteis**:
-
-- [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-- [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## User Flow
 
