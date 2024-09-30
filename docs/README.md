@@ -97,3 +97,44 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 O projeto foi desenvolvido usando as metodologias Scrum e Kanban, tendo como principal ferramenta de gestão o Trello, da Atlassian
 
 <p align="center"><img alt="Trello do Culturar" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/trello-culturar.png"/></p>
+
+## Referências Bibliográficas
+
+GOMES, Leandro. A falta de acesso a cultura na sociedade brasileira,
+assimetria popular. Nov., 2016.
+Disponível em:
+<https://medium.com/@leandrogomes/a-falta-de-acesso-à-cultura-nasociedade-brasileira-b16e81ddf09> Acesso em set. 2024.
+
+GLOBO, Jornal Nacional. Pesquisa do IBGE mostra como é desigual o
+acesso à cultura e ao lazer. Rio de Janeiro, 10 dez. 2019.
+Disponível em:
+<https://g1.globo.com/jornal-nacional/noticia/2019/12/10/pesquisa-do-ibgemostra-como-e-desigual-o-acesso-a-cultura-e-ao-lazer.ghtml> Acesso em
+set.2024.
+
+SIMÕES, Nataly. Cultura em Evidência: Pesquisa aponta desigualdade no
+acesso à cultura e propõe soluções. 11 dez. 2023.
+Disponível em:
+<https://educacaoeterritorio.org.br/reportagens/cultura-em-evidencia-pesquisaaponta-desigualdades-no-acesso-a-cultura-e-propoe-solucoes/> Acesso em
+set. 2024.
+
+CULTURAL, Itaú. Hábitos culturais 2023 – Quarta edição. Analisa hábitos
+culturais e as expectativas para a prática de atividades no país. 14 dez.
+2023.
+Disponível em:
+<https://prod-fundacao-2023-front.fundacaoitau.org.br/observatorio/habitosculturais-2023---4-edicao> Acesso em set. 2024.
+
+ESTADO, Secretaria de Cultura e Turismo. Impulsionada pela cultura,
+economia da criatividade é um dos principais geradores de empregos em
+Minas Gerais. 12 jan. 2024.
+Disponível em:
+<https://prod-fundacao-2023-front.fundacaoitau.org.br/observatorio/habitosculturais-2023---4-edicao> Acesso em set.2024.
+
+SC, Negócios. Os hábitos culturais e o acesso à cultura no Brasil em
+dados. 28 fev. 2024.
+Disponível em:
+<https://www.negociossc.com.br/blog/os-habitos-culturais-e-o-acesso-a-culturano-brasil-em-dados/> Acesso em set.2024.
+
+ALBINO, Antonio. Paradoxos e desafios da vida cultural brasileira na
+atualidade. Edição 231, 19 abr.2023.
+Disponível em:
+<https://teoriaedebate.org.br/2023/04/19/paradoxos-e-desafios-da-vida-culturalbrasileira-na-atualidade/> Acesso em set. 2024.
