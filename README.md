@@ -1,6 +1,6 @@
-# Tech é Cult
+# Culturar
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O objetivo deste projeto é desenvolver uma aplicação web que conecte os cidadãos a oportunidades culturais, oferecendo uma plataforma acessível onde possam encontrar eventos culturais gratuitos ou a preços acessíveis, além de disponibilizar conteúdos educacionais e artísticos online.
 
 ## Alunos integrantes da equipe
 
