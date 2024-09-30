@@ -30,7 +30,6 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 <p align="center"><img alt="Persona 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/persona-02.jpg" width=600/></p>
 
 <p align="center"><img alt="Persona 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/persona-03.jpg" width=600/></p>
-Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
 
 ## Histórias de Usuários
 
