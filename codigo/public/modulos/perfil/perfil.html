@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="perfil.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../assets/css/perfil.css">
+    <script src="../../assets/js/perfil.js"></script>
 </head>
 <body>
     <nav class="navbar">
-        <img alt="Logo" height="50" src="pmg-es-2024-2-ti1-2401100-tech-cult-master\codigo\public\assets\images\logo.png" width="50"/>
+        <img alt="Logo" height="50" src="../../assets/images/logo.png" width="50"/>
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">Feed</a>
             <a href="#">Sobre Nós</a>
             <a href="#">Cadastre-se</a>
         </div>
-        <i class="fas fa-user-circle profile-icon"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
     </nav>
     <hr class="nav-divider">
     <main class="content">
@@ -31,10 +33,16 @@
         <hr class="divider">
         
         <div class="options">
-            <a href="#">Criar Evento</a>
+            <a href="#" onclick="openPopup('Criar Eventos')">Criar Eventos</a>
+            <a href="#" onclick="openPopup('Meus Eventos')">Meus Eventos</a>
+        </div>
 
-            <a href="#">Meus Eventos</a>
-            
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <div id="popup-content">
+                <h1>Bom dia</h1>
+            </div>
+            <button class="close-btn" onclick="closePopup()">Fechar</button>
         </div>
     </main>
 </body>
