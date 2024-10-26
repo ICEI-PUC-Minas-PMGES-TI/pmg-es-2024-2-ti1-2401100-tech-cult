@@ -33,17 +33,78 @@
         <hr class="divider">
         
         <div class="options">
-            <a href="#" onclick="openPopup('Criar Eventos')">Criar Eventos</a>
+            <a href="#" onclick="openPopup('Criar Evento')">Criar Evento</a>
             <a href="#" onclick="openPopup('Meus Eventos')">Meus Eventos</a>
         </div>
 
         <div class="overlay" id="overlay"></div>
         <div class="popup" id="popup">
             <div id="popup-content">
-                <h1>Bom dia</h1>
+                <div id="root"></div>
             </div>
-            <button class="close-btn" onclick="closePopup()">Fechar</button>
+            
+                
         </div>
+
+        <template id="criar-evento-template">
+            <div class="container">
+                <div class="image-section">
+                    <button class="edit-btn"><img src="../../assets/images/edit.png" alt="button-edit"></button>
+                </div>
+                <div class="form-section">
+                    <button class="close-btn" onclick="closePopup()">X</button>
+                    <label for="event-name">Nome do evento</label>
+                    <input type="text" id="event-name">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="width: 48%;">
+                            <label for="event-date">Data</label>
+                            <input type="date" id="event-date">
+                        </div>
+                        <div style="width: 48%;">
+                            <label for="event-time">Hora</label>
+                            <input type="time" id="event-time">
+                        </div>
+                    </div>
+                    <label for="event-description">Descrição do Evento</label>
+                    <textarea id="event-description" rows="4"></textarea>
+                    <label for="prohibited-items">Regras</label>
+                    <input type="text" id="prohibited-items">
+                    <label for="tags">Tags</label>
+                    <input type="text" id="tags">
+                    <div class="buttons">
+                        <button class="save-btn">salvar</button>
+                        <button class="publish-btn">publicar</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    
+        <template id="meus-eventos-template">
+            <button class="close-btn" onclick="closePopup()">X</button>
+            <div class="event-item">
+                <img src="https://placehold.co/80x80" alt="Event Image">
+                <div class="event-info">
+                    <h2>Evento 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="event-tags">
+                        <span>Tag1</span>
+                        <span>Tag2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="https://placehold.co/80x80" alt="Event Image">
+                <div class="event-info">
+                    <h2>Evento 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="event-tags">
+                        <span>Tag3</span>
+                        <span>Tag4</span>
+                    </div>
+                </div>
+            </div>
+        </template>
+        
     </main>
 </body>
 </html>

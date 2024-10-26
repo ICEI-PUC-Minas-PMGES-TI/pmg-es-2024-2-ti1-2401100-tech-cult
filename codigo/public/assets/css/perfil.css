@@ -134,6 +134,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
 .event-item {
     display: flex;
     align-items: center;
@@ -170,4 +171,99 @@ body {
     border-radius: 5px;
     font-size: 12px;
     margin-right: 5px;
+}.container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image-section {
+    background: url('https://placehold.co/300x400') no-repeat center center;
+    background-size: cover;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form-section {
+    padding: 20px;
+    background-color: white;
+    width: 300px;
+    position: relative;
+}
+.form-section .close-btn {
+    position: absolute;
+    top: -9px;
+    right: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+}
+.image-section .edit-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.edit-btn img {
+    width: 16px;
+}
+.edit-btn:hover {
+    background-color: #4b2370;
+}
+.form-section label {
+    display: block;
+    margin-top: 10px;
+    color: orange;
+}
+.form-section input, .form-section textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-section .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.form-section .buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.form-section .buttons .save-btn {
+    background-color: purple;
+}
+.form-section .buttons .save-btn:hover {
+    background-color: #4b2370;
+}
+.form-section .buttons .publish-btn {
+    background-color: #e11d48;
+}
+.form-section .buttons .publish-btn:hover {
+    background-color: #db2777;
 }
