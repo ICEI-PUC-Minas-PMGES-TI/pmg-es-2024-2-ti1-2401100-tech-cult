@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Feed</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/feed.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body>
+    <header class="header flex">
+        <div class="logo">
+            <img src="assets/images/feed/logo.png" alt="Logo do Culturar" width="80px">
+        </div>
+
+        <nav>
+            <ul class="nav-items flex">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item active"><a href="#" class="active">Feed</a></li>
+                <li class="nav-item"><a href="#">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#">Cadastrar-se</a></li>
+                <li class="nav-item-icon">
+                    <div class="icon-perfil flex">
+                        <svg width="50" height="50" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M49.7 28.4a14.2 14.2 0 1 1-28.4 0 14.2 14.2 0 0 1 28.4 0Z" fill="#532059" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M34.052 70.972C15.118 70.212 0 54.62 0 35.5 0 15.893 15.893 0 35.5 0S71 15.893 71 35.5 55.107 71 35.5 71h-.486c-.322 0-.643-.01-.962-.028ZM12.72 57.9a5.374 5.374 0 0 1 4.478-7.11c13.838-1.531 22.851-1.393 36.622.033a5.306 5.306 0 0 1 4.434 7.103A31.843 31.843 0 0 0 67.45 35.5c0-17.645-14.305-31.95-31.95-31.95S3.55 17.855 3.55 35.5c0 8.726 3.499 16.635 9.17 22.4Z"
+                                fill="#532059" />
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search flex">
+            <div class="search-bar flex">
+                <input type="text" class="search-input" placeholder="Faça sua pesquisa">
+                <img class="search-icon" src="assets/images/feed/material-symbols_search.png" alt="">
+            </div>
+        </section>
+
+        <section class="title flex">
+            <div class="main-title flex">
+                <h1 class="bold">Eventos em Destaque</h1>
+            </div>
+        </section>
+
+        <section class="carousel">
+            <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true}'>
+                <div class="gallery-cell">
+                    <img src="assets/images/feed/frevo-img.jpeg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="assets/images/feed/culinaria-img.jpeg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="assets/images/feed/banda-img.jpg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="assets/images/feed/show-img.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="title flex">
+            <div class="secondary-title flex">
+                <h2 class="bold">Eventos que podem te interessar</h2>
+            </div>
+        </section>
+
+        <section class="cards flex">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/feed/culinaria-img.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <button class="feed-btn flex bold">Lorem Ipsum</button>
+                        <h4 class="bold event-description">Descrição do evento</h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a
+                            egestas felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque
+                            lacinia ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at
+                            ultricies elit. Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed
+                            fermentum ante.
+                        </p>
+                        <div class="location-info">
+                            <div class="location-address flex">
+                                <img src="assets/images/feed/location-icon.png" alt="">
+                                <p>Belo Horizonte, MG</p>
+                            </div>
+                            <div class="location-clock flex">
+                                <img src="assets/images/feed/clock-icon.png" alt="">
+                                <p>17:00h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional cards omitted for brevity -->
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="assets/images/feed/culinaria-img.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <button class="feed-btn flex bold">Lorem Ipsum</button>
+                    <h4 class="bold event-description">Descrição do evento</h4>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a egestas
+                        felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque lacinia
+                        ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at ultricies elit.
+                        Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed fermentum ante.
+                    </p>
+                    <div class="location-info">
+                        <div class="location-address flex">
+                            <img src="assets/images/feed/location-icon.png" alt="">
+                            <p>Belo Horizonte, MG</p>
+                        </div>
+                        <div class="location-clock flex">
+                            <img src="assets/images/feed/clock-icon.png" alt="">
+                            <p>17:00h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/feed/show-img.png" alt="Card image cap">
+                    <div class="card-body">
+                        <button class="feed-btn flex bold">Lorem Ipsum</button>
+                        <h4 class="bold event-description">Descrição do evento</h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a
+                            egestas felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque
+                            lacinia ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at
+                            ultricies elit. Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed
+                            fermentum ante.
+                        </p>
+                        <div class="location-info">
+                            <div class="location-address flex">
+                                <img src="assets/images/feed/location-icon.png" alt="">
+                                <p>Belo Horizonte, MG</p>
+                            </div>
+                            <div class="location-clock flex">
+                                <img src="assets/images/feed/location-icon.png" alt="">
+                                <p>17:00h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional cards omitted for brevity -->
+            </div>
+            <div class="card" id="card1">
+                <img class="card-img-top" src="assets/images/feed/show-img.png" alt="Card image cap">
+                <div class="card-body">
+                    <button class="feed-btn flex bold">Lorem Ipsum</button>
+                    <h4 class="bold event-description">Descrição do evento</h4>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a egestas
+                        felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque lacinia
+                        ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at ultricies elit.
+                        Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed fermentum ante.
+                    </p>
+                    <div class="location-info">
+                        <div class="location-address flex">
+                            <img src="assets/images/feed/location-icon.png" alt="">
+                            <p>Belo Horizonte, MG</p>
+                        </div>
+                        <div class="location-clock flex">
+                            <img src="assets/images/feed/clock-icon.png" alt="">
+                            <p>17:00h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck">
+                <div class="card" id="card2">
+                    <img class="card-img-top" src="assets/images/feed/culinaria-img.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <button class="feed-btn flex bold">Lorem Ipsum</button>
+                        <h4 class="bold event-description">Descrição do evento</h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a
+                            egestas felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque
+                            lacinia ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at
+                            ultricies elit. Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed
+                            fermentum ante.''
+                        </p>
+                        <div class="location-info">
+                            <div class="location-address flex">
+                                <img src="assets/images/feed/location-icon.png" alt="">
+                                <p>Belo Horizonte, MG</p>
+                            </div>
+                            <div class="location-clock flex">
+                                <img src="assets/images/feed/clock-icon.png" alt="">
+                                <p>17:00h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card" id="card3">
+                <img class="card-img-top" src="assets/images/feed/culinaria-img.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <button class="feed-btn flex bold">Lorem Ipsum</button>
+                    <h4 class="bold event-description">Descrição do evento</h4>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet accumsan diam, a egestas
+                        felis lacinia sit amet. Vivamus in purus in libero placerat aliquam. Pellentesque lacinia
+                        ullamcorper placerat. Nunc scelerisque auctor orci sit amet rhoncus. Nulla at ultricies elit.
+                        Aliquam gravida volutpat ligula, at tincidunt dolor cursus eget. Etiam sed fermentum ante.
+                    </p>
+                    <div class="location-info">
+                        <div class="location-address flex">
+                            <img src="assets/images/feed/location-icon.png" alt="">
+                            <p>Belo Horizonte, MG</p>
+                        </div>
+                        <div class="location-clock flex">
+                            <img src="assets/images/feed/clock-icon.png" alt="">
+                            <p>17:00h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </section>
+
+        <div class="load-btn-section flex">
+            <button class="load-btn bold">Carregar mais</button>
+        </div>
+
+        <div id="modal" class="modal flex">
+            
+
+            <div class="modal-left flex">
+                <img src="assets/images/feed/culinaria-img.jpeg" alt="">
+            </div>
+
+            <div class="modal-right flex">
+                <div class="close-button flex white-bg">
+                    <span class="close">X</span>
+                </div>
+                <h2 class="bold">Lorem Ipsum</h2>
+                
+                <div class="agent">
+                    <div class="principal-avatar"></div>
+                    <div class="agent-info">
+                        <p class="bold">Agente Cultural</p>
+                        <img src="assets/images/feed/verified-symbol.png" alt="Símbolo de verificado">
+                    </div>
+                </div>
+                
+                <div class="comment-section">
+                    <h3 class="bold">Comentários</h3>
+                </div>
+            
+                <div class="comments flex">
+                    <div class="comment flex">
+                        <div class="avatar-info flex">
+                            <div class="avatar flex"></div>
+                            <div class="comment-p white-bg">
+                                <p class="avatar-name bold white-bg">Pessoa</p>
+                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et venenatis mi,
+                                    variusmcongue risus.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="comment flex">
+                        <div class="avatar-info flex">
+                            <div class="avatar flex"></div>
+                            <div class="comment-p white-bg">
+                                <p class="avatar-name bold white-bg">Pessoa</p>
+                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et venenatis mi,
+                                    variusmcongue risus.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="comment flex">
+                        <div class="avatar-info flex">
+                            <div class="avatar flex"></div>
+                            <div class="comment-p white-bg">
+                                <p class="avatar-name bold white-bg">Pessoa</p>
+                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et venenatis mi,
+                                    variusmcongue risus.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="comment flex">
+                        <div class="avatar-info flex">
+                            <div class="avatar flex"></div>
+                            <div class="comment-p white-bg">
+                                <p class="avatar-name bold white-bg">Pessoa</p>
+                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et venenatis mi,
+                                    variusmcongue risus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="engagement-area white-bg flex">
+                    <div class="white-bg bold">
+                        <svg class="white-bg" width="40" height="40" viewBox="0 0 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.81163 10.7949C7.51814 10.0884 8.35689 9.52795 9.27999 9.14558C10.2031 8.76321 11.1925 8.56641 12.1916 8.56641C13.1908 8.56641 14.1802 8.76321 15.1033 9.14558C16.0264 9.52795 16.8651 10.0884 17.5716 10.7949L20 13.2233L22.4283 10.7949C23.8554 9.36807 25.7908 8.56655 27.8089 8.56671C29.8269 8.56686 31.7623 9.36868 33.1891 10.7958C34.616 12.2229 35.4175 14.1583 35.4174 16.1764C35.4172 18.1944 34.6154 20.1297 33.1883 21.5566L30.76 23.9833L30.7816 24.0049L20.0216 34.7666L20 34.7449L19.9783 34.7666L9.2183 24.0049L9.23997 23.9833L6.81163 21.5566C6.10486 20.8501 5.5442 20.0112 5.16168 19.088C4.77916 18.1647 4.58228 17.1751 4.58228 16.1758C4.58228 15.1764 4.77916 14.1868 5.16168 13.2636C5.5442 12.3403 6.10486 11.5015 6.81163 10.7949Z" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+
+                    <div class="white-bg comment-svg">
+                        <svg class="white-bg" width="40" height="40" viewBox="0 0 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 30.625C20.0959 30.625 22.6335 29.8552 24.7919 28.413C26.9503 26.9709 28.6325 24.921 29.6259 22.5227C30.6193 20.1244 30.8792 17.4854 30.3728 14.9394C29.8664 12.3934 28.6163 10.0548 26.7808 8.21923C24.9452 6.38366 22.6066 5.13363 20.0606 4.6272C17.5146 4.12077 14.8756 4.38069 12.4773 5.37409C10.079 6.36749 8.02916 8.04975 6.58696 10.2081C5.14477 12.3665 4.375 14.9041 4.375 17.5C4.375 19.67 4.9 21.716 5.83333 23.5185L4.375 30.625L11.4815 29.1667C13.284 30.1 15.3315 30.625 17.5 30.625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+                </div>
+                <div class="comment-input">
+                    <input type="text" placeholder="Adicione um comentário...">
+                    <button class="bold">Publicar</button>
+                </div>
+            </div>
+
+            
+        
+        
+        </div>
+
+
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="assets/js/feed.js"></script>
+
+</html>
