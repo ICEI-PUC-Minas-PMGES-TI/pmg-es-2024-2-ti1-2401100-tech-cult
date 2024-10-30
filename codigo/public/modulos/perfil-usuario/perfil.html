@@ -53,24 +53,28 @@
                 </div>
                 <div class="form-section">
                     <button class="close-btn" onclick="closePopup()">X</button>
-                    <label for="event-name">Nome do evento</label>
+                    <label for="event-name"><b>Nome do Evento</b></label>
                     <input type="text" id="event-name">
                     <div style="display: flex; justify-content: space-between;">
                         <div style="width: 48%;">
-                            <label for="event-date">Data</label>
+                            <label for="event-date"><b>Data</b></label>
                             <input type="date" id="event-date">
                         </div>
                         <div style="width: 48%;">
-                            <label for="event-time">Hora</label>
+                            <label for="event-time"><b>Hora</b></label>
                             <input type="time" id="event-time">
                         </div>
                     </div>
-                    <label for="event-description">Descrição do Evento</label>
+                    <label for="event-description"><b>Descrição do Evento</b></label>
                     <textarea id="event-description" rows="4"></textarea>
-                    <label for="prohibited-items">Regras</label>
+                    <label for="prohibited-items"><b>Regras</b></label>
                     <input type="text" id="prohibited-items">
-                    <label for="tags">Tags</label>
-                    <input type="text" id="tags">
+                    <label for="tags"><b>Tags</b></label>
+                    <div style="display: flex; align-items: center;">
+                        <input type="text" id="tags">
+                        <button type="button" onclick="addTag()">Adicionar</button>
+                    </div>
+                    <ul id="tag-list"></ul>
                     <div class="buttons">
                         <button class="save-btn">salvar</button>
                         <button class="publish-btn">publicar</button>
