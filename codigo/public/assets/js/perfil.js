@@ -18,3 +18,27 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
+
+function addTag() {
+    const tagInput = document.getElementById('tags');
+    const tagList = document.getElementById('tag-list');
+    const tagValue = tagInput.value.trim();
+
+    if (tagValue) {
+        const listItem = document.createElement('li');
+
+        const tagText = document.createElement('span');
+        tagText.textContent = tagValue;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remover';
+        removeButton.onclick = function() {
+            tagList.removeChild(listItem);
+        };
+
+        listItem.appendChild(tagText);
+        listItem.appendChild(removeButton);
+        tagList.appendChild(listItem);
+        tagInput.value = '';
+    }
+}
