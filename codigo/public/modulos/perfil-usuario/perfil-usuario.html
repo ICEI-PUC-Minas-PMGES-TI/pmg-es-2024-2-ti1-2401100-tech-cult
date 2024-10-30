@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="../../assets/css/perfil.css">
-    <script src="../../assets/js/perfil.js"></script>
+    <link rel="stylesheet" href="../../assets/css/perfil-usuario.css">
+    <script src="../../assets/js/perfil-usuario.js"></script>
 </head>
 <body>
     <nav class="navbar">
-        <img alt="Logo" height="50" src="../../assets/images/logo.png" width="50"/>
+        <img alt="Logo" height="50" src="../../assets/images/perfil-usuario/logo.png" width="50"/>
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">Feed</a>
             <a href="#">Sobre Nós</a>
             <a href="#">Cadastre-se</a>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        </svg>
+        <img src="../../assets/images/perfil-usuario/perfil.png" class="img-perfil">
     </nav>
     <hr class="nav-divider">
     <main class="content">
@@ -49,10 +47,11 @@
         <template id="criar-evento-template">
             <div class="container">
                 <div class="image-section">
+                    <img src="../../assets/images/perfil-usuario/foto-evento.png" alt="event-image">
                     <button class="edit-btn"><img src="../../assets/images/edit.png" alt="button-edit"></button>
                 </div>
                 <div class="form-section">
-                    <button class="close-btn" onclick="closePopup()">X</button>
+                    <button class="close-btn" onclick="closePopup()"><img src="../../assets/images/perfil-usuario/fechar.png" alt=""></button>
                     <label for="event-name"><b>Nome do Evento</b></label>
                     <input type="text" id="event-name">
                     <div style="display: flex; justify-content: space-between;">
@@ -70,14 +69,14 @@
                     <label for="prohibited-items"><b>Regras</b></label>
                     <input type="text" id="prohibited-items">
                     <label for="tags"><b>Tags</b></label>
-                    <div style="display: flex; align-items: center;">
+                    <div class="tags">
                         <input type="text" id="tags">
-                        <button type="button" onclick="addTag()">Adicionar</button>
+                        <button type="button" onclick="addTag()" class="add-btn"><img src="../../assets/images/perfil-usuario/adicionar.png" alt=""></button>
                     </div>
                     <ul id="tag-list"></ul>
                     <div class="buttons">
-                        <button class="save-btn">salvar</button>
-                        <button class="publish-btn">publicar</button>
+                        <button class="save-btn">Salvar</button>
+                        <button class="publish-btn">Publicar</button>
                     </div>
                 </div>
             </div>
