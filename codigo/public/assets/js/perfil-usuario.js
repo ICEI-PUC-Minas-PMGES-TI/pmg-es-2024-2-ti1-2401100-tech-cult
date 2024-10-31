@@ -31,7 +31,16 @@ function addTag() {
         tagText.textContent = tagValue;
 
         const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remover';
+        removeButton.className = 'remove-tag';
+
+        const removeImg = document.createElement('img');
+        removeImg.src = '../../assets/images/perfil-usuario/fechar.png';
+        removeImg.alt = 'X';
+        removeImg.width = 10;
+        removeImg.height = 10;
+
+        removeButton.appendChild(removeImg);
+
         removeButton.onclick = function() {
             tagList.removeChild(listItem);
         };

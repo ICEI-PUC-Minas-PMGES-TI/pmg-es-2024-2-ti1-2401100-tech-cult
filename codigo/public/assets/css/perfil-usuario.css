@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Teko';
     background-color: #F4EEE4;
     margin: 0;
     padding: 0;
@@ -242,7 +242,7 @@ body {
 .form-section label {
     display: block;
     margin-top: 10px;
-    color: orange;
+    color: #ff9400;
 }
 .form-section input, .form-section textarea {
     width: calc(100% - 20px);
@@ -282,12 +282,37 @@ body {
     margin-top: 5px;
     height: 28px;
 }
+.tags-list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag-list li {
+    display: flex;
+    background-color: #5e2d89;
+    color: #ffffff;
+    padding: 3px 3px 3px 9px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: -40px;
+    
+}
 .tags .add-btn:hover {
     background-color: #4b2370;
 }
 .tags .add-btn img {
     width: 10px;
     height: auto;
+}
+.remove-tag {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    background-color: #5e2d89;
+    margin-left: 3px;
 }
 .form-section .buttons .save-btn {
     background-color: purple;
