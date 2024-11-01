@@ -19,6 +19,17 @@ function closePopup() {
     document.getElementById('overlay').style.display = 'none';
 }
 
+function updateEventImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('event-image').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
 function addTag() {
     const tagInput = document.getElementById('tags');
     const tagList = document.getElementById('tag-list');
@@ -51,3 +62,5 @@ function addTag() {
         tagInput.value = '';
     }
 }
+
+// Só fazer o JSON e ser feliz
