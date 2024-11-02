@@ -444,6 +444,10 @@
     object-fit: scale-down;
     align-self: center;
   }
+
+  .agent-name:hover {
+    cursor: pointer;
+  }
   
   
   .white-bg {
@@ -453,6 +457,10 @@
   .avatar-name {
     color: #532059;
     margin-bottom: 0px;
+  }
+
+  .avatar-name:hover {
+    cursor: pointer;
   }
   
   .agent-info {
@@ -479,7 +487,16 @@
     align-self: center;
   
   }
+
+  .engagement-area svg:hover {
+    cursor: pointer;
+  }
+
+  .engagement-area .heart-svg svg:hover {
+    fill: #FF4D53;
+  }
   
+
   .comment-svg {
     padding-top: 3px;
   }
