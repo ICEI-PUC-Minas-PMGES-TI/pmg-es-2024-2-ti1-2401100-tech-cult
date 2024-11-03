@@ -1,0 +1,87 @@
+{
+    "title": "Feed",
+    "description": "P\u00e1gina do Feed do projeto Culturar, apresentando eventos em destaque e outros que podem interessar.",
+    "html": {
+        "structure": {
+            "header": {
+                "logo": "Logo do Culturar",
+                "navigation": [
+                    {
+                        "name": "Home",
+                        "link": "../landingpage/landingpage.html"
+                    },
+                    {
+                        "name": "Feed",
+                        "link": "feed.html",
+                        "active": true
+                    },
+                    {
+                        "name": "Sobre N\u00f3s",
+                        "link": "../sobrenos/sobrenos.html"
+                    },
+                    {
+                        "name": "Cadastrar-se",
+                        "link": "#"
+                    }
+                ]
+            },
+            "main": {
+                "sections": [
+                    {
+                        "type": "search",
+                        "placeholder": "Fa\u00e7a sua pesquisa"
+                    },
+                    {
+                        "type": "carousel",
+                        "images": [
+                            "../../assets/images/feed/frevo-img.jpeg",
+                            "../../assets/images/feed/culinaria-img.jpeg",
+                            "../../assets/images/feed/banda-img.jpg",
+                            "../../assets/images/feed/show-img.png"
+                        ]
+                    },
+                    {
+                        "type": "cards",
+                        "cards": [
+                            {
+                                "title": "Lorem Ipsum",
+                                "description": "Descri\u00e7\u00e3o do evento",
+                                "image": "../../assets/images/feed/culinaria-img.jpeg",
+                                "location": "Belo Horizonte, MG",
+                                "time": "17:00h"
+                            },
+                            {
+                                "title": "Lorem Ipsum",
+                                "description": "Descri\u00e7\u00e3o do evento",
+                                "image": "../../assets/images/feed/show-img.png",
+                                "location": "Belo Horizonte, MG",
+                                "time": "17:00h"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "css": {
+        "styles": {
+            "reset": "Estilos b\u00e1sicos para todos os elementos.",
+            "header": {
+                "background": "#F4EEE4",
+                "height": "170px"
+            },
+            "buttons": {
+                "feed_button": {
+                    "background_color": "#FF9400",
+                    "border_radius": "25px"
+                }
+            }
+        }
+    },
+    "javascript": {
+        "interactivity": {
+            "card_click": "Exibe modal ao clicar em um card.",
+            "modal_close": "Fecha o modal ao clicar no bot\u00e3o ou fora dele."
+        }
+    }
+}

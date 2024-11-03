@@ -506,16 +506,16 @@
   }
   
   .comment-section {
-    border-bottom: 4px solid #e1e1e1; /* Cor e espessura da borda */
-    margin-bottom: 20px; /* Espaçamento abaixo da seção */
+    border-bottom: 4px solid #e1e1e1;
+    margin-bottom: 20px;
     background-color: #fff;
   }
   
   .comment-section h3 {
     font-size: 20px;
     text-align: center;
-    color: #FF9400; /* Cor do texto */
-    margin-bottom: 10px; /* Espaçamento entre o texto e a borda */
+    color: #FF9400; 
+    margin-bottom: 10px; 
   }
   
   .comment-input {
