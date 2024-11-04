@@ -21,5 +21,16 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "eventos": [
+    {
+      "id": 1,
+      "nome": "Evento de Teste",
+      "data": "2023-10-01",
+      "hora": "18:00",
+      "descricao": "Descrição do evento de teste",
+      "regras": "Regras do evento de teste",
+      "tags": ["teste", "evento"]
+    }
   ]
 }
