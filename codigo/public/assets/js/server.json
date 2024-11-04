@@ -1,0 +1,24 @@
+{
+    "consumidor": [
+        {
+            "nome": "João",
+            "email": "joa@gnail.com",
+            "senha": "123456",
+            "confirmarSenha": "123456"
+        },
+
+        {
+            "nome": "Maria",
+            "email": "maria@gnail.com",
+            "senha": "12345",
+            "confirmarSenha": "12345"
+        },
+
+        {
+            "nome": "Pedro",
+            "email": "pedro@gnail.com",
+            "senha": "1234",
+            "confirmarSenha": "1234"
+        }
+    ]
+}
