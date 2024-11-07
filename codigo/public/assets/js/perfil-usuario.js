@@ -1,4 +1,4 @@
-function openPopup(content) {
+function AbrirPopup(content) {
     const popupContent = document.getElementById('popup-content');
     popupContent.innerHTML = '';
 
@@ -12,14 +12,23 @@ function openPopup(content) {
 
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
+
+    // Adiciona o evento de submit ao formulário de criação de evento
+    const form = document.getElementById('criar-evento-form');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            salvarEvento();
+        });
+    }
 }
 
-function closePopup() {
+function FecharPopup() {
     document.getElementById('popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
 
-function updateEventImage(event) {
+function EditarImagemEvento(event) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
@@ -30,7 +39,7 @@ function updateEventImage(event) {
     }
 }
 
-function addTag() {
+function AdicionarTag() {
     const tagInput = document.getElementById('tags');
     const tagList = document.getElementById('tag-list');
     const tagValue = tagInput.value.trim();
@@ -47,8 +56,8 @@ function addTag() {
         const removeImg = document.createElement('img');
         removeImg.src = '../../assets/images/perfil-usuario/fechar.png';
         removeImg.alt = 'X';
-        removeImg.width = 10;
-        removeImg.height = 10;
+        removeImg.width = 8;
+        removeImg.height = 8;
 
         removeButton.appendChild(removeImg);
 
@@ -62,5 +71,3 @@ function addTag() {
         tagInput.value = '';
     }
 }
-
-// Só fazer o JSON e ser feliz
