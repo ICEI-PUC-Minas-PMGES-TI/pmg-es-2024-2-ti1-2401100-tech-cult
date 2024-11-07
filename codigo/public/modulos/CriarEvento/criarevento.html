@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Eventos</title>
+</head>
+<body>
+    <h1>Cadastro de Eventos</h1>
+    <form id="criar-evento-form">
+        <label for="nome-evento"><b>Nome do Evento</b></label>
+        <input type="text" id="nome-evento" required>
+        <div class="fomulario">
+            <div class="data-hora">
+                <label for="data"><b>Data</b></label>
+                <input type="date" id="data" required>
+            </div>
+            <div class="data-hora">
+                <label for="hora"><b>Hora</b></label>
+                <input type="time" id="hora" required>
+            </div>
+        </div>
+
+        <label for="descricao"><b>Descrição do Evento</b></label>
+        <textarea id="descricao" rows="4" required></textarea>
+        <label for="regras"><b>Regras</b></label>
+        <input type="text" id="regras" required>
+        <label for="tags"><b>Tags</b></label>
+
+        <div class="tags">
+            <input type="text" id="tags">
+            <button type="button" onclick="AdicionarTag()" class="adicionar-tag-btn">
+                <img src="../../assets/images/perfil-usuario/adicionar.png" alt="">
+            </button>
+        </div>
+
+        <div class="tag-align">
+            <ul id="tag-list" class="tag-list"></ul>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="salvar-btn" id="salvar-btn">Salvar</button>
+            <button type="submit" class="publicar-btn" id="publicar-btn">Publicar</button>
+        </div>
+    </form>
+
+    <h2>Lista de Eventos</h2>
+    <ul id="eventsList"></ul>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
