@@ -6,6 +6,12 @@ function saveEvent() {
     const eventRules = document.getElementById('regras').value;
     const eventTags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
 
+    // Validação dos campos
+    if (!eventName || !eventDate || !eventTime || !eventDescription || !eventRules || eventTags.length === 0) {
+        alert('Por favor, preencha todos os campos antes de salvar o evento.');
+        return;
+    }
+
     const eventInfo = {
         name: eventName,
         date: eventDate,
