@@ -10,7 +10,9 @@
     <header>
         <nav>
             <div class="logo">
-                <img alt="Logo" class="logo" src="../../assets/images/perfil-usuario/logo.png"/>
+                <a href="../../modulos/perfil-usuario/perfil-usuario.html">
+                    <img alt="Logo" class="logo" src="../../assets/images/perfil-usuario/logo.png"/>
+                </a>
             </div>
             <ul>
                 <li>
@@ -61,7 +63,7 @@
                     <input id="hora" type="time"/>
                 </div>
                 <div class="input-group">
-                    <label for="descricao">Descrição do Evento</label>
+                    <label for="descricao">Descrição</label>
                     <textarea id="descricao" placeholder="Descrição do evento"></textarea>
                 </div>
                 <div class="input-group">
@@ -70,7 +72,10 @@
                 </div>
                 <div class="input-group">
                     <label for="tags">Tags</label>
-                    <input id="tags" placeholder="Adicionar tags" type="text"/>
+                    <div class="linha">
+                        <input class="input-tag" id="tags" placeholder="Adicionar tags" type="text"/>
+                        <button id="add-tag-btn"><img src="../../assets/images/perfil-usuario/adicionar.png"></button>
+                    </div>
                 </div>
                 <div class="button-group">
                     <button class="register-event" type="submit">Cadastrar Evento</button>
