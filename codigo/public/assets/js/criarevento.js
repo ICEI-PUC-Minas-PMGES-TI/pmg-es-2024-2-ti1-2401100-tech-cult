@@ -13,44 +13,50 @@ function saveEvent() {
     }
 
     const eventInfo = {
-        name: eventName,
-        date: eventDate,
-        time: eventTime,
-        description: eventDescription,
-        rules: eventRules,
+        nome: eventName,
+        data: eventDate,
+        hora: eventTime,
+        descricao: eventDescription,
+        regras: eventRules,
         tags: eventTags
     };
 
-    let events = localStorage.getItem('events');
-    if (events) {
-        events = JSON.parse(events);
-    } else {
-        events = [];
-    }
-
-    events.push(eventInfo);
-    localStorage.setItem('events', JSON.stringify(events));
-
-    alert('Evento salvo com sucesso!');
+    fetch('http://localhost:3000/save-event', { // Certifique-se de que a URL está correta
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventInfo)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        displayEvents();
+    })
+    .catch(error => {
+        console.error('Erro ao salvar o evento:', error);
+        alert('Erro ao salvar o evento');
+    });
 }
 
 function displayEvents() {
-    const events = localStorage.getItem('events');
-    if (events) {
-        const eventsArray = JSON.parse(events);
-        let eventsList = '';
-        eventsArray.forEach(event => {
-            eventsList += `<li>${event.name} - ${event.date} ${event.time}: ${event.description}</li>`;
+    fetch('http://localhost:3000/db.json') // Certifique-se de que a URL está correta
+        .then(response => response.json())
+        .then(db => {
+            let eventsList = '';
+            db.eventos.forEach(event => {
+                eventsList += `<li>${event.nome} - ${event.data} ${event.hora}: ${event.descricao}</li>`;
+            });
+            document.getElementById('eventsList').innerHTML = eventsList;
+        })
+        .catch(error => {
+            console.error('Erro ao carregar os eventos:', error);
+            document.getElementById('eventsList').innerHTML = 'Nenhum evento cadastrado.';
         });
-        document.getElementById('eventsList').innerHTML = eventsList;
-    } else {
-        document.getElementById('eventsList').innerHTML = 'Nenhum evento cadastrado.';
-    }
 }
 
 // Adicione um listener para o formulário
 document.getElementById('criar-evento-form').addEventListener('submit', function(event) {
     event.preventDefault();
     saveEvent();
-    displayEvents();
 });
