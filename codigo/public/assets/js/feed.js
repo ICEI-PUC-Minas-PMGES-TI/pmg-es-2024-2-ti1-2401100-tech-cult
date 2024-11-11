@@ -71,3 +71,5 @@ function updateHTMLContent(data) {
     if (firstCardTitle) firstCardTitle.textContent = data.html.structure.main.sections[2].cards[0].title;
     if (firstCardDescription) firstCardDescription.textContent = data.html.structure.main.sections[2].cards[0].description;
 }
+
+
