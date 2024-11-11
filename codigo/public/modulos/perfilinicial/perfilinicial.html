@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../../assets/css/perfilinicial.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../assets/images/logo.png" alt="Logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#" class="ativo">Cadastrar-se</a></li>
+            </ul>
+            <div>
+                <img src="../../assets/images/placeholdericon.png" alt="icon" class="icon-perfil">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="editar-formulario">
+            <h1>Editar Perfil</h1>
+            <form id="editarPerfilForm">
+                <div class="foto-perfil">
+                    <img src="../../assets/images/placeholdericon.png" alt="Foto de Perfil" id="fotoPerfil">
+                    <input type="file" id="uploadFoto" style="display: none;">
+                    <label for="uploadFoto" class="editar-foto">Alterar Foto</label>
+                </div>
+                
+                <input type="text" id="nome" placeholder="Nome" required>
+                <textarea id="bio" placeholder="Bio" rows="4"></textarea>
+                <input type="text" id="localizacao" placeholder="Localização" required>
+
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fotoPerfil = document.getElementById("fotoPerfil");
+            const uploadFoto = document.getElementById("uploadFoto");
+
+            uploadFoto.addEventListener("change", function(event) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    fotoPerfil.src = e.target.result;
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            });
+        });
+    </script>
+</body>
+</html>

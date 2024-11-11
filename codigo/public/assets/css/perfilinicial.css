@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- */
+
+/* header */
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #fff4f4;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    font-family: agrandir-regular;
+}
+
+/* logo */
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 50px; 
+}
+
+/* nav */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #532059;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FF4D53;
+}
+
+nav ul .ativo {
+    background-color: #FF4D53;
+}
+
+/* ícone perfil */
+.icon-perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 30px; 
+}
+
+/* ---------------- */
+
+/* Formulário de Edição de Perfil */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+    background-color: #f5eee6;
+}
+
+.editar-formulario {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.editar-formulario h1 {
+    margin-bottom: 20px;
+    color: #532059;
+    font-size: 24px;
+}
+
+.editar-formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.foto-perfil img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.editar-foto {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #FF4D53;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.editar-formulario input[type="text"],
+.editar-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.editar-formulario input:focus,
+.editar-formulario textarea:focus {
+    border-color: #FF4D53;
+}
+
+.editar-formulario button {
+    background-color: #ffa041;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.editar-formulario button:hover {
+    background-color: #e08a36;
+}
+
+/* ---------------- */
+
+/* fontes */
+
+@font-face {
+    font-family: agrandir;
+    src: url(../fontes/Agrandir-TextBold.otf);
+}
+
+@font-face {
+    font-family: agrandir-regular;
+    src: url(../fontes/Agrandir-Regular.otf);
+}
+
+@font-face {
+    font-family: agrandir-narrow;
+    src: url(../fontes/Agrandir-Narrow.otf);
+}
+
+
+/* ---------------- */
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+
+    .logo, .icon-perfil {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
