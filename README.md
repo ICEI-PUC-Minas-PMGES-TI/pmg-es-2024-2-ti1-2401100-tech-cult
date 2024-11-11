@@ -1,5 +1,5 @@
 # Culturar
-<p align="center"><img alt="Wireframe Sobre Nós" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/culturar-frame.png" width=600/></p>
+<p align="center"><img alt="Wireframe Sobre Nós" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/culturar-horizontal-logo.png" width=600/></p>
 O objetivo deste projeto é desenvolver uma aplicação web que conecte os cidadãos a oportunidades culturais, oferecendo uma plataforma acessível onde possam encontrar eventos culturais gratuitos ou a preços acessíveis, além de disponibilizar conteúdos educacionais e artísticos online.
 
 ## Alunos integrantes da equipe
