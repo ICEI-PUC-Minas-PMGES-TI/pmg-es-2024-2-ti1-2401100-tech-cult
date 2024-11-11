@@ -65,32 +65,30 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 <p align="center"><img alt="Persona 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Userflow.png"/></p>
 
 ## Wireframes
-<a href="https://www.figma.com/design/AtERkdTTcbSxXVRLa6dXWR/Untitled?node-id=12-527&t=jCjKjBCQm7NMpeAr-1" target="_blank">Protótipo Interativo</a>
+<a href="h[ttps://www.figma.com/design/AtERkdTTcbSxXVRLa6dXWR/Untitled?node-id=12-527&t=jCjKjBCQm7NMpeAr-1](https://www.figma.com/design/k6IRqJH1CruCCed745YxQo/Culturar?node-id=0-1&node-type=canvas&t=fMLqvr4mnNwPd850-0)" target="_blank">Protótipo</a>
 
 ### Home
-<p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Wireframe%2001%20-%20Desktop%20-%20Home.png"/></p>
-
-<p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-02-desktop-home.png"/></p>
+<p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home.png"/></p>
 
 ### Login
 
-<p align="center"><img alt="Wireframe de Login" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-03-login.png"/></p>
+<p align="center"><img alt="Wireframe de Login" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-02-login.png"/></p>
+
+<p align="center"><img alt="Wireframe de Login - Esqueceu a Senha" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wirefarem-03-login.png"/></p>
 
 ### Cadastro
 
 <p align="center"><img alt="Wireframe de Cadastro" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-04-cadastro.png"/></p>
 
-<p align="center"><img alt="Wireframe de Cadastro bem-sucedido" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-05-cadastro.png"/></p>
-
 ### Feed
 
-<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-06-feed.png"/></p>
+<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-05-feed.png"/></p>
 
-<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-07-post-selecionado.png"/></p>
+<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-06-evento-selecionado.png"/></p>
 
 ### Sobre Nós
 
-<p align="center"><img alt="Wireframe Sobre Nós" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-08-sobre-nos.png"/></p>
+<p align="center"><img alt="Wireframe Sobre Nós" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-07-sobre-nos.png"/></p>
 
 ## Gestão de Projetos
 
