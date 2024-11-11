@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Pesquisa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" placeholder="Buscar evento por nome, tag ou localização" class="search-input">
+        <button class="search-button">&#10140;</button>
+    </div>
+    <div class="tags">
+        <button class="tag" onclick="toggleDropdown('local-dropdown')">Local</button>
+        <div class="dropdown" id="local-dropdown">
+            <p>Endereço 1</p>
+            <p>Endereço 2</p>
+            <p>Endereço 3</p>
+        </div>
+
+        <button class="tag" onclick="toggleDropdown('date-dropdown')">Data</button>
+        <div class="dropdown" id="date-dropdown">
+            <p>Hoje</p>
+            <p>Amanhã</p>
+            <p>Próximo Fim de Semana</p>
+        </div>
+
+        <button class="tag" onclick="toggleDropdown('category-dropdown')">Categoria</button>
+        <div class="dropdown" id="category-dropdown">
+            <p>Shows</p>
+            <p>Exposições</p>
+            <p>Teatro</p>
+            <p>Dança</p>
+            <p>Festivais</p>
+        </div>
+
+        <button class="tag" onclick="toggleDropdown('price-dropdown')">Faixa de Preço</button>
+        <div class="dropdown" id="price-dropdown">
+            <p>Gratuito</p>
+            <p>Até R$50</p>
+            <p>R$50 - R$100</p>
+            <p>Acima de R$100</p>
+        </div>
+
+        <button class="tag" onclick="toggleDropdown('age-dropdown')">Faixa Etária</button>
+        <div class="dropdown" id="age-dropdown">
+            <p>Livre</p>
+            <p>+12</p>
+            <p>+18</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
