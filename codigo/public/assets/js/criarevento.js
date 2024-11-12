@@ -21,38 +21,55 @@ function saveEvent() {
         tags: eventTags
     };
 
-    fetch('http://localhost:3000/save-event', { // Certifique-se de que a URL está correta
+    // Salvar no localStorage
+    let events = JSON.parse(localStorage.getItem('events')) || [];
+    events.push(eventInfo);
+    localStorage.setItem('events', JSON.stringify(events));
+
+    alert('Evento salvo no localStorage com sucesso!');
+    displayEvents();
+    sendEventsToServer(); // Enviar os eventos para o servidor após salvar no localStorage
+}
+
+function sendEventsToServer() {
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+
+    if (events.length === 0) {
+        alert('Nenhum evento para enviar ao servidor.');
+        return;
+    }
+
+    fetch('http://localhost:3000/api/events', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(eventInfo)
+        body: JSON.stringify(events)
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao enviar os eventos para o servidor');
+        }
+        return response.json();
+    })
     .then(data => {
-        alert(data);
+        alert('Eventos enviados para o servidor com sucesso!');
+        localStorage.removeItem('events'); // Limpar o localStorage após enviar
         displayEvents();
     })
     .catch(error => {
-        console.error('Erro ao salvar o evento:', error);
-        alert('Erro ao salvar o evento');
+        console.error('Erro ao enviar os eventos para o servidor:', error);
+        alert('Erro ao enviar os eventos para o servidor');
     });
 }
 
 function displayEvents() {
-    fetch('http://localhost:3000/db.json') // Certifique-se de que a URL está correta
-        .then(response => response.json())
-        .then(db => {
-            let eventsList = '';
-            db.eventos.forEach(event => {
-                eventsList += `<li>${event.nome} - ${event.data} ${event.hora}: ${event.descricao}</li>`;
-            });
-            document.getElementById('eventsList').innerHTML = eventsList;
-        })
-        .catch(error => {
-            console.error('Erro ao carregar os eventos:', error);
-            document.getElementById('eventsList').innerHTML = 'Nenhum evento cadastrado.';
-        });
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    let eventsList = '';
+    events.forEach(event => {
+        eventsList += `<li>${event.nome} - ${event.data} ${event.hora}: ${event.descricao}</li>`;
+    });
+    document.getElementById('eventsList').innerHTML = eventsList;
 }
 
 // Adicione um listener para o formulário
