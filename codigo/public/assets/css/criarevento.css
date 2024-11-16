@@ -60,7 +60,7 @@ nav ul .ativo {
 
 .perfil-icon:hover {
     cursor: pointer;
-    background-color:#FF4D53;
+    background-color: #FF4D53;
 }
 
 .perfil-icon img {
@@ -91,7 +91,6 @@ nav ul .ativo {
     background-color: #e0e0e0;
     background-color: white;
     transition: 3ms;
-    
 }
 
 .container .imagem-evento {
@@ -159,7 +158,7 @@ nav ul .ativo {
     align-items: center;
 }
 
-.input-group button  {
+.input-group button {
     border: none;
     background-color: #532059;
     display: flex;
@@ -203,24 +202,31 @@ nav ul .ativo {
     margin-top: 20px;
 }
 
-.tag-group {
+.tags-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
     gap: 10px;
-    margin-top: 20px;
-}
-.tag-group button {
-    border: none;
-    background-color: #532059;
-    display: flex;
-    float: right;
-    border-radius: 5px;
-    margin-top: 5px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 0;
 }
 
-.input-group .linha input {
-    flex: 1;
-    width: 80%;
-    margin-left: 25px; 
+.tags-list li {
+    background-color: #532059;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tags-list li .remove-tag {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
 }
