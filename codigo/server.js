@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const cors = require('cors'); // Importando o CORS
+const cors = require('cors'); // Importante para permitir requisições de outros domínios
 const app = express();
 const PORT = 3000;
 
