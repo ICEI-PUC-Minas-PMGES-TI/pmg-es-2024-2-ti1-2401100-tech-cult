@@ -1,75 +1,47 @@
-// Seleciona os cards
-const cards = document.querySelectorAll('.card');
-
-// Adiciona um evento de clique a cada card
-cards.forEach(card => {
-    card.addEventListener('click', function() {
-        document.getElementById('modal').style.display = 'flex';
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("../../assets/js/feed.json")
+      .then(response => response.json())
+      .then(data => {
+        carregarEventosDestaque(data.eventosEmDestaque);
+        carregarEventosInteressantes(data.eventosInteressantes);
+      })
+      .catch(error => console.error("Erro ao carregar os dados:", error));
+  });
+  
+  function carregarEventosDestaque(eventos) {
+    const carousel = document.querySelector(".gallery");
+    eventos.forEach(evento => {
+      const cell = document.createElement("div");
+      cell.className = "gallery-cell";
+      cell.innerHTML = `<img src="${evento.imagem}" alt="${evento.alt}">`;
+      carousel.appendChild(cell);
     });
-});
-
-// Fecha o modal ao clicar no botão de fechar
-document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-});
-
-// Fecha o modal ao clicar fora dele
-window.addEventListener('click', function(event) {
-    if (event.target === document.getElementById('modal')) {
-        document.getElementById('modal').style.display = 'none';
-    }
-});
-
-
-// Fetch para carregar dados
-fetch('./feed_context.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        updateHTMLContent(data);
-    })
-    .catch(error => console.error('Erro ao carregar JSON:', error));
-
-function updateHTMLContent(data) {
-    const mainTitle = document.querySelector('.main-title h1');
-    if (mainTitle) mainTitle.textContent = data.html.structure.main.sections[1].type;
-
-    const firstCardTitle = document.querySelector('.card .feed-btn');
-    const firstCardDescription = document.querySelector('.card .event-description');
-    if (firstCardTitle) firstCardTitle.textContent = data.html.structure.main.sections[2].cards[0].title;
-    if (firstCardDescription) firstCardDescription.textContent = data.html.structure.main.sections[2].cards[0].description;
-}
-
-// Adiciona comentário ao clicar no botão
-document.getElementById('submit-comment').addEventListener('click', function() {
-    const commentInput = document.getElementById('comment-input');
-    const commentText = commentInput.value;
-
-    if (commentText) {
-        const commentsList = document.getElementById('comments-list');
-        const commentDiv = document.createElement('div');
-        commentDiv.textContent = commentText;
-        commentsList.appendChild(commentDiv);
-        commentInput.value = '';
-    }
-});
-
-fetch('./feed_context.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        updateHTMLContent(data);
-    })
-    .catch(error => console.error('Erro ao carregar JSON:', error));
-
-function updateHTMLContent(data) {
-    const mainTitle = document.querySelector('.main-title h1');
-    if (mainTitle) mainTitle.textContent = data.html.structure.main.sections[1].type;
-
-    const firstCardTitle = document.querySelector('.card .feed-btn');
-    const firstCardDescription = document.querySelector('.card .event-description');
-    if (firstCardTitle) firstCardTitle.textContent = data.html.structure.main.sections[2].cards[0].title;
-    if (firstCardDescription) firstCardDescription.textContent = data.html.structure.main.sections[2].cards[0].description;
-}
-
-
+  }
+  
+  function carregarEventosInteressantes(eventos) {
+    const cardsContainer = document.querySelector(".cards");
+    eventos.forEach(evento => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img class="card-img-top" src="${evento.imagem}" alt="${evento.titulo}">
+        <div class="card-body">
+          <button class="feed-btn flex bold">${evento.titulo}</button>
+          <h4 class="bold event-description">Descrição do evento</h4>
+          <p class="card-text">${evento.descricao}
+          <div class="location-info">
+            <div class="location-address flex">
+              <img src="../../assets/images/feed/location-icon.png" alt="Ícone de localização">
+              <p>${evento.local}</p>
+            </div>
+            <div class="location-clock flex">
+              <img src="../../assets/images/feed/clock-icon.png" alt="Ícone de relógio">
+              <p>${evento.horario}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      cardsContainer.appendChild(card);
+    });
+  }
+  

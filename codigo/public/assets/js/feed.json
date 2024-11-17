@@ -1,0 +1,79 @@
+{
+    "eventosEmDestaque": [
+      {
+        "imagem": "../../assets/images/feed/frevo-img.jpeg",
+        "alt": "Imagem de evento de Frevo"
+      },
+      {
+        "imagem": "../../assets/images/feed/culinaria-img.jpeg",
+        "alt": "Imagem de culinária"
+      },
+      {
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "alt": "Imagem de uma banda"
+      },
+      {
+        "imagem": "../../assets/images/feed/show-img.png",
+        "alt": "Imagem de show"
+      }
+    ],
+    "eventosInteressantes": [
+      {
+        "titulo": "Festival de Culinária",
+        "descricao": "Aprenda e experimente pratos de diversas culturas.",
+        "imagem": "../../assets/images/feed/culinaria-img.jpeg",
+        "local": "Belo Horizonte, MG",
+        "horario": "17:00h"
+      },
+      {
+        "titulo": "Show de Rock",
+        "descricao": "Venha curtir os clássicos do rock ao vivo!",
+        "imagem": "../../assets/images/feed/show-img.png",
+        "local": "Belo Horizonte, MG",
+        "horario": "20:00h"
+      },
+      {
+        "titulo": "Frevo na Praça",
+        "descricao": "Um espetáculo cheio de cor e dança.",
+        "imagem": "../../assets/images/feed/frevo-img.jpeg",
+        "local": "Recife, PE",
+        "horario": "16:00h"
+      },
+      {
+        "titulo": "Concerto de Jazz",
+        "descricao": "Uma noite para apreciar música de qualidade.",
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "local": "São Paulo, SP",
+        "horario": "19:00h"
+      },
+      {
+        "titulo": "Concerto de Jazz",
+        "descricao": "Uma noite para apreciar música de qualidade.",
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "local": "São Paulo, SP",
+        "horario": "19:00h"
+      },
+      {
+        "titulo": "Concerto de Jazz",
+        "descricao": "Uma noite para apreciar música de qualidade.",
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "local": "São Paulo, SP",
+        "horario": "19:00h"
+      },
+      {
+        "titulo": "Concerto de Jazz",
+        "descricao": "Uma noite para apreciar música de qualidade.",
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "local": "São Paulo, SP",
+        "horario": "19:00h"
+      },
+      {
+        "titulo": "Concerto de Jazz",
+        "descricao": "Uma noite para apreciar música de qualidade.",
+        "imagem": "../../assets/images/feed/banda-img.jpg",
+        "local": "São Paulo, SP",
+        "horario": "19:00h"
+      }
+    ]
+  }
+  
