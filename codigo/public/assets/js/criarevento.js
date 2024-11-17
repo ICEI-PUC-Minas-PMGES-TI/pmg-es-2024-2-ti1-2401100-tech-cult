@@ -1,71 +1,47 @@
 // Lista de tags global
 let tags = [];
-
 // Função para adicionar uma tag
 function adicionarTag() {
     const inputTag = document.getElementById('tags');
     const tagValor = inputTag.value.trim();
-
     if (tagValor === "") {
         alert("Por favor, insira uma tag.");
         return;
     }
-
     if (tags.includes(tagValor)) {
         alert("Essa tag já foi adicionada.");
         return;
     }
-
     // Adiciona a tag à lista
     tags.push(tagValor);
     atualizarListaTags();
-
     // Limpa o campo de entrada
     inputTag.value = "";
 }
-
-// Função para adicionar uma tag na lista
-function adicionarTagNaLista(tag, index) {
+// Função para atualizar a exibição da lista de tags
+function atualizarListaTags() {
     const listaTags = document.getElementById('tags-list');
-
-    const tagItem = document.createElement('li');
-    tagItem.textContent = tag;
-
-    // Clona o template do botão de remoção
-    const template = document.getElementById('remove-button-template');
-    const botaoRemover = template.content.cloneNode(true).querySelector('button');
-
-    botaoRemover.onclick = () => removerTag(index);
-
-    tagItem.appendChild(botaoRemover);
-    listaTags.appendChild(tagItem);
+    listaTags.innerHTML = "";
+    tags.forEach((tag, index) => {
+        const tagItem = document.createElement('li');
+        tagItem.textContent = tag;
+        const botaoRemover = document.createElement('button');
+        botaoRemover.className = "remove-tag";
+        // Adiciona a imagem ao botão de remoção
+        const imgRemover = document.createElement('img');
+        imgRemover.src = "../../assets/images/perfil-usuario/fechar.png"; // Caminho para a imagem
+        imgRemover.alt = "Remover tag";
+        botaoRemover.appendChild(imgRemover);
+        botaoRemover.onclick = () => removerTag(index);
+        tagItem.appendChild(botaoRemover);
+        listaTags.appendChild(tagItem);
+    });
 }
-
-// Função para remover uma tag da lista
-function removerTagDaLista(index) {
-    const listaTags = document.getElementById('tags-list');
-    listaTags.removeChild(listaTags.childNodes[index]);
-}
-
 // Função para remover uma tag
 function removerTag(index) {
     tags.splice(index, 1);
     atualizarListaTags();
 }
-
-// Função para atualizar a exibição da lista de tags
-function atualizarListaTags() {
-    const listaTags = document.getElementById('tags-list');
-    listaTags.innerHTML = "";
-
-    tags.forEach((tag, index) => {
-        adicionarTagNaLista(tag, index);
-    });
-}
-
-// Evento para adicionar tag ao clicar no botão
-document.getElementById('add-tag-btn').addEventListener('click', adicionarTag);
-
 // Função para salvar o evento no armazenamento local (localStorage) e exibir na tela
 function salvarEvento() {
     const nomeEvento = document.getElementById('nome-evento').value;
@@ -95,7 +71,6 @@ function salvarEvento() {
     localStorage.setItem('eventos', JSON.stringify(eventos));
 
     alert('Evento salvo no armazenamento local com sucesso!');
-    exibirEventos();
     enviarEventosParaServidor(); // Enviar os eventos para o servidor após salvar no armazenamento local
 }
 
@@ -108,30 +83,27 @@ function enviarEventosParaServidor() {
         return;
     }
 
-    fetch('http://localhost:3000/api/eventos', {
+    fetch('http://localhost:3000/api/events', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(eventos)
     })
-    .then(resposta => resposta.json())
+    .then(resposta => {
+        if (!resposta.ok) {
+            throw new Error(`Erro ao salvar no servidor: ${resposta.statusText}`);
+        }
+        return resposta.json();
+    })
     .then(dados => {
         alert('Eventos enviados para o servidor com sucesso!');
-        localStorage.removeItem('eventos'); // Limpar o armazenamento local após enviar
-        exibirEventos();
+        localStorage.removeItem('eventos'); // Limpar armazenamento após envio bem-sucedido
     })
     .catch(erro => {
         console.error('Erro ao enviar os eventos para o servidor:', erro);
-        alert('Erro ao enviar os eventos para o servidor');
+        alert(`Erro ao enviar os eventos para o servidor: ${erro.message}`);
     });
-}
-
-// Exibe os eventos armazenados no armazenamento local na página
-function exibirEventos() {
-    const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
-    const listaEventos = document.getElementById('eventsList');
-    listaEventos.innerHTML = eventos.map(evento => `<li>${evento.nome} - ${evento.data} ${evento.hora}: ${evento.descricao}</li>`).join('');
 }
 
 // Evento para submissão do formulário
@@ -139,3 +111,5 @@ document.getElementById('criar-evento-form').addEventListener('submit', function
     event.preventDefault();
     salvarEvento();
 });
+// Evento para adicionar tag ao clicar no botão
+document.getElementById('add-tag-btn').addEventListener('click', adicionarTag);
