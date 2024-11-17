@@ -1,3 +1,22 @@
+// MODAL:
+const cards = document.querySelectorAll('.cards');
+
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'flex';
+    });
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     fetch("../../assets/js/feed.json")
       .then(response => response.json())
@@ -9,12 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   function carregarEventosDestaque(eventos) {
-    const carousel = document.querySelector(".gallery");
+    const carousel = document.querySelector(".card-deck");
     eventos.forEach(evento => {
       const cell = document.createElement("div");
-      cell.className = "gallery-cell";
+      cell.className = "card-img";
       cell.innerHTML = `<img src="${evento.imagem}" alt="${evento.alt}">`;
-      carousel.appendChild(cell);
     });
   }
   
