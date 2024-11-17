@@ -74,7 +74,9 @@
                     <label for="tags">Tags</label>
                     <div class="linha">
                         <input class="input-tag" id="tags" placeholder="Adicionar tags" type="text"/>
-                        <button id="add-tag-btn" type="button"><img src="../../assets/images/perfil-usuario/adicionar.png"></button>
+                        <div class="add-btn">
+                            <button id="add-tag-btn" type="button"><img src="../../assets/images/perfil-usuario/adicionar.png"></button>
+                        </div>
                     </div>
                     <ul id="tags-list" class="tags-list"></ul>
                 </div>
@@ -85,6 +87,13 @@
             <ul id="eventsList"></ul>
         </div>
     </main>
+
+    <template id="remove-button-template">
+        <button class="remove-tag">
+            <img src="../../assets/images/perfil-usuario/fechar.png" alt="Remover tag">
+        </button>
+    </template>
+
     <script src="../../assets/js/criarevento.js"></script>
 </body>
 </html>
