@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "nome": "Evento Teste",
+    "data": "2024-10-20",
+    "hora": "11:00",
+    "descricao": "Apenas ver se o json server esta realmente funcionano",
+    "regras": "funcionar",
+    "tags": [
+      "deu bom",
+      "é isso mesmo",
+      "só alegria"
+    ],
+    "id": 1
+  }
+]
