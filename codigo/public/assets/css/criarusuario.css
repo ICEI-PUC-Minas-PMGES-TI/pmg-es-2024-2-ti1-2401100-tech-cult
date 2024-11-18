@@ -1,11 +1,13 @@
-/* Estilos básicos */
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-/* header */
+
+/* ---------------- */
+
 /* header */
 header {
     display: flex;
@@ -14,6 +16,7 @@ header {
     padding: 10px 50px;
     background-color: #fff4f4;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    font-family: agrandir-regular;
 }
 
 /* logo */
@@ -39,7 +42,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    background-color: #6a005f;
+    background-color: #532059;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
@@ -47,11 +50,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff5e7e;
+    background-color: #FF4D53;
 }
 
 nav ul .ativo {
-    background-color: #ff5e7e;
+    background-color: #FF4D53;
 }
 
 /* ícone perfil */
@@ -62,12 +65,14 @@ nav ul .ativo {
     margin-left: 30px; 
 }
 
-/* Seção do formulário */
+/* ---------------- */
+
+/* formulario */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px);
+    min-height: 900px;
     background-color: #f5eee6;
 }
 
@@ -83,7 +88,7 @@ main {
 
 .formulario h1 {
     margin-bottom: 20px;
-    color: #6a005f;
+    color: #532059;
     font-size: 24px;
 }
 
@@ -103,7 +108,7 @@ main {
 }
 
 .formulario input:focus {
-    border-color: #ff5e7e;
+    border-color: #FF4D53;
 }
 
 .formulario button {
@@ -122,7 +127,6 @@ main {
     background-color: #e08a36;
 }
 
-/* Links e seção de redes sociais */
 .formulario p {
     margin-top: 10px;
     color: #888;
@@ -139,28 +143,71 @@ main {
     text-decoration: underline;
 }
 
-.social-login {
-    margin-top: 20px;
-}
-
-.social-login p {
-    margin-bottom: 10px;
+.formulario label {
+    text-align: left;
     font-size: 14px;
-    color: #666;
+    color: #555;
+    margin: 10px 0 5px;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.formulario select, .formulario input[type="text"]#cnpj {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s;
 }
 
-.social-icons img {
-    width: 35px;
-    cursor: pointer;
-    transition: transform 0.3s;
+/* ---------------- */
+
+/* fontes */
+
+@font-face {
+    font-family: agrandir;
+    src: url(/fontes/Agrandir-TextBold.otf);
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+@font-face {
+    font-family: agrandir-regular;
+    src: url(/fontes/Agrandir-Regular.otf);
+}
+
+@font-face {
+    font-family: agrandir-narrow;
+    src: url(/fontes/Agrandir-Narrow.otf);
+}
+
+
+/* ---------------- */
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+
+    .logo, .icon-perfil {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .formulario {
+        width: 90%;
+        padding: 20px;
+    }
+    
 }

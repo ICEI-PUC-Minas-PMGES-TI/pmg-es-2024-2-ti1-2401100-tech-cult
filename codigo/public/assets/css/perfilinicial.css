@@ -157,17 +157,17 @@ main {
 
 @font-face {
     font-family: agrandir;
-    src: url(../fontes/Agrandir-TextBold.otf);
+    src: url(/fontes/Agrandir-TextBold.otf);
 }
 
 @font-face {
     font-family: agrandir-regular;
-    src: url(../fontes/Agrandir-Regular.otf);
+    src: url(/fontes/Agrandir-Regular.otf);
 }
 
 @font-face {
     font-family: agrandir-narrow;
-    src: url(../fontes/Agrandir-Narrow.otf);
+    src: url(/fontes/Agrandir-Narrow.otf);
 }
 
 
