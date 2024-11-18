@@ -1,0 +1,70 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Cabeçalho */
+header {
+    background-color:black;
+    color: white
+    padding: 10px 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* Carrossel */
+.carousel-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 12px;
+}
+
+/* Cards */
+.card {
+    border: 1px solid white;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: black;
+}
