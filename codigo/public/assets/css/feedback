@@ -1,0 +1,147 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAD6B8; /* Cor de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F4A97B; /* Cor do cabeçalho */
+}
+
+header img {
+    height: 50px; /* Logo */
+}
+
+header .menu {
+    display: flex;
+    gap: 10px;
+}
+
+header .menu button {
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #A5542B;
+    transition: background-color 0.3s;
+}
+
+header .menu button:hover {
+    background-color: #F4A97B;
+    color: white;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+/* Cards de eventos */
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.event-card {
+    background-color: #FFF5EE;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #A5542B;
+    font-weight: bold;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event-card .tags {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.event-card .tags span {
+    background-color: #FFD9C2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #A5542B;
+}
+
+/* Ícones (coração e comentário) */
+.event-card .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.event-card .icons i {
+    font-size: 20px;
+    color: #A5542B;
+    cursor: pointer;
+}
+
+.event-card .icons i:hover {
+    color: #F4A97B;
+}
+
+/* Rodapé */
+footer {
+    background-color: #E69D72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+footer .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer .links a:hover {
+    text-decoration: underline;
+}
