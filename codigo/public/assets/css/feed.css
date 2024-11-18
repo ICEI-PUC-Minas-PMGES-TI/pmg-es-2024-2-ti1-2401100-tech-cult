@@ -405,8 +405,17 @@
     height: 20px;
   }
   
-  .agent p {
+  .agent a {
     color: #532059;
+    font-weight: bold;
+    background-color: #fff;
+    text-decoration: none;
+    
+
+  }
+
+  .agent a:hover {
+    color:#FF9400
   }
   
   
