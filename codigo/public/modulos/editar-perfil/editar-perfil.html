@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../../assets/css/editar-perfil.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../../assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="../../modulos/landingpage/landingpage.html">Home</a></li>
+                <li><a href="../../modulos/feed/feed.html">Feed</a></li>
+                <li><a href="../../modulos/sobrenos/sobrenos.html">Sobre Nós</a></li>
+                <li><a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a></li>
+            </ul>
+
+            <div class="perfil-icon">
+                <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
+            </div>
+        </nav>
+    </header>  
+
+    <main class="edit-profile-container">
+        <form action="#" method="post" class="edit-profile-form">
+            <div class="form-group">
+                <label for="profile-image">Foto de Perfil:</label>
+                <input type="file" id="profile-image" name="profile-image" accept="image/*">
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Fale algo sobre você..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Localização:</label>
+                <input type="text" id="location" name="location" placeholder="Digite sua localização">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-button">Salvar Alterações</button>
+                <a href="../configuracoes-avancadas/configuracoes-avancadas.html" class="advanced-settings-button">Configurações Avançadas</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
