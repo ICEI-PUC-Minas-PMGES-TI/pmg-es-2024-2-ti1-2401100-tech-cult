@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4EEE4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #fff4f4;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* logo */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 50px; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #532059;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #FF4D53;
+}
+
+nav ul .ativo {
+    background-color: #FF4D53;
+}
+.navbar .perfil-icon {
+    display: flex;
+    background-color: #FF4D53;
+    margin-left: 50px;
+    border-radius: 50px;
+    padding: 7px;
+}
+.navbar .perfil-icon img{
+    height: 32px;
+}
+.content {
+    padding: 40px 20px;
+}
+
+
+.advanced-settings-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.advanced-settings-form .form-group {
+    margin-bottom: 20px;
+}
+
+.advanced-settings-form label {
+    display: block;
+    font-weight: bold;
+    color: #532059;
+    margin-bottom: 5px;
+}
+
+.advanced-settings-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.save-button {
+    background-color: #FF4D53;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #532059;
+}
