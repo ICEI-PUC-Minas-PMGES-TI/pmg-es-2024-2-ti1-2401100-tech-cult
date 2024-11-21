@@ -73,7 +73,6 @@ function salvarEvento() {
     alert('Evento salvo no armazenamento local com sucesso!');
     enviarEventosParaServidor(); // Enviar os eventos para o servidor após salvar no armazenamento local
 }
-
 // Função para enviar os eventos para o servidor
 function enviarEventosParaServidor() {
     const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
@@ -105,6 +104,24 @@ function enviarEventosParaServidor() {
         alert(`Erro ao enviar os eventos para o servidor: ${erro.message}`);
     });
 }
+
+// Imagens do Evento 
+const inputImage = document.getElementById("input-image");
+const imagemEvento = document.querySelector(".imagem-evento img");
+
+inputImage.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            imagemEvento.src = e.target.result; // Atualiza a imagem
+            imagemEvento.classList.add('cover'); // Adiciona a classe cover para preencher o espaço
+            imagemEvento.style.maxWidth = '100%'; // Remove a restrição de tamanho
+            imagemEvento.style.maxHeight = '100%'; // Remove a restrição de tamanho
+        };
+        reader.readAsDataURL(file); // Lê o arquivo como URL
+    }
+});
 
 // Evento para submissão do formulário
 document.getElementById('criar-evento-form').addEventListener('submit', function(event) {
