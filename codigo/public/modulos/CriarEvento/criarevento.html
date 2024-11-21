@@ -4,98 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/criarevento.css">
-    <title>Document</title>
+    <title>Criar Evento</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="../../modulos/perfil-usuario/perfil-usuario.html">
-                    <img alt="Logo" class="logo" src="../../assets/images/perfil-usuario/logo.png"/>
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="../../modulos/landingpage/landingpage.html">Home</a>
-                </li>
-                <li>
-                    <a href="../../modulos/feed/feed.html">Feed</a>
-                </li>
-                <li>
-                    <a href="../../modulos/sobrenos/sobrenos.html">Sobre Nós</a>
-                </li>
-                <li>
-                    <a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a>
-                </li>
-            </ul>
-            <div class="perfil-icon">
-                <a href="../../modulos/perfil-usuario/perfil-usuario.html">
-                    <img alt="icon" class="icon-perfil" src="../../assets/images/perfil-usuario/perfil.png"/>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main class="conteudo">
-        <div class="container">
-            <h1>Crie seu evento</h1>
-            <form id="criar-evento-form">
-                <div class="imagem-evento">
-                    <img src="../../assets/images/criarevento/imagem.png" alt="Imagem do evento"></img>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="../../modulos/perfil-usuario/perfil-usuario.html">
+                        <img alt="Logo" class="logo" src="../../assets/images/perfil-usuario/logo.png"/>
+                    </a>
                 </div>
-                <div class="button-group">
-                    <button class="add-image" type="button">
-                        <i class="fas fa-upload"></i>
-                        Editar imagem
-                    </button>
+                <ul>
+                    <li> <a href="../../modulos/landingpage/landingpage.html">Home</a> </li>
+                    <li> <a href="../../modulos/feed/feed.html">Feed</a> </li>
+                    <li> <a href="../../modulos/sobrenos/sobrenos.html">Sobre Nós</a> </li>
+                    <li> <a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a> </li>
+                </ul>
+                <div class="perfil-icon">
+                    <a href="../../modulos/perfil-usuario/perfil-usuario.html">
+                        <img alt="icon" class="icon-perfil" src="../../assets/images/perfil-usuario/perfil.png"/>
+                    </a>
                 </div>
-                <div class="input-group">
-                    <label for="nome-evento">Nome do Evento</label>
-                    <input id="nome-evento" placeholder="Nome do evento" type="text"/>
-                </div>
-                <div class="input-group">
-                    <label for="local-evento">Local</label>
-                    <input id="local-evento" placeholder="Local do evento" type="text"/>
-                </div>
-                <div class="input-group">
-                    <label for="data">Data</label>
-                    <input id="data" type="date"/>
-                </div>
-                <div class="input-group">
-                    <label for="hora">Horário de Início</label>
-                    <input id="hora" type="time"/>
-                </div>
-                <div class="input-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea id="descricao" placeholder="Descrição do evento"></textarea>
-                </div>
-                <div class="input-group">
-                    <label for="regras">Regras do Evento</label>
-                    <textarea id="regras" placeholder="Regras do evento"></textarea>
-                </div>
-                <div class="input-group">
-                    <label for="tags">Tags</label>
-                    <div class="linha">
-                        <input class="input-tag" id="tags" placeholder="Adicionar tags" type="text"/>
-                        <div class="add-btn">
-                            <button id="add-tag-btn" type="button"><img src="../../assets/images/perfil-usuario/adicionar.png"></button>
-                        </div>
+            </nav>
+        </header>
+        <main class="conteudo">
+            <div class="container">
+                <h1>Crie seu evento</h1>
+                <form id="criar-evento-form">
+                    <div class="imagem-evento">
+                        <img src="../../assets/images/criarevento/imagem.png" alt="Imagem do evento"></img>
                     </div>
-                    <ul id="tags-list" class="tags-list"></ul>
-                </div>
-                <div class="button-group">
-                    <button class="register-event" type="submit">Cadastrar Evento</button>
-                </div>
-            </form>
-            <ul id="eventsList"></ul>
-        </div>
-    </main>
+                    <div class="button-group">
+                        <input id="input-image" type="file" accept="image/*" style="display: none;" />
+                        <button class="add-image" type="button" onclick="document.getElementById('input-image').click();">
+                            <i class="fas fa-upload"></i>Editar imagem
+                        </button>
+                    </div>
 
-    <template id="remove-button-template">
-        <button class="remove-tag">
-            <img src="../../assets/images/perfil-usuario/fechar.png" alt="Remover tag">
-        </button>
-    </template>
+                    <div class="input-group">
+                        <label for="nome-evento">Nome do Evento</label>
+                        <input id="nome-evento" placeholder="Nome do evento" type="text"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="local-evento">Local</label>
+                        <input id="local-evento" placeholder="Local do evento" type="text"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="data">Data</label>
+                        <input id="data" type="date"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="hora">Horário de Início</label>
+                        <input id="hora" type="time"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" placeholder="Descrição do evento"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="regras">Regras do Evento</label>
+                        <textarea id="regras" placeholder="Regras do evento"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="tags">Tags</label>
+                        <div class="linha">
+                            <input class="input-tag" id="tags" placeholder="Adicionar tags" type="text"/>
+                            <div class="add-btn">
+                                <button id="add-tag-btn" type="button"><img src="../../assets/images/perfil-usuario/adicionar.png"></button>
+                            </div>
+                        </div>
+                        <ul id="tags-list" class="tags-list"></ul>
+                    </div>
+                    <div class="button-group">
+                        <button class="register-event" type="submit">Cadastrar Evento</button>
+                    </div>
+                </form>
+                <ul id="eventsList"></ul>
+            </div>
+        </main>
 
-    <script src="../../assets/js/criarevento.js"></script>
-</body>
+        <template id="remove-button-template">
+            <button class="remove-tag">
+                <img src="../../assets/images/perfil-usuario/fechar.png" alt="Remover tag">
+            </button>
+        </template>
+
+        <script src="../../assets/js/criarevento.js"></script>
+    </body>
 </html>

@@ -1,211 +1,210 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F4EEE4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4eee4;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 10px 50px;
-    background-color: #fff4f4;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fff4f4;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* logo */
 .logo {
-    width: 40px;
-    height: auto;
-    margin-right: 50px; 
+  width: 40px;
+  height: auto;
+  margin-right: 50px;
 }
 
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #532059;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  color: #fff;
+  background-color: #532059;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #FF4D53;
+  background-color: #ff4d53;
 }
 
 nav ul .ativo {
-    background-color: #FF4D53;
+  background-color: #ff4d53;
 }
 .navbar .perfil-icon {
-    display: flex;
-    background-color: #FF4D53;
-    margin-left: 50px;
-    border-radius: 50px;
-    padding: 7px;
+  display: flex;
+  background-color: #ff4d53;
+  margin-left: 50px;
+  border-radius: 50px;
+  padding: 7px;
 }
-.navbar .perfil-icon img{
-    height: 32px;
+.navbar .perfil-icon img {
+  height: 32px;
 }
 .content {
-    padding: 40px 20px;
+  padding: 40px 20px;
 }
 
 .profile-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
-    background-color: #d3d3d3;
-    border-radius: 50%;
-    margin-right: 60px;
+  width: 200px;
+  height: 200px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  margin-right: 60px;
 }
 
 .text-content {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .text-content h1 {
-    color: #532059;
-    font-size: 32px;
-    margin: 0;
+  color: #532059;
+  font-size: 32px;
+  margin: 0;
 }
 
 .descricao {
-    color: #333333;
-    font-size: 18px;
-    margin-top: 10px;
-    text-align: justify;
+  color: #333333;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: justify;
 }
 
 .divider {
-    width: 100%;
-    border: 1px solid #a8a29e;
+  width: 100%;
+  border: 1px solid #a8a29e;
 }
 
 .options {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 10px 0;
-    margin: 0 20%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 20%;
 }
 
 .options a {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #532059;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 22px;
-    flex: 1;
-    text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #532059;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 22px;
+  flex: 1;
+  text-align: center;
 }
 
 .options a:hover {
-    background-color: #FF4D53;
-    transition: 0.3s;
+  background-color: #ff4d53;
+  transition: 0.3s;
 }
 
 .titulo {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-    color: darkorange;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  color: darkorange;
 }
 .meus-eventos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-
 .card-evento p {
-    display: flex;
-    justify-content: center;
-    color: #532059;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: #532059;
+  font-weight: bold;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    margin: 20px;
-    transition: box-shadow 0.10s ease-in-out;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  margin: 20px;
+  transition: box-shadow 0.1s ease-in-out;
 }
 
 .card:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.04);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.04);
 }
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background-color: #d3d3d3;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #d3d3d3;
 }
 .card-evento {
-    padding: 20px;
+  padding: 20px;
 }
 .card-evento h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 .card-evento h2 {
-    margin: 5px 0;
-    font-size: 18px;
-    color: #666;
+  margin: 5px 0;
+  font-size: 18px;
+  color: #666;
 }
 .card-evento p {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 .card-evento hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 20px 0;
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
 }
 .card-evento h3 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 .tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
 }
 .tag {
-    padding: 5px 10px;
-    background-color: #FF4D53;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #fff;
-    border: none;
-    font-weight: bold;
+  padding: 5px 10px;
+  background-color: #ff4d53;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  font-weight: bold;
 }
