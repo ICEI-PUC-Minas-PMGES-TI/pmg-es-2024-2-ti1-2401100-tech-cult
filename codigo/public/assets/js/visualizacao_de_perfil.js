@@ -1,35 +1,36 @@
-console.log("entrou");
+// Dados mocados para visualização de perfil
+const mockUsuarioVisualizacaoDePerfil = {
+    id: "12345",
+    nome: "Joao Victor",
+    descricao: "Professor de música",
+    fotoPerfil: "../../assets/images/visualizacaoDePerfil/FotoDePerfil.jpg",
+};
 
-function getDadosPerfil (emailDoUsuario) {
-    const usuariosSalvos = JSON.parse(localStorage.getItem('usuarios'));
-    const usuario = usuariosSalvos.find(usuario => usuario.email === emailDoUsuario);
-    console.log(usuariosSalvos);
-    return usuario;
-}
+// Adicionando dados mocados ao LocalStorage
+localStorage.setItem("usuarioId", mockUsuarioVisualizacaoDePerfil.id);
+localStorage.setItem("usuario", JSON.stringify(mockUsuarioVisualizacaoDePerfil));
 
-getDadosPerfil();   
+console.log("Mock data set in localStorage");
 
-// Função para obter as informações do usuário (exemplo)
+// Conseguir e exibir dados do usuário
 function obterPerfilUsuario(usuarioId) {
-    // Aqui você pode fazer uma requisição para a API ou usar dados do localStorage, por exemplo:
-    const usuario = JSON.parse(localStorage.getItem("usuario")); // Supondo que as informações estejam salvas assim
-
+    const usuario = JSON.parse(localStorage.getItem("usuario")); 
     if (usuario) {
-        // Preencher as informações no HTML
         document.getElementById("nome_usuario").textContent = usuario.nome;
         document.getElementById("descricao_usuario").textContent = usuario.descricao;
-        document.getElementById("foto_perfil").src = usuario.fotoPerfil; // Foto do usuário
+        document.getElementById("foto_perfil").src = "/assets/images/visualizacaoDePerfil/FotoDePerfil.jpg"
     } else {
         console.error("Usuário não encontrado");
     }
 }
 
-// Chamar a função quando a página carregar
+// Chamando a função para exibir os dados do usuário
 window.onload = function() {
-    const usuarioId = localStorage.getItem("usuarioId"); // Supondo que o ID do usuário esteja no localStorage
+    const usuarioId = localStorage.getItem("usuarioId");
     if (usuarioId) {
         obterPerfilUsuario(usuarioId);
     } else {
         console.error("Usuário não autenticado");
     }
 };
+
