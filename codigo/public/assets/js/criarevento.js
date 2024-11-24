@@ -58,6 +58,11 @@ function salvarEvento() {
   const descricaoEvento = document.getElementById("descricao").value;
   const regrasEvento = document.getElementById("regras").value;
   const imagemEvento = document.getElementById("input-image").files[0];
+  const usuarioId = localStorage.getItem("id");
+  if (!usuarioId) {
+    alert("Usuário não autenticado.");
+    return;
+  }
 
   // Validação dos campos
   if (
