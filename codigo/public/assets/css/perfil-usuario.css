@@ -71,6 +71,14 @@ nav ul .ativo {
   margin-bottom: 20px;
 }
 
+.foto_perfil {
+object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+
 .profile-pic {
   width: 200px;
   height: 200px;
