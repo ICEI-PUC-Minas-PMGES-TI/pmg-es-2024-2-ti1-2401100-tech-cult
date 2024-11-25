@@ -1,73 +1,64 @@
-function AbrirPopup(content) {
-    const popupContent = document.getElementById('popup-content');
-    popupContent.innerHTML = '';
+document.addEventListener("DOMContentLoaded", () => {
+  const containerEventos = document.querySelector(".meus-eventos");
 
-    if (content === 'Criar Evento') {
-        popupContent.innerHTML = document.getElementById('criar-evento-template').innerHTML;
-    } else if (content === 'Meus Eventos') {
-        popupContent.innerHTML = document.getElementById('meus-eventos-template').innerHTML;
-    } else {
-        popupContent.innerText = content;
-    }
+  // Função para buscar eventos do servidor e renderizar na tela
+  function carregarEventos() {
+    fetch("http://localhost:3000/api/events/list", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resposta) => {
+        if (!resposta.ok) {
+          throw new Error("Erro ao carregar eventos.");
+        }
+        return resposta.json();
+      })
+      .then((eventos) => {
+        // Limpa os cards estáticos
+        containerEventos.innerHTML = "";
 
-    document.getElementById('popup').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
+        if (eventos.length === 0) {
+          containerEventos.innerHTML = `<p>Não há eventos cadastrados.</p>`;
+          return;
+        }
 
-    // Adiciona o evento de submit ao formulário de criação de evento
-    const form = document.getElementById('criar-evento-form');
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            salvarEvento();
+        // Renderiza os eventos dinamicamente
+        eventos.forEach((evento) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // Verifica se a imagem existe, caso contrário, usa a imagem padrão
+          const imagemEvento = evento.imagem
+            ? `http://localhost:3000${evento.imagem}`
+            : "https://placehold.co/300x200";
+
+          card.innerHTML = `
+            <img src="${imagemEvento}" alt="${evento.nome}" />
+            <div class="card-evento">
+              <h1>${evento.nome}</h1>
+              <h2>${evento.subtitulo || "Subtítulo não informado"}</h2>
+              <p>${evento.descricao || "Descrição não disponível"}</p>
+              <hr />
+              <h3>Tags</h3>
+              <div class="tags">
+                ${evento.tags
+                  .map((tag) => `<div class="tag">${tag}</div>`)
+                  .join("")}
+              </div>
+            </div>
+          `;
+
+          containerEventos.appendChild(card);
         });
-    }
-}
+      })
+      .catch((erro) => {
+        console.error("Erro ao carregar eventos:", erro);
+        containerEventos.innerHTML = `<p>Erro ao carregar eventos. Tente novamente mais tarde.</p>`;
+      });
+  }
 
-function FecharPopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-}
-
-function EditarImagemEvento(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            document.getElementById('event-image').src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-}
-
-function AdicionarTag() {
-    const tagInput = document.getElementById('tags');
-    const tagList = document.getElementById('tag-list');
-    const tagValue = tagInput.value.trim();
-
-    if (tagValue) {
-        const listItem = document.createElement('li');
-
-        const tagText = document.createElement('span');
-        tagText.textContent = tagValue;
-
-        const removeButton = document.createElement('button');
-        removeButton.className = 'remove-tag';
-
-        const removeImg = document.createElement('img');
-        removeImg.src = '../../assets/images/perfil-usuario/fechar.png';
-        removeImg.alt = 'X';
-        removeImg.width = 8;
-        removeImg.height = 8;
-
-        removeButton.appendChild(removeImg);
-
-        removeButton.onclick = function() {
-            tagList.removeChild(listItem);
-        };
-
-        listItem.appendChild(tagText);
-        listItem.appendChild(removeButton);
-        tagList.appendChild(listItem);
-        tagInput.value = '';
-    }
-}
+  // Chama a função ao carregar a página
+  carregarEventos();
+});
