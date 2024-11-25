@@ -42,7 +42,10 @@ app.post("/api/upload", upload.single("imagem"), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "Nenhuma imagem foi enviada." });
   }
-  res.status(200).json({ caminho: `/uploads/${req.file.filename}` });
+  // Retorna o caminho completo da imagem
+  res
+    .status(200)
+    .json({ caminho: `http://localhost:3000/uploads/${req.file.filename}` });
 });
 
 // Endpoint para salvar novos eventos
@@ -64,13 +67,13 @@ app.post("/api/events/save", (req, res) => {
     // Adiciona IDs sequenciais aos novos eventos e os insere na lista
     novosEventos.forEach((evento) => {
       evento.id = eventosExistentes.length
-        ? eventosExistentes[eventosExistentes.length - 1].id + 1 : 1;
+        ? eventosExistentes[eventosExistentes.length - 1].id + 1
+        : 1;
       eventosExistentes.push(evento);
     });
 
     salvarEventos(eventosExistentes, (err) => {
       if (err) {
-        console.error("Erro ao salvar eventos:", err);
         return res.status(500).json({ error: "Erro ao salvar os eventos" });
       }
 
