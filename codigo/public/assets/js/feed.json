@@ -52,27 +52,6 @@
         "imagem": "../../assets/images/feed/banda-img.jpg",
         "local": "São Paulo, SP",
         "horario": "19:00h"
-      },
-      {
-        "titulo": "Concerto de Jazz",
-        "descricao": "Uma noite para apreciar música de qualidade.",
-        "imagem": "../../assets/images/feed/banda-img.jpg",
-        "local": "São Paulo, SP",
-        "horario": "19:00h"
-      },
-      {
-        "titulo": "Concerto de Jazz",
-        "descricao": "Uma noite para apreciar música de qualidade.",
-        "imagem": "../../assets/images/feed/banda-img.jpg",
-        "local": "São Paulo, SP",
-        "horario": "19:00h"
-      },
-      {
-        "titulo": "Concerto de Jazz",
-        "descricao": "Uma noite para apreciar música de qualidade.",
-        "imagem": "../../assets/images/feed/banda-img.jpg",
-        "local": "São Paulo, SP",
-        "horario": "19:00h"
       }
     ]
   }
