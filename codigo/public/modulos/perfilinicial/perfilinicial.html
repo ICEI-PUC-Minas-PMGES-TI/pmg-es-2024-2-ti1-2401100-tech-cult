@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="perfilinicial.css">
+    <link rel="stylesheet" href="../../assets/css/perfilinicial.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">
-                <img src="/imagens/logo.png" alt="Logo" class="logo">
+                <img src="../../assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Feed</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#" class="ativo">Cadastrar-se</a></li>
+                <li><a href="../../modulos/landingpage/landingpage.html">Home</a></li>
+                <li><a href="../../modulos/feed/feed.html">Feed</a></li>
+                <li><a href="../../modulos/sobrenos/sobrenos.html">Sobre Nós</a></li>
+                <li><a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a></li>
             </ul>
-            <div>
-                <img src="/imagens/placeholdericon.png" alt="icon" class="icon-perfil">
+
+            <div class="perfil-icon">
+                <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
             </div>
         </nav>
     </header>
@@ -29,7 +30,7 @@
             <h1>Editar Perfil</h1>
             <form id="editarPerfilForm">
                 <div class="foto-perfil">
-                    <img src="/imagens/placeholdericon.png" alt="Foto de Perfil" id="fotoPerfil">
+                    <img src="../../assets/images/placeholdericon.png" alt="Foto de Perfil" id="fotoPerfil">
                     <input type="file" id="uploadFoto" style="display: none;">
                     <label for="uploadFoto" class="editar-foto">Alterar Foto</label>
                 </div>
