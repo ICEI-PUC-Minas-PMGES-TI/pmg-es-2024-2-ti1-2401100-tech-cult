@@ -2,10 +2,10 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Felicio Teixeira
+    given-names: Anna Chandra
+  - family-names: Souza Lopes 
+    given-names: Gabriel Victor
   - family-names: 
     given-names: 
   - family-names: 
