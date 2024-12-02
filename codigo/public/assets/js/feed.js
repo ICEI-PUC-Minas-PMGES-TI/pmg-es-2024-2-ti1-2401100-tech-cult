@@ -18,7 +18,7 @@ window.addEventListener('click', function(event) {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../../assets/js/feed.json")
+    fetch("../../../db/feed.json")
       .then(response => response.json())
       .then(data => {
         carregarEventosDestaque(data.eventosEmDestaque);
