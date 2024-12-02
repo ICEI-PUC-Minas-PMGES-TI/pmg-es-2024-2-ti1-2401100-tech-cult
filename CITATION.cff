@@ -1,10 +1,10 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Culturar
 authors:
   - family-names: Felicio Teixeira
     given-names: Anna Chandra
-  - family-names: Souza Lopes 
+  - family-names: Souza Lopes
     given-names: Gabriel Victor
   - family-names: 
     given-names: 
@@ -16,16 +16,20 @@ authors:
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: de Faria Barros
+    given-names: Diego Augusto
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Carneiro Aramuni
+    given-names: João Paulo
+- name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Soares de Andrade
+    given-names: Michelle Hanne
 keywords:
   - 
   - 
-repository-code: 
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
