@@ -116,8 +116,8 @@ main {
     border-color: #ff5e7e;
 }
 
-#next-button {
-    background-color: #ffa041;
+.next-button {
+    background-color: #FF5722;
     color: #fff;
     border: none;
     padding: 12px;
@@ -129,7 +129,7 @@ main {
 }
 
 .formulario button:hover {
-    background-color: #e08a36;
+    background-color: #E64A19;
 }
 
 /* Links e seção de redes sociais */
