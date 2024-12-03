@@ -28,14 +28,14 @@
     <main>
         <section class="formulario">
             <h1>Crie sua conta</h1>
-            <form>
+            <form id="signup-form">
                 <input type="text" id="name" placeholder="Seu nome completo" required>
                 <input type="email" id="email" placeholder="E-mail" required>
                 <input type="email" id="confirme-email" placeholder="Confirme seu E-mail" required>
                 <input type="password" id="senha" placeholder="Senha" required>
                 <input type="password" id="confirme-senha" placeholder="Confirme sua senha" required>
-                <a id="next-button" href="../../modulos/perfilinicial/perfilinicial.html">Prosseguir</a>
-                <p>Já tem uma conta? <a href="#">Faça login</a></p>
+                <button class="next-button" type="submit">Prosseguir</button>
+                <p>Já tem uma conta? <a href="../../modulos/login-usuario/login.html">Faça login</a></p>
             </form>
             <div class="social-login">
                 <p>ou cadastre-se com</p>
@@ -46,5 +46,6 @@
             </div>
         </section>
     </main>
+    <script src="../../assets/js/criarusuario.js"></script>
 </body>
 </html>
