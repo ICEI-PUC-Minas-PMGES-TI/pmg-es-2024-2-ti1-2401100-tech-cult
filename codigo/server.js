@@ -29,9 +29,11 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Servind
 
 // Caminho para o arquivo de eventos
 const eventosPath = path.join(__dirname, "db", "eventos.json");
+const usuariosPath = path.join(__dirname, "db", "usuarios.json");
 console.log(`Caminho para eventos.json: ${eventosPath}`);
+console.log(`Caminho para usuarios.json: ${usuariosPath}`);
 
-// Função auxiliar para leitura de eventos
+// Funções auxiliares para leitura e escrita de eventos
 function lerEventos(callback) {
   fs.readFile(eventosPath, "utf8", (err, data) => {
     if (err) return callback(err, null);
@@ -40,9 +42,24 @@ function lerEventos(callback) {
   });
 }
 
-// Função auxiliar para salvar eventos
 function salvarEventos(eventos, callback) {
   fs.writeFile(eventosPath, JSON.stringify(eventos, null, 2), (err) => {
+    if (err) return callback(err);
+    callback(null);
+  });
+}
+
+// Funções auxiliares para leitura e escrita de usuários
+function lerUsuarios(callback) {
+  fs.readFile(usuariosPath, "utf8", (err, data) => {
+    if (err) return callback(err, null);
+    const usuarios = data ? JSON.parse(data) : [];
+    callback(null, usuarios);
+  });
+}
+
+function salvarUsuarios(usuarios, callback) {
+  fs.writeFile(usuariosPath, JSON.stringify(usuarios, null, 2), (err) => {
     if (err) return callback(err);
     callback(null);
   });
@@ -104,6 +121,64 @@ app.get("/api/events/list", (req, res) => {
     }
 
     res.status(200).json(eventos); // Retorna a lista de eventos
+  });
+});
+
+// Endpoint para cadastro de novos usuários
+app.post("/api/signup", (req, res) => {
+  const { nome, email, senha } = req.body;
+
+  if (!nome || !email || !senha) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Campos obrigatórios faltando!" });
+  }
+
+  // Verifica se o e-mail já existe
+  lerUsuarios((err, usuariosExistentes) => {
+    if (err) {
+      console.error("Erro ao ler os usuários:", err);
+      return res
+        .status(500)
+        .json({
+          success: false,
+          message: "Erro ao ler o arquivo de usuários.",
+        });
+    }
+
+    const usuarioExistente = usuariosExistentes.find(
+      (user) => user.email === email
+    );
+    if (usuarioExistente) {
+      return res
+        .status(400)
+        .json({ success: false, message: "E-mail já cadastrado!" });
+    }
+
+    // Cria um novo usuário e o adiciona
+    const novoUsuario = {
+      id: usuariosExistentes.length
+        ? usuariosExistentes[usuariosExistentes.length - 1].id + 1
+        : 1,
+      nome,
+      email,
+      senha, // Aqui, idealmente, você deve fazer a criptografia da senha
+    };
+
+    usuariosExistentes.push(novoUsuario);
+
+    salvarUsuarios(usuariosExistentes, (err) => {
+      if (err) {
+        console.error("Erro ao salvar os usuários:", err);
+        return res
+          .status(500)
+          .json({ success: false, message: "Erro ao salvar o usuário." });
+      }
+
+      res
+        .status(200)
+        .json({ success: true, message: "Cadastro realizado com sucesso!" });
+    });
   });
 });
 
