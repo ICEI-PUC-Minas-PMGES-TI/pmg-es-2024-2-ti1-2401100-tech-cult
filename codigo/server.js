@@ -14,7 +14,7 @@ const upload = multer({
 
 app.use(cors()); // Middleware CORS
 app.use(express.json()); // Middleware para entender JSON
-app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Servindo arquivos estáticos de uploads
+app.use("/uploads", express.static(path.join(__dirname, "codigo", "uploads"))); // Servindo arquivos estáticos de uploads
 
 // Caminho para o arquivo de eventos
 const eventosPath = path.join(__dirname, "db", "eventos.json");
@@ -83,7 +83,7 @@ app.post("/api/events/save", (req, res) => {
 });
 
 // Endpoint para listar os eventos salvos
-app.post("/api/events/list", (req, res) => {
+app.get("/api/events/list", (req, res) => {
   lerEventos((err, eventos) => {
     if (err) {
       console.error("Erro ao ler eventos:", err);

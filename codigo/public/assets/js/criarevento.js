@@ -59,10 +59,7 @@ function salvarEvento() {
   const regrasEvento = document.getElementById("regras").value;
   const imagemEvento = document.getElementById("input-image").files[0];
   const usuarioId = localStorage.getItem("id");
-  if (!usuarioId) {
-    alert("Usuário não autenticado.");
-    return;
-  }
+  
 
   // Validação dos campos
   if (
@@ -114,6 +111,7 @@ function salvarEvento() {
 
 // Função para salvar o evento no localStorage
 function salvarEventoLocalmente(evento) {
+  localStorage.removeItem("eventos"); // Limpa o armazenamento local antes de salvar os novos eventos
   let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
   eventos.push(evento);
   localStorage.setItem("eventos", JSON.stringify(eventos));

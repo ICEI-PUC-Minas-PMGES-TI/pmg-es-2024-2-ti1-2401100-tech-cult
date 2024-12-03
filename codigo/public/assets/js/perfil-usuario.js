@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para buscar eventos do servidor e renderizar na tela
   function carregarEventos() {
     fetch("http://localhost:3000/api/events/list", {
-      method: "POST",
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
@@ -31,14 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Verifica se a imagem existe, caso contrário, usa a imagem padrão
           const imagemEvento = evento.imagem
-            ? `http://localhost:3000${evento.imagem}`
+            ? `http://localhost:3000/uploads${evento.imagem}`
             : "https://placehold.co/300x200";
 
           card.innerHTML = `
             <img src="${imagemEvento}" alt="${evento.nome}" />
             <div class="card-evento">
               <h1>${evento.nome}</h1>
-              <h2>${evento.subtitulo || "Subtítulo não informado"}</h2>
               <p>${evento.descricao || "Descrição não disponível"}</p>
               <hr />
               <h3>Tags</h3>

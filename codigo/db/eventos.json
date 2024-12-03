@@ -1,16 +1,15 @@
 [
   {
-    "nome": "Evento Teste",
-    "data": "2024-10-20",
-    "hora": "11:00",
-    "descricao": "Apenas ver se o json server esta realmente funcionano",
-    "regras": "funcionar",
+    "nome": "Teste",
+    "data": "1111-11-11",
+    "hora": "11:11",
+    "descricao": "Uma descrição grande para poder ver com que vai ficar isso, quero quebrar esse card pra ficar feio, ficou pequeno deixa eu escrever mais um pouco aqui Lorem",
+    "regras": "pode tuod meu rei",
     "tags": [
-      "deu bom",
-      "é isso mesmo",
-      "só alegria"
+      "teste",
+      "coisa de maluco"
     ],
-    "id": 1,
-    "criadorDoEvento": "yura@gnail.com"
+    "imagem": "http://localhost:3000/uploads/e90dc526b98143429e24f95322323a95",
+    "id": 11
   }
 ]
