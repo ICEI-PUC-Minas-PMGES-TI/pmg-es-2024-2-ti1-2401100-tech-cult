@@ -138,12 +138,10 @@ app.post("/api/signup", (req, res) => {
   lerUsuarios((err, usuariosExistentes) => {
     if (err) {
       console.error("Erro ao ler os usuários:", err);
-      return res
-        .status(500)
-        .json({
-          success: false,
-          message: "Erro ao ler o arquivo de usuários.",
-        });
+      return res.status(500).json({
+        success: false,
+        message: "Erro ao ler o arquivo de usuários.",
+      });
     }
 
     const usuarioExistente = usuariosExistentes.find(
@@ -179,6 +177,40 @@ app.post("/api/signup", (req, res) => {
         .status(200)
         .json({ success: true, message: "Cadastro realizado com sucesso!" });
     });
+  });
+});
+
+// Endpoint para login de usuários
+app.post("/api/login", (req, res) => {
+  const { email, senha } = req.body;
+
+  if (!email || !senha) {
+    return res.status(400).json({ error: "E-mail e senha são obrigatórios." });
+  }
+
+  // Lê o arquivo de usuários para verificar as credenciais
+  lerUsuarios((err, usuarios) => {
+    if (err) {
+      console.error("Erro ao ler os usuários:", err);
+      return res
+        .status(500)
+        .json({ error: "Erro ao ler o arquivo de usuários" });
+    }
+
+    // Busca o usuário com o e-mail fornecido
+    const usuario = usuarios.find((user) => user.email === email);
+
+    if (!usuario) {
+      return res.status(400).json({ error: "E-mail não encontrado." });
+    }
+
+    // Verifica se a senha está correta
+    if (usuario.senha !== senha) {
+      return res.status(400).json({ error: "Senha incorreta." });
+    }
+
+    // Login bem-sucedido
+    res.status(200).json({ message: "Login realizado com sucesso!", usuario });
   });
 });
 
