@@ -7,14 +7,25 @@ const app = express();
 const PORT = 3000;
 
 // Configuração do Multer para uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "uploads")); // Diretório de destino
+  },
+  filename: (req, file, cb) => {
+    const extname = path.extname(file.originalname); // Obtém a extensão do arquivo
+    const filename = `${Date.now()}${extname}`; // Gera o nome do arquivo com timestamp
+    cb(null, filename); // Salva o arquivo com o novo nome
+  },
+});
+
 const upload = multer({
-  dest: path.join(__dirname, "uploads"),
+  storage: storage,
   limits: { fileSize: 5 * 1024 * 1024 }, // Limite de 5 MB por imagem
 });
 
 app.use(cors()); // Middleware CORS
 app.use(express.json()); // Middleware para entender JSON
-app.use("/uploads", express.static(path.join(__dirname, "codigo", "uploads"))); // Servindo arquivos estáticos de uploads
+app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Servindo arquivos estáticos de uploads
 
 // Caminho para o arquivo de eventos
 const eventosPath = path.join(__dirname, "db", "eventos.json");

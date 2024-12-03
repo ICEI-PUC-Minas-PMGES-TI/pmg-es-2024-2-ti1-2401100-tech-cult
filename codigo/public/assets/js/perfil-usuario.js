@@ -1,63 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Busca o JSON com os dados dos eventos
+  fetch("../../../db/eventos.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erro ao carregar os dados.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      carregarMeusEventos(data);
+    })
+    .catch((error) => console.error("Erro ao carregar os dados:", error));
+});
+
+// Função para carregar e exibir os eventos na seção "Meus Eventos"
+function carregarMeusEventos(eventos) {
   const containerEventos = document.querySelector(".meus-eventos");
 
-  // Função para buscar eventos do servidor e renderizar na tela
-  function carregarEventos() {
-    fetch("http://localhost:3000/api/events/list", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resposta) => {
-        if (!resposta.ok) {
-          throw new Error("Erro ao carregar eventos.");
-        }
-        return resposta.json();
-      })
-      .then((eventos) => {
-        // Limpa os cards estáticos
-        containerEventos.innerHTML = "";
+  // Limpa os eventos antigos (se houver)
+  containerEventos.innerHTML = "";
 
-        if (eventos.length === 0) {
-          containerEventos.innerHTML = `<p>Não há eventos cadastrados.</p>`;
-          return;
-        }
+  eventos.forEach((evento) => {
+    const card = document.createElement("div");
+    card.className = "card";
 
-        // Renderiza os eventos dinamicamente
-        eventos.forEach((evento) => {
-          const card = document.createElement("div");
-          card.classList.add("card");
+    // A imagem agora pode ser diretamente o caminho do arquivo
+    const imagemEvento = evento.imagem || "https://placehold.co/300x200"; // Caso não tenha imagem
 
-          // Verifica se a imagem existe, caso contrário, usa a imagem padrão
-          const imagemEvento = evento.imagem
-            ? `http://localhost:3000/uploads${evento.imagem}`
-            : "https://placehold.co/300x200";
-
-          card.innerHTML = `
-            <img src="${imagemEvento}" alt="${evento.nome}" />
-            <div class="card-evento">
-              <h1>${evento.nome}</h1>
-              <p>${evento.descricao || "Descrição não disponível"}</p>
-              <hr />
-              <h3>Tags</h3>
-              <div class="tags">
-                ${evento.tags
+    // Monta o conteúdo do card
+    card.innerHTML = `
+      <img src="${imagemEvento}" alt="${evento.nome}" />
+      <div class="card-evento">
+        <h1>${evento.nome}</h1>
+        <p>${evento.descricao || "Descrição não disponível"}</p>
+        <hr />
+        <h3>Tags</h3>
+        <div class="tags">
+          ${
+            evento.tags && evento.tags.length > 0
+              ? evento.tags
                   .map((tag) => `<div class="tag">${tag}</div>`)
-                  .join("")}
-              </div>
-            </div>
-          `;
+                  .join("")
+              : "<div class='tag'>Sem tags</div>"
+          }
+        </div>
+      </div>
+    `;
 
-          containerEventos.appendChild(card);
-        });
-      })
-      .catch((erro) => {
-        console.error("Erro ao carregar eventos:", erro);
-        containerEventos.innerHTML = `<p>Erro ao carregar eventos. Tente novamente mais tarde.</p>`;
-      });
-  }
-
-  // Chama a função ao carregar a página
-  carregarEventos();
-});
+    // Adiciona o card ao container
+    containerEventos.appendChild(card);
+  });
+}
