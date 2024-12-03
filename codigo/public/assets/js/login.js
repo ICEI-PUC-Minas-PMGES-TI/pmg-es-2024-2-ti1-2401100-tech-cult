@@ -14,8 +14,8 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
-        // Login bem-sucedido, redireciona para a página do feed ou outra página
-        window.location.href = "../../modulos/feed/feed.html"; // Exemplo de redirecionamento
+        // Login bem-sucedido, redireciona para a página do feed
+        window.location.href = "../../modulos/feed/feed.html";
       } else {
         alert(data.error);
       }
