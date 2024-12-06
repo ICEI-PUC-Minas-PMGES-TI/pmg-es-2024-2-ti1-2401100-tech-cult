@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,17 @@
     <link rel="stylesheet" href="../public/assets/css/index.css">
 
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
                 <img src="assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
             </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="../public/modulos/feed/feed.html">Feed</a></li>
@@ -38,8 +41,10 @@
     <section class="parte2">
         <div class="text-container">
             <h2>Como surgiu o Culturar?</h2>
-            <p>O Culturar nasceu da necessidade de reduzir a disparidade no acesso à cultura no Brasil, especialmente em áreas periféricas e rurais.</p>
-            <p>Acreditamos que a tecnologia pode ser uma poderosa aliada na democratização do conhecimento e no engajamento cultural, conectando pessoas a eventos e atividades de forma acessível e inclusiva.</p>
+            <p>O Culturar nasceu da necessidade de reduzir a disparidade no acesso à cultura no Brasil, especialmente em
+                áreas periféricas e rurais.</p>
+            <p>Acreditamos que a tecnologia pode ser uma poderosa aliada na democratização do conhecimento e no
+                engajamento cultural, conectando pessoas a eventos e atividades de forma acessível e inclusiva.</p>
         </div>
         <img src="../public/assets/images/landingpage/ilustracao-mulher-lp.png" alt="mulher" class="ilustracao-parte2">
     </section>
@@ -48,8 +53,10 @@
         <img src="../public/assets/images/landingpage/samba-pessoas-lp.png" alt="mulher">
         <div class="text-container">
             <h2>O que o Culturar oferece?</h2>
-            <p>O <b>Culturar</b> oferece uma plataforma completa para quem deseja criar e divulgar eventos culturais, cursos e oficinas, além de facilitar o acesso de pessoas que buscam essas atividades.</p>
-            <p>Seja você um <b>agente cultural</b> ou <b>alguém em busca de novas experiências</b>, o Culturar conecta oportunidades e promove a cultura para todos!</p>
+            <p>O <b>Culturar</b> oferece uma plataforma completa para quem deseja criar e divulgar eventos culturais,
+                cursos e oficinas, além de facilitar o acesso de pessoas que buscam essas atividades.</p>
+            <p>Seja você um <b>agente cultural</b> ou <b>alguém em busca de novas experiências</b>, o Culturar conecta
+                oportunidades e promove a cultura para todos!</p>
         </div>
     </section>
 
@@ -65,6 +72,14 @@
     <footer>
         <p>© Culturar 2024</p>
     </footer>
-    </body>
-    </html>
-    
+</body>
+
+<script>
+    function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        console.log("Toggle acionado"); // Confirma a execução
+        navbar.classList.toggle('active');
+    }
+</script>
+
+</html>
