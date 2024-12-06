@@ -65,7 +65,7 @@ nav ul li a:hover {
     display: flex;
     background-color: #532059;
     border-radius: 50px;
-    padding: 7px;
+    padding: 7px 7px 4px 7px;
     transition: 0.3s;
 }
 

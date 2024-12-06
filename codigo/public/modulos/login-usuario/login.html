@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - 1ª Etapa</title>
-    <link rel="stylesheet" href="../../assets/css/createusers.css ">
-    <script src="../../assets/js/script.js" defer></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../assets/css/login.css">
 </head>
-
 <body>
     <header>
         <nav class="navbar">
@@ -36,18 +30,15 @@
     </header>
     <main>
         <section class="formulario">
-            <h1>Crie sua conta</h1>
-            <form id="signup-form">
-                <input type="text" id="name" placeholder="Seu nome completo" required>
+            <h1>Entre na sua conta</h1>
+            <form>
                 <input type="email" id="email" placeholder="E-mail" required>
-                <input type="email" id="confirme-email" placeholder="Confirme seu E-mail" required>
                 <input type="password" id="senha" placeholder="Senha" required>
-                <input type="password" id="confirme-senha" placeholder="Confirme sua senha" required>
-                <button class="next-button" type="submit">Prosseguir</button>
-                <p>Já tem uma conta? <a href="../../modulos/login-usuario/login.html">Faça login</a></p>
+                <a id="login-button" href="../../modulos/feed/feed.html">Entrar</a>
+                <p>Não tem uma conta? <a href="../../modulos/criarusuario/createusers.html">Cadastre-se</a></p>
             </form>
             <div class="social-login">
-                <p>ou cadastre-se com</p>
+                <p>ou entre com</p>
                 <div class="social-icons">
                     <img src="../../assets/images/about/google.png" alt="Google">
                     <img src="../../assets/images/criarUsuario/facebook.png" alt="Facebook">
@@ -55,7 +46,6 @@
             </div>
         </section>
     </main>
-    <script src="../../assets/js/criarusuario.js"></script>
+    <script src="../../assets/js/login.js"></script>
 </body>
-
 </html>

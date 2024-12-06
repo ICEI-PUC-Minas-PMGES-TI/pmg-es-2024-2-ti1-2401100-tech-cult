@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 body {
     height: 100vh;
@@ -24,7 +24,7 @@ header {
 
 /* logo */
 .logo {
-    width: 64px;
+    width: 40px;
     height: auto;
     margin-right: 50px; 
 }
@@ -116,8 +116,8 @@ main {
     border-color: #ff5e7e;
 }
 
-.next-button {
-    background-color: #FF5722;
+#next-button {
+    background-color: #ffa041;
     color: #fff;
     border: none;
     padding: 12px;
@@ -129,7 +129,7 @@ main {
 }
 
 .formulario button:hover {
-    background-color: #E64A19;
+    background-color: #e08a36;
 }
 
 /* Links e seção de redes sociais */
