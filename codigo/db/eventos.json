@@ -24,5 +24,18 @@
     ],
     "imagem": "http://localhost:3000/uploads/1733231115487.jpg",
     "id": 2
+  },
+  {
+    "nome": "Ipe Amarelo",
+    "data": "2024-12-07",
+    "hora": "14:00",
+    "descricao": "Vamos adorar o ipe amarelo da praça do papa, traga seus amigos!",
+    "regras": "Precisa adorar o ipe amarelo",
+    "tags": [
+      "Incrivel",
+      "Amarelo"
+    ],
+    "imagem": "http://localhost:3000/uploads/1733275330257.webp",
+    "id": 3
   }
 ]
