@@ -7,12 +7,13 @@
 
 /* body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background-color: #F4EEE4;
-    margin: 0;
-    padding: 0;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Keeping original navbar styles */
 header {
     display: flex;
     justify-content: center; 
@@ -22,7 +23,6 @@ header {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* logo */
 .logo {
     width: 64px;
     height: auto;
@@ -57,6 +57,7 @@ nav ul li a:hover {
 nav ul .ativo {
     background-color: #FF4D53;
 }
+
 .navbar .perfil-icon {
     display: flex;
     background-color: #532059;
@@ -65,99 +66,112 @@ nav ul .ativo {
     padding: 7px;
     transition: 0.3s;
 }
+
 .navbar .perfil-icon:hover {
     background-color: #FF4D53;
 }
-.navbar .perfil-icon img{
+
+.navbar .perfil-icon img {
     height: 32px;
 }
 
-/* -------------------- */
-
-/* main */
+/* Main Content Styles */
 main {
-    padding: 2em 1em;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* sobre nos */
+/* Sobre Nos Section */
 .sobre {
-    max-width: 800px;
-    margin: 0 auto 2em;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
-/* equipe */
+.sobre h1 {
+    color: #532059;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #FF4D53;
+    padding-bottom: 0.5rem;
+}
+
+/* Team Section */
 .equipe {
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.equipe h2 {
+    grid-column: 1 / -1;
+    color: #532059;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .equipe-membro {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.equipe-membro:hover {
+    transform: translateY(-10px);
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-right: 15px;
+    overflow: hidden;
+    border: 4px solid #532059;
+    margin-bottom: 1rem;
 }
 
-.info {
-    text-align: left;
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* links sociais */
+.info h3 {
+    color: #532059;
+    margin-bottom: 0.5rem;
+}
+
 .social-link {
     display: flex;
     align-items: center;
+    color: #333;
     text-decoration: none;
-    color: #4e1f73;
-    margin-bottom: 0.5em;
-    font-size: 1em;
+    margin: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #FF4D53;
 }
 
 .social-link .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
-/* ajuste final */
-.social-link:last-child {
-    margin-bottom: 0;
-}
-
-/* estilo titulo */
-h1, h2 {
-    margin-bottom: 1em;
-}
-
-h1 {
-    font-size: 2em;
-    color: #532059;
-}
-
-h2 {
-    font-size: 1.8em;
-    color: #532059;
-}
-
-/* responsividade */
-@media (max-width: 600px) {
-    .team-member {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .avatar {
-        margin-bottom: 0.5em;
-        margin-right: 0;
-    }
-
-    .info {
-        text-align: center;
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .equipe {
+        grid-template-columns: 1fr;
     }
 }
