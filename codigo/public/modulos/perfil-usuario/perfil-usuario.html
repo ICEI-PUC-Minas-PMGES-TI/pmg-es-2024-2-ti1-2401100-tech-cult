@@ -6,28 +6,28 @@
     <title>Perfil</title>
     
     <link rel="stylesheet" href="../../assets/css/perfil-usuario.css">
-    <script src=""></script>
-    <script defer src="../../assets/js/visualizacao_de_perfil.js"></script>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    <script src="../../assets/js/perfil-usuario.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="../../assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
+                </a>
             </div>
             <ul>
-                <li><a href="../../modulos/landingpage/landingpage.html">Home</a></li>
+                <li><a href="../../index.html">Home</a></li>
                 <li><a href="../../modulos/feed/feed.html">Feed</a></li>
-                <li><a href="../../modulos/sobrenos/sobrenos.html">Sobre Nós</a></li>
+                <li><a href="../../about.html">Sobre Nós</a></li>
                 <li><a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a></li>
             </ul>
 
             <div class="perfil-icon">
-                <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
+                <a href="../perfil-usuario/perfil-usuario.html">
+                    <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
+                </a>
             </div>
         </nav>
     </header>
@@ -37,11 +37,19 @@
         <!-- Info do Perfil -->
         <div class="profile-section">
             <div class="profile-pic">
-                <img src="../../assets/images/visualizacaoDePerfil/FotoDePerfil.jpg" alt="fotoDePerfil" class="foto_perfil" id="foto_perfil">
+                <img src="../../assets/images/about/gabriel.jfif" alt="fotoDePerfil" class="foto_perfil" id="foto_perfil">
             </div>
             <div class="text-content">
-                <h1 id="nome_usuario">Pessoa</h1>
-                <p class="descricao">João Victor é um apaixonado professor de música com mais de 10 anos de experiência no ensino de teoria musical, prática instrumental e história da música. Com um profundo amor pela arte, ele acredita no poder da música como ferramenta de expressão e desenvolvimento pessoal. Ao longo de sua carreira, João tem ajudado alunos de todas as idades a desenvolverem habilidades musicais, explorando diferentes estilos e formas musicais, sempre com paciência e dedicação. Seu objetivo é tornar o aprendizado musical acessível e prazeroso, incentivando a criatividade e o amor pela música em cada aluno.</p>
+                <h1>Nome de usuário</h1>
+                <h2 class="user">@User</h2>
+                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis adipisci totam deserunt ducimus provident voluptate nam eos quae. Veritatis magnam expedita ducimus adipisci autem voluptate at beatae aliquam veniam facere.</p>
+                
+                <div class="local">
+                    <p class="localizacao"><img src="../../assets/images/perfil-usuario/local.png" alt="">Minas Gerais</p>
+
+                    <a href="../../modulos/editar-perfil/editar-perfil.html" class="edit-button">Editar Perfil</a>
+                </div>
+
             </div>
         </div>
 

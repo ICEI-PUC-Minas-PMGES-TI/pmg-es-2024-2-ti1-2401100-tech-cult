@@ -54,7 +54,7 @@ nav ul .ativo {
   background-color: #ff4d53;
   margin-left: 50px;
   border-radius: 50px;
-  padding: 7px;
+  padding: 7px 7px 4px 7px;
 }
 .navbar .perfil-icon img {
   height: 32px;
@@ -72,7 +72,7 @@ nav ul .ativo {
 }
 
 .foto_perfil {
-object-fit: cover;
+  object-fit: cover;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -97,11 +97,59 @@ object-fit: cover;
   margin: 0;
 }
 
+.text-content h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
 .descricao {
   color: #333333;
   font-size: 18px;
   margin-top: 10px;
   text-align: justify;
+}
+
+.local {
+  display: flex;
+  align-items: center;
+  text-align: space-between;
+  font-weight: bold;
+}
+
+.localizacao {
+  display: flex;
+  align-items: center;
+}
+
+.localizacao img {
+  width: 20px;
+  height: auto;
+  margin-right: 3px;
+  margin-bottom: 2.5px;
+}
+.button-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.edit-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #532059;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  margin-left: auto;
+}
+
+.edit-button:hover {
+  background-color: #ff4d53;
+  transform: translateX(5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .divider {
