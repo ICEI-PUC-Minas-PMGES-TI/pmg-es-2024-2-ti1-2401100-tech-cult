@@ -7,7 +7,7 @@
 
 /* body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     background-color: #F4EEE4;
     margin: 0;
     padding: 0;
@@ -85,7 +85,6 @@ nav ul .ativo {
 }
 
 .parte1 h1{
-    font-family: agrandir;
     font-size: 90px;
     color: #532059;
     position: absolute;
@@ -96,7 +95,6 @@ nav ul .ativo {
 }
 
 .parte1 h2{
-    font-family: agrandir-regular;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -239,19 +237,4 @@ footer {
     text-align: center;
     font-weight: 700;
     padding-bottom: 30px;
-}
-
-@font-face {
-    font-family: agrandir;
-    src: url(/fontes/Agrandir-TextBold.otf);
-}
-
-@font-face {
-    font-family: agrandir-regular;
-    src: url(/fontes/Agrandir-Regular.otf);
-}
-
-@font-face {
-    font-family: agrandir-narrow;
-    src: url(/fontes/Agrandir-Narrow.otf);
 }
