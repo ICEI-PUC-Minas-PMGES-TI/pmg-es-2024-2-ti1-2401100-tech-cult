@@ -52,10 +52,10 @@ p {
   align-items: center;
 }
 
-/* Header */
+/* Estilo do cabeçalho */
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
   background-color: #fff4f4;
@@ -65,48 +65,50 @@ header {
 .logo {
   width: 64px;
   height: auto;
-  margin-right: 50px;
-  background-color: #fff4f4;
-}
-
-.navbar {
   background-color: #fff4f4;
 }
 
 nav {
   display: flex;
   align-items: center;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
   gap: 15px;
   background-color: #fff4f4;
 }
 
+nav ul {
+  background-color: #fff4f4;
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  transition: max-height 0.4s ease-out;
+  max-height: none;
+  overflow: visible;
+}
+
+nav ul li {
+  background-color: #fff4f4;
+  width: auto;
+}
+
 nav ul li a {
+  display: block;
   text-decoration: none;
   color: #fff;
   background-color: #532059;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
   background-color: #FF4D53;
-}
-
-nav ul .ativo {
-  background-color: #FF4D53;
+  color: #fff;
 }
 
 .navbar .perfil-icon {
   display: flex;
   background-color: #532059;
-  margin-left: 50px;
   border-radius: 50px;
   padding: 7px;
   transition: 0.3s;
@@ -118,7 +120,6 @@ nav ul .ativo {
 
 .navbar .perfil-icon img {
   height: 32px;
-  background: none;
 }
 
 /* Main */
@@ -777,5 +778,108 @@ main {
   .gallery-cell img {
     width: 250px;
     height: 250px;
+  }
+}
+
+/* Menu Toggle para dispositivos móveis */
+.menu-toggle {
+  display: none;
+}
+
+/* Ajustes para telas maiores */
+@media screen and (min-width: 601px) {
+  header {
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  nav {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    background-color: #532059;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo,
+  .menu-toggle,
+  .perfil-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    background-color: #fff4f4;
+    max-height: 400px;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    width: auto;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #532059;
+  }
+
+  .navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar.active ul li a {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border-radius: 0;
+    color: #333;
+    background-color: #fff4f4;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .navbar.active ul li a:hover {
+    background-color: #FF4D53;
+    color: #fff;
   }
 }
