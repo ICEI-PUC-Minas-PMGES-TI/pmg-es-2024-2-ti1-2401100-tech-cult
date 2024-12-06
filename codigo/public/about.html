@@ -20,6 +20,7 @@
             <div class="logo">
                 <img src="../public/assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
             </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="../public/modulos/feed/feed.html">Feed</a></li>
@@ -132,5 +133,12 @@
         </section>
     </main>
 </body>
+<script>
+    function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        console.log("Toggle acionado"); // Confirma a execução
+        navbar.classList.toggle('active');
+    }
+</script>
 
 </html>
