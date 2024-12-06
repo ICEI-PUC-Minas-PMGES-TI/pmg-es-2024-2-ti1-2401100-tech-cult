@@ -75,12 +75,13 @@ nav ul .ativo {
 /* -------------------- */
 
 .parte1 {
-    background-image: url("/imagens/brasil.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: cover;
-    height: 60rem;
+    width: 1920px;
+    height: 1119px;
     position: relative;
+}
+
+.parte1 .elementos-br {
+    width: 50%;
 }
 
 .parte1 h1{
@@ -115,8 +116,12 @@ nav ul .ativo {
 }
 
 .parte2 .text-container {
-    padding: 2rem;
+    padding: 130px;
     text-align: left;
+}
+
+.parte2 .ilustracao-parte2{
+    object-fit: cover;
 }
 
 .parte2 .text-container h2 {
@@ -159,7 +164,8 @@ nav ul .ativo {
 
 
 .imagem-mulher {
-    height: 900px;
+    height: 811px;
+    width: 1388px;
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -171,19 +177,21 @@ section {
 }
 
 .se-inscreva {
-    background-color: #51236c;
+    background-color: #532059;
     color: #fff;
     padding: 60px 20px;
-    border-radius: 10px;
 }
 
 .se-inscreva h2 {
-    font-size: 28px;
+    font-size: 60px;
+    padding-bottom: 30px;
     color: #fff;
 }
 
 .se-inscreva p {
     color: #ddd;
+    font-size: 30px;
+    padding-bottom: 30px;
 }
 
 form {
@@ -192,26 +200,44 @@ form {
     margin-top: 20px;
 }
 
-input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
+input {
     border: none;
-    border-radius: 5px 0 0 5px;
-    width: 250px;
+    border-radius: 15px;
+    width: 597px;
+    height: 82px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 19px;
 }
 
+input::placeholder {
+    color:#FF4D53;
+}
+
+
 button {
-    padding: 10px 20px;
-    background-color: #e02876;
+    border-radius: 15px;
+    background-color: #FF4D53;
     color: #fff;
-    font-size: 16px;
+    font-size: 30px;
+    font-weight: 700;
     border: none;
-    border-radius: 0 5px 5px 0;
     cursor: pointer;
+    padding: 15px;
 }
 
 button:hover {
     background-color: #c02064;
+}
+
+footer {
+    background-color: #532059 ;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 30px;
 }
 
 @font-face {
