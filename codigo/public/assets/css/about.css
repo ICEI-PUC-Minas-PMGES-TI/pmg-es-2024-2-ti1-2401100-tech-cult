@@ -13,7 +13,6 @@ body {
     line-height: 1.6;
 }
 
-/* Keeping original navbar styles */
 header {
     display: flex;
     justify-content: center; 
@@ -75,14 +74,14 @@ nav ul .ativo {
     height: 32px;
 }
 
-/* Main Content Styles */
+/* Main */
 main {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* Sobre Nos Section */
+/* Sobre Nos */
 .sobre {
     background-color: #ffffff;
     padding: 2rem;
@@ -99,7 +98,6 @@ main {
     padding-bottom: 0.5rem;
 }
 
-/* Team Section */
 .equipe {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -169,7 +167,6 @@ main {
     margin-right: 10px;
 }
 
-/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .equipe {
         grid-template-columns: 1fr;
