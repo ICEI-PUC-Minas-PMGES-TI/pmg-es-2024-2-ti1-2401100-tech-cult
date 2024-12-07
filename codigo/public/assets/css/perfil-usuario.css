@@ -82,11 +82,19 @@ nav ul .ativo {
 .profile-pic {
   width: 200px;
   height: 200px;
-  background-color: #d3d3d3;
+  background-color: #fff4f4;
   border-radius: 50%;
   margin-right: 60px;
 }
 
+.profile-pic img {
+  width: 160px;
+  height: auto;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 14px;
+}
 .text-content {
   max-width: 600px;
 }
