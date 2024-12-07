@@ -3,3 +3,6 @@ Icon?
 .DS_Store
 .vscode
 node_modules/
+package.json
+node_modules/
+package-lock.json

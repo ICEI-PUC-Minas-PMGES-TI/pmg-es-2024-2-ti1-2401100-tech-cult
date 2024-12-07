@@ -48,29 +48,6 @@
         </section>
 
         <section class="title flex">
-            <div class="main-title flex">
-                <h1 class="bold">Eventos em Destaque</h1>
-            </div>
-        </section>
-
-        <section class="carousel">
-            <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true}'>
-                <div class="gallery-cell">
-                    <img src="../../assets/images/feed/banda-img.jpg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="../../assets/images/feed/culinaria-img.jpeg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="../../assets/images/feed/banda-img.jpg" alt="">
-                </div>
-                <div class="gallery-cell">
-                    <img src="../../assets/images/feed/show-img.png" alt="">
-                </div>
-            </div>
-        </section>
-
-        <section class="title flex">
             <div class="secondary-title flex">
                 <h2 class="bold">Eventos que podem te interessar</h2>
             </div>
@@ -78,11 +55,8 @@
 
         <section class="cards flex">
             <div class="card-deck">
-
+                <!-- Os cards dos eventos serão inseridos dinamicamente aqui -->
             </div>
-
-            </div>
-
         </section>
 
         <div class="load-btn-section flex">
@@ -90,16 +64,15 @@
         </div>
 
         <div id="modal" class="modal flex">
-
             <div class="modal-left flex">
-                <img src="../../assets/images/feed/culinaria-img.jpeg" alt="">
+                <img src="" alt="Imagem do Evento">
             </div>
 
             <div class="modal-right flex">
                 <div class="close-button flex white-bg">
                     <span class="close">X</span>
                 </div>
-                <h2 class="bold">Lorem Ipsum</h2>
+                <h2 class="bold"></h2> <!-- Título do evento -->
 
                 <div class="agent">
                     <div class="principal-avatar"></div>
@@ -114,54 +87,7 @@
                 </div>
 
                 <div class="comments flex">
-                    <div class="comment flex">
-                        <div class="avatar-info flex">
-                            <div class="avatar flex"></div>
-                            <div class="comment-p white-bg">
-                                <p class="avatar-name bold white-bg">Pessoa</p>
-                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed et venenatis mi,
-                                    variusmcongue risus.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comment flex">
-                        <div class="avatar-info flex">
-                            <div class="avatar flex"></div>
-                            <div class="comment-p white-bg">
-                                <p class="avatar-name bold white-bg">Pessoa</p>
-                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed et venenatis mi,
-                                    variusmcongue risus.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comment flex">
-                        <div class="avatar-info flex">
-                            <div class="avatar flex"></div>
-                            <div class="comment-p white-bg">
-                                <p class="avatar-name bold white-bg">Pessoa</p>
-                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed et venenatis mi,
-                                    variusmcongue risus.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="comment flex">
-                        <div class="avatar-info flex">
-                            <div class="avatar flex"></div>
-                            <div class="comment-p white-bg">
-                                <p class="avatar-name bold white-bg">Pessoa</p>
-                                <p class="comment-p white-bg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed et venenatis mi,
-                                    variusmcongue risus.</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <!-- Comentários podem ser dinamicamente carregados aqui se necessário -->
                 </div>
                 <div class="engagement-area white-bg flex">
                     <div class="white-bg heart-svg bold">
@@ -187,27 +113,22 @@
                     <button id="submit-comment" class="bold">Publicar</button>
                 </div>
             </div>
-
-
-
-
         </div>
-
-
     </main>
 
-</body>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="../../assets/js/feed.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="../../assets/js/feed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-<script>
-    function toggleMenu() {
-        const navbar = document.querySelector('.navbar');
-        console.log("Toggle acionado"); // Confirma a execução
-        navbar.classList.toggle('active');
-    }
-</script>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            console.log("Toggle acionado"); // Confirma a execução
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
 
 </html>
