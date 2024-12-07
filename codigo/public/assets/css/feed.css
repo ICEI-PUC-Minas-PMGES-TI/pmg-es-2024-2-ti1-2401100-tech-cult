@@ -248,7 +248,7 @@ main {
 }
 
 .card {
-  width: calc(50% - 10px); /* Two cards per row with gap consideration */
+  width: 100%;
   max-width: 600px;
   height: 660px;
   background-color: #fff;

@@ -37,5 +37,17 @@
     ],
     "imagem": "http://localhost:3000/uploads/1733275330257.webp",
     "id": 3
+  },
+  {
+    "nome": "Teste Anna",
+    "data": "2011-11-11",
+    "hora": "10:10",
+    "descricao": "teste",
+    "regras": "tem q testaaar",
+    "tags": [
+      "teste"
+    ],
+    "imagem": "http://localhost:3000/uploads/1733595820549.jpeg",
+    "id": 4
   }
 ]

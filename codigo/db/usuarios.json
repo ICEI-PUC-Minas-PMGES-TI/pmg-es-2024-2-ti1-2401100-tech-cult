@@ -16,5 +16,11 @@
     "nome": "Ana Julia",
     "email": "anaju@gmail.com",
     "senha": "anaju1234"
+  },
+  {
+    "id": 4,
+    "nome": "Anna Chandra Felício Teixeira",
+    "email": "annaftteixeira@gmail.com",
+    "senha": "12345678"
   }
 ]
