@@ -1,53 +1,34 @@
 [
   {
-    "nome": "Teste",
-    "data": "1111-11-11",
-    "hora": "11:11",
-    "descricao": "Uma descrição grande para poder ver com que vai ficar isso, quero quebrar esse card pra ficar feio, ficou pequeno deixa eu escrever mais um pouco aqui Lorem",
-    "regras": "pode tuod meu rei",
+    "nome": "Kaká foi Rei",
+    "local": "Campo de futebol",
+    "data": "2024-12-12",
+    "hora": "21:00",
+    "descricao": "Kaká foi uma lenda nos gramados ",
+    "regras": "É necessario reverenciar o Kaká ao passar do lado dele",
     "tags": [
-      "teste",
-      "coisa de maluco"
+      "Rei",
+      "Melhor",
+      "Futebol"
     ],
-    "imagem": "http://localhost:3000/uploads/e90dc526b98143429e24f95322323a95",
+    "imagem": "http://localhost:3000/uploads/1733614837506.jpeg",
+    "usuarioId": "2",
     "id": 1
   },
   {
-    "nome": "Nnunca mais preciso voltar aqui?",
-    "data": "2024-12-20",
-    "hora": "12:12",
-    "descricao": "Hoje declaro que vai dar tudo certo e essa entrega vai pelo menos estar funcionando",
-    "regras": "Já trazes, ao nascer, a tua filosofia.\nAs razões? Essas vêm posteriormente,\nTal como escolhes, na chapelaria,\nA forma que mais te assente...",
+    "nome": "Cava uma falta",
+    "local": "Santiago Bernabéu",
+    "data": "2024-12-12",
+    "hora": "20:00",
+    "descricao": "Cava uma falta que é gol",
+    "regras": "É necessario que vc cave uma falta para que o ronaldinho possa fazer seu gol",
     "tags": [
-      "teste",
-      "funciona"
+      "Gol",
+      "Falta",
+      "Bruxo"
     ],
-    "imagem": "http://localhost:3000/uploads/1733231115487.jpg",
+    "imagem": "http://localhost:3000/uploads/1733615052246.jpg",
+    "usuarioId": "2",
     "id": 2
-  },
-  {
-    "nome": "Ipe Amarelo",
-    "data": "2024-12-07",
-    "hora": "14:00",
-    "descricao": "Vamos adorar o ipe amarelo da praça do papa, traga seus amigos!",
-    "regras": "Precisa adorar o ipe amarelo",
-    "tags": [
-      "Incrivel",
-      "Amarelo"
-    ],
-    "imagem": "http://localhost:3000/uploads/1733275330257.webp",
-    "id": 3
-  },
-  {
-    "nome": "Teste Anna",
-    "data": "2011-11-11",
-    "hora": "10:10",
-    "descricao": "teste",
-    "regras": "tem q testaaar",
-    "tags": [
-      "teste"
-    ],
-    "imagem": "http://localhost:3000/uploads/1733595820549.jpeg",
-    "id": 4
   }
 ]
