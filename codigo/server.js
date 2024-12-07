@@ -209,8 +209,16 @@ app.post("/api/login", (req, res) => {
       return res.status(400).json({ error: "Senha incorreta." });
     }
 
-    // Login bem-sucedido
-    res.status(200).json({ message: "Login realizado com sucesso!", usuario });
+    // Login bem-sucedido - agora retornamos o ID do usuário e o nome dentro de um objeto 'usuario'
+    res.status(200).json({
+      message: "Login realizado com sucesso!",
+      usuario: {
+        // Alteração: retornando os dados dentro do objeto 'usuario'
+        id: usuario.id, // ID do usuário
+        nome: usuario.nome, // Nome do usuário
+        email: usuario.email, // Email do usuário
+      },
+    });
   });
 });
 
