@@ -64,69 +64,73 @@ function carregarEventosInteressantes(eventos) {
 }
 
 // *************************************************** / 
-// PESQUISA POR TAGS
+// PESQUISA POR TAGS E POR TÍTULO
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("../../../db/eventos.json")
-      .then(response => response.json())
-      .then(data => {
-          mostrarEventos(data);
-      })
-      .catch(error => console.error("Erro ao carregar os dados:", error));
+    fetch("../../../db/eventos.json")
+        .then(response => response.json())
+        .then(data => {
+            mostrarEventos(data);
+        })
+        .catch(error => console.error("Erro ao carregar os dados:", error));
 });
 
 function mostrarEventos(data) {
-  carregarEventosDestaque(data);
-  carregarEventosInteressantes(data);
-  
-  const searchButton = document.querySelector('.search-btn');
-  searchButton.addEventListener('click', function () {
-      const searchInput = document.querySelector('.search-input').value.toLowerCase();
-      filtrarEventosPorTag(data, searchInput);
-  });
+    carregarEventosDestaque(data);
+    carregarEventosInteressantes(data);
+    
+    const searchButton = document.querySelector('.search-btn');
+    searchButton.addEventListener('click', function () {
+        const searchInput = document.querySelector('.search-input').value.toLowerCase();
+        filtrarEventosPorTituloETag(data, searchInput);
+    });
 }
 
-function filtrarEventosPorTag(data, term) {
-  const filteredEventos = data.filter(evento => evento.tags.some(tag => tag.toLowerCase().includes(term)));
-  carregarEventosInteressantes(filteredEventos);
+function filtrarEventosPorTituloETag(eventos, term) {
+    const filteredEventos = eventos.filter(evento => {
+        const titleMatch = evento.nome.toLowerCase().includes(term);
+        const tagMatch = evento.tags.some(tag => tag.toLowerCase().includes(term));
+        return titleMatch || tagMatch;
+    });
+    carregarEventosInteressantes(filteredEventos);
 }
 
 function carregarEventosDestaque(eventos) {
-  const carousel = document.querySelector(".gallery");
-  carousel.innerHTML = ''; // Limpar eventos anteriores
-  eventos.forEach(evento => {
-      const cell = document.createElement("div");
-      cell.className = "gallery-cell";
-      cell.innerHTML = `<img src="${evento.imagem}" alt="${evento.nome}">`;
-      carousel.appendChild(cell);
-  });
+    const carousel = document.querySelector(".gallery");
+    carousel.innerHTML = ''; // Limpar eventos anteriores
+    eventos.forEach(evento => {
+        const cell = document.createElement("div");
+        cell.className = "gallery-cell";
+        cell.innerHTML = `<img src="${evento.imagem}" alt="${evento.nome}">`;
+        carousel.appendChild(cell);
+    });
 }
 
 function carregarEventosInteressantes(eventos) {
-  const cardsContainer = document.querySelector(".cards");
-  cardsContainer.innerHTML = ''; // Limpar eventos anteriores
-  eventos.forEach(evento => {
-      const card = document.createElement("div");
-      card.className = "card";
-      const tagsHTML = evento.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
-      card.innerHTML = `
-          <img class="card-img-top" src="${evento.imagem}" alt="${evento.nome}">
-          <div class="card-body">
-              <h4 class="bold">${evento.nome}</h4>
-              <p class="card-text">${evento.descricao}</p>
-              <div class="tag-container">${tagsHTML}</div>
-              <div class="location-info">
-                  <div class="location-address flex">
-                      <img src="../../assets/images/feed/location-icon.png" alt="Ícone de localização">
-                      <p>${evento.local || 'Local não especificado'}</p>
-                  </div>
-                  <div class="location-clock flex">
-                      <img src="../../assets/images/feed/clock-icon.png" alt="Ícone de relógio">
-                      <p>${evento.hora}</p>
-                  </div>
-              </div>
-          </div>
-      `;
-      cardsContainer.appendChild(card);
-  });
+    const cardsContainer = document.querySelector(".cards");
+    cardsContainer.innerHTML = ''; // Limpar eventos anteriores
+    eventos.forEach(evento => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const tagsHTML = evento.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+        card.innerHTML = `
+            <img class="card-img-top" src="${evento.imagem}" alt="${evento.nome}">
+            <div class="card-body">
+                <h4 class="bold">${evento.nome}</h4>
+                <p class="card-text">${evento.descricao}</p>
+                <div class="tag-container">${tagsHTML}</div>
+                <div class="location-info">
+                    <div class="location-address flex">
+                        <img src="../../assets/images/feed/location-icon.png" alt="Ícone de localização">
+                        <p>${evento.local || 'Local não especificado'}</p>
+                    </div>
+                    <div class="location-clock flex">
+                        <img src="../../assets/images/feed/clock-icon.png" alt="Ícone de relógio">
+                        <p>${evento.hora}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        cardsContainer.appendChild(card);
+    });
 }
