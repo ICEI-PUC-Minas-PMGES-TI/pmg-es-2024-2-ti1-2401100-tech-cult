@@ -116,7 +116,7 @@ main {
     border-color: #ff5e7e;
 }
 
-#next-button {
+.formulario button {
     background-color: #ffa041;
     color: #fff;
     border: none;
