@@ -4,5 +4,17 @@
     "nome": "Gabriel Victor Souza Lopes",
     "email": "gabrieelvictor26@gmail.com",
     "senha": "1234"
+  },
+  {
+    "id": 2,
+    "nome": "João Andrade Reis",
+    "email": "joaozinho@gmail.com",
+    "senha": "joao1234"
+  },
+  {
+    "id": 3,
+    "nome": "Ana Julia",
+    "email": "anaju@gmail.com",
+    "senha": "anaju1234"
   }
 ]
