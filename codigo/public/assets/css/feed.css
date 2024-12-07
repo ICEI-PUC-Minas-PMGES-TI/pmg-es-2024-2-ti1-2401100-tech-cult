@@ -164,6 +164,22 @@ main {
   object-fit: contain;
 }
 
+.search-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 77, 83, 0.755);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #FF4D53;
+}
+
+
 .search-icon:hover {
   cursor: pointer;
 }
@@ -256,6 +272,32 @@ main {
 
 .card-body p {
   background-color: #fff;
+}
+
+.tag-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.tag {
+  background-color: #FF9400;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Ajustes em diferentes tamanhos de tela para as tags */
+@media screen and (max-width: 767px) {
+  .tag {
+      font-size: 12px;
+      padding: 4px 8px;
+  }
 }
 
 /* Informações do evento */
