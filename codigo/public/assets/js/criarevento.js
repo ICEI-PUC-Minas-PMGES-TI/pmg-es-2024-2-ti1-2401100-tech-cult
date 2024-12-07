@@ -53,23 +53,25 @@ function removerTag(index) {
 // Função para salvar evento
 function salvarEvento() {
   const nomeEvento = document.getElementById("nome-evento").value;
+  const localEvento = document.getElementById("local-evento").value; // Novo campo para localização
   const dataEvento = document.getElementById("data").value;
   const horaEvento = document.getElementById("hora").value;
   const descricaoEvento = document.getElementById("descricao").value;
   const regrasEvento = document.getElementById("regras").value;
   const imagemEvento = document.getElementById("input-image").files[0];
-  const usuarioId = localStorage.getItem("id");
-  
+  const usuarioId = localStorage.getItem("userId"); // Corrigido o nome da chave para "userId"
 
   // Validação dos campos
   if (
     !nomeEvento ||
+    !localEvento || // Verifica se o local foi preenchido
     !dataEvento ||
     !horaEvento ||
     !descricaoEvento ||
     !regrasEvento ||
     tags.length === 0 ||
-    !imagemEvento
+    !imagemEvento ||
+    !usuarioId // Verifica se o usuário está logado
   ) {
     alert("Por favor, preencha todos os campos antes de salvar o evento.");
     return;
@@ -93,12 +95,14 @@ function salvarEvento() {
 
       const evento = {
         nome: nomeEvento,
+        local: localEvento, // Agora inclui o local do evento
         data: dataEvento,
         hora: horaEvento,
         descricao: descricaoEvento,
         regras: regrasEvento,
         tags,
         imagem: caminhoImagem,
+        usuarioId, // Agora inclui o ID do usuário
       };
 
       salvarEventoLocalmente(evento);
