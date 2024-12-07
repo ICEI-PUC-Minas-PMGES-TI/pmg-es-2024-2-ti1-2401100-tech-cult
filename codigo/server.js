@@ -97,6 +97,13 @@ app.post("/api/events/save", (req, res) => {
       evento.id = eventosExistentes.length
         ? eventosExistentes[eventosExistentes.length - 1].id + 1
         : 1;
+
+      // Campo de local (se não enviado, usa um valor padrão)
+      evento.local = evento.local || "Local não informado";
+
+      // O ID do usuário é atribuído do frontend
+      evento.usuarioId = evento.usuarioId;
+
       eventosExistentes.push(evento);
     });
 
