@@ -92,7 +92,7 @@ O público-alvo principal da aplicação são jovens e adultos que vivem em áre
 
 ## Gestão de Projetos
 
-O projeto foi desenvolvido usando as metodologias Scrum e Kanban, tendo como principal ferramenta de gestão o Trello, da Atlassian
+O projeto foi desenvolvido usando as metodologias Scrum e Kanban, tendo como principal ferramenta de gestão o Trello, da Atlassian e o GitHub Projects
 
 <p align="center"><img alt="Trello do Culturar" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/trello-culturar.png"/></p>
 
