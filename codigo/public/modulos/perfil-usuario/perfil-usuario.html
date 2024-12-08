@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    
     <link rel="stylesheet" href="../../assets/css/perfil-usuario.css">
-    <script src="../../assets/js/perfil-usuario.js"></script>
 </head>
 
 <body>
@@ -33,23 +31,20 @@
     </header>
     
     <main class="content">
-        
         <!-- Info do Perfil -->
         <div class="profile-section">
             <div class="profile-pic">
                 <img src="../../assets/images/perfil-usuario/foto-perfil.png" alt="fotoDePerfil" class="foto_perfil" id="foto_perfil">
             </div>
             <div class="text-content">
-                <h1>Nome de usuário</h1>
-                <h2 class="user">@User</h2>
-                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis adipisci totam deserunt ducimus provident voluptate nam eos quae. Veritatis magnam expedita ducimus adipisci autem voluptate at beatae aliquam veniam facere.</p>
-                
-                <div class="local">
-                    <p class="localizacao"><img src="../../assets/images/perfil-usuario/local.png" alt="">Localização</p>
+                <h1 id="nome_usuario">Nome de usuário</h1> <!-- Alterado para id para manipulação no JS -->
+                <h2 class="user"><span id="usuario">@User</span></h2> <!-- Adicionando ID para manipulação -->
+                <p class="descricao" id="bio_usuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis adipisci totam deserunt ducimus provident voluptate nam eos quae. Veritatis magnam expedita ducimus adipisci autem voluptate at beatae aliquam veniam facere.</p> <!-- Alterando para id -->
 
+                <div class="local">
+                    <img src="../../assets/images/perfil-usuario/local.png"><p class="localizacao" id="localizacao_usuario">Localização</p>
                     <a href="../../modulos/editar-perfil/editar-perfil.html" class="edit-button">Editar Perfil</a>
                 </div>
-
             </div>
         </div>
 
@@ -68,5 +63,7 @@
         </div>
 
     </main>
+    <script src="../../assets/js/perfil-usuario.js"></script>
+    <script src="../../assets/js/atualizarInfoPerfil.js" ></script>
 </body>
 </html>
