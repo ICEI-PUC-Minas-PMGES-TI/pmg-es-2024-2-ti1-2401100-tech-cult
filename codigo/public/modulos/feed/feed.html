@@ -23,18 +23,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="../../assets/images/perfil-usuario/logo.PNG" alt="Logo" class="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/perfil-usuario/logo.png" alt="Logo" class="logo">
+                </a>
             </div>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <ul>
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="feed.html">Feed</a></li>
+                <li><a href="../../modulos/feed/feed.html">Feed</a></li>
                 <li><a href="../../about.html">Sobre Nós</a></li>
-                <li><a href="../criarusuario/createusers.html">Cadastrar-se</a></li>
+                <li><a href="../../modulos/criarusuario/createusers.html">Cadastrar-se</a></li>
             </ul>
 
             <div class="perfil-icon">
-                <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
+                <a href="../perfil-usuario/perfil-usuario.html">
+                    <img src="../../assets/images/perfil-usuario/perfil.png" alt="icon" class="icon-perfil">
+                </a>
             </div>
         </nav>
     </header>
@@ -83,7 +86,6 @@
                 </div>
 
                 <div class="comment-section">
-                    <h3 class="bold">Comentários</h3>
                 </div>
 
                 <div class="comments flex">
@@ -107,10 +109,6 @@
                                 stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                </div>
-                <div class="comment-input">
-                    <input type="text" placeholder="Adicione um comentário...">
-                    <button id="submit-comment" class="bold">Publicar</button>
                 </div>
             </div>
         </div>
