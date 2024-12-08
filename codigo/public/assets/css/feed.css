@@ -237,6 +237,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 20px;
 }
 
 .card-deck {
@@ -250,25 +251,32 @@ main {
 .card {
   width: 100%;
   max-width: 600px;
-  height: auto; /* Permite que o conteúdo interno defina a altura */
+  height: auto; 
   background-color: #fff;
   margin-bottom: 20px; 
-  border-radius: 15px; /* Define a borda arredondada para os cards */
-  overflow: hidden; /* Garante que o conteúdo não transborde as bordas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  border-radius: 15px; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  flex-direction: column;
 }
 
 .card-img-top {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
-  border-top-left-radius: 15px; /* Arredonda a parte superior da imagem */
-  border-top-right-radius: 15px; /* Arredonda a parte superior da imagem */
+  height: 300px;
+  flex: 1;
+  object-fit: cover; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-position: center;
 }
 
 .card-body {
   padding: 20px;
   background-color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-body h4 {
@@ -301,10 +309,22 @@ main {
 
 
 /* Ajustes em diferentes tamanhos de tela para as tags */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .tag {
     font-size: 12px;
     padding: 4px 8px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 15px;
   }
 }
 
@@ -710,7 +730,7 @@ main {
   }
 
   .card-img-top {
-    width: 95%;
+    width: 100%;
     height: auto;
   }
 
@@ -943,5 +963,20 @@ main {
   .navbar.active ul li a:hover {
     background-color: #FF4D53;
     color: #fff;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .card {
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 150px;
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 10px;
   }
 }
