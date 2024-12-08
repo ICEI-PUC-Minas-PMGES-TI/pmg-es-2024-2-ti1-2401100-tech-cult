@@ -122,6 +122,8 @@ app.post("/api/events/save", (req, res) => {
 
 // Endpoint para listar os eventos salvos
 app.get("/api/events/list", (req, res) => {
+  const userId = req.query.userId;  // Captura o userId da query string
+
   lerEventos((err, eventos) => {
     if (err) {
       console.error("Erro ao ler eventos:", err);
@@ -130,7 +132,12 @@ app.get("/api/events/list", (req, res) => {
         .json({ error: "Erro ao ler o arquivo de eventos" });
     }
 
-    res.status(200).json(eventos); // Retorna a lista de eventos
+    // Se userId foi passado na query, filtra os eventos pelo usuarioId
+    if (userId) {
+      eventos = eventos.filter(evento => evento.usuarioId == userId);
+    }
+
+    res.status(200).json(eventos); // Retorna a lista de eventos (ou filtrados, se userId foi fornecido)
   });
 });
 
