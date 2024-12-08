@@ -33,7 +33,7 @@ function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
     let creatorLink = "#";
     if (creator) {
       creatorName = creator.nome;
-      creatorLink = `../visualizar_perfil/usuario${creator.id}.html`;
+      creatorLink = `../perfil-visitante/perfil-visitante.html?id=${creator.id}`;
     }
 
     card.innerHTML = `
@@ -53,6 +53,9 @@ function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
                   <img src="../../assets/images/feed/clock-icon.png" alt="Ícone de relógio">
                   <p>${evento.hora}</p>
               </div>
+          </div>
+          <div class="creator-info">
+              <p>Criado por: <a href="${creatorLink}">${creatorName}</a></p>
           </div>
       </div>
     `;
@@ -89,14 +92,13 @@ function abrirModal(evento, usuarios, usuarioLogado) {
   `;
   modal.querySelector(".comment-section").innerHTML = modalContent;
 
-  // Carregar os comentários existentes para esse evento (isso será feito através do evento)
+  // Carregar os comentários existentes para esse evento
   carregarComentarios(evento);
 
   document.getElementById("submit-comment")?.addEventListener("click", () => {
     const commentInput = modal.querySelector(".comment-input input");
     const newComment = commentInput.value.trim();
     if (newComment) {
-      // Recupera o userId do localStorage
       const userId = localStorage.getItem("userId"); // Obtém o userId do localStorage
       const eventoId = evento.id;
 
@@ -105,13 +107,9 @@ function abrirModal(evento, usuarios, usuarioLogado) {
         return;
       }
 
-      // Adiciona o novo comentário ao localStorage (localmente)
       salvarComentarioNoLocalStorage(eventoId, newComment, userId);
-
-      // Envia o comentário para o servidor (para ser gravado no eventos.json)
       salvarComentarioNoServidor(eventoId, newComment, userId);
 
-      // Adiciona o comentário na interface
       const commentList = modal.querySelector(".comments-list");
       const commentElement = document.createElement("p");
       commentElement.textContent = newComment;
@@ -127,7 +125,7 @@ function abrirModal(evento, usuarios, usuarioLogado) {
     modal.querySelector(".agent-info a").textContent = creator.nome;
     modal.querySelector(
       ".agent-info a"
-    ).href = `../visualizar_perfil/usuario${creator.id}.html`;
+    ).href = `../perfil-visitante/perfil-visitante.html?id=${creator.id}`;
     if (creator.imagemPerfil) {
       modal.querySelector(
         ".principal-avatar"
@@ -175,7 +173,7 @@ function salvarComentarioNoLocalStorage(eventoId, comentario, userId) {
       eventos[eventoIndex].comentarios = [];
     }
     eventos[eventoIndex].comentarios.push({ comentario, userId });
-    localStorage.setItem("eventos", JSON.stringify(eventos)); // Salva no localStorage
+    localStorage.setItem("eventos", JSON.stringify(eventos));
   }
 }
 
@@ -195,7 +193,6 @@ function salvarComentarioNoServidor(eventoId, comentario, userId) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Comentário enviado para o servidor", data);
-      // Aqui você pode fazer algo quando o comentário for salvo no servidor
     })
     .catch((error) =>
       console.error("Erro ao salvar comentário no servidor:", error)
