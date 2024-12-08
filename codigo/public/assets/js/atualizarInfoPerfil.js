@@ -18,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
           // Preenche os dados no HTML
           document.querySelector("#nome_usuario").textContent =
             data.usuario.nome || "Nome não definido";
-          document.querySelector("#usuario").textContent = `@${
-            data.usuario.nome || "usuário"
-          }`;
           document.querySelector("#bio_usuario").textContent =
             data.usuario.bio || "Bio não definida.";
           document.querySelector("#localizacao_usuario").textContent =
