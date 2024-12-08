@@ -42,7 +42,13 @@
     "imagem": "http://localhost:3000/uploads/1733615052246.jpg",
     "usuarioId": "2",
     "id": 2,
-    "comentarios": []
+    "comentarios": [
+      {
+        "comentario": "teste",
+        "userId": "4",
+        "data": "2024-12-08T17:24:42.049Z"
+      }
+    ]
   },
   {
     "nome": "Amar o Snoopy",

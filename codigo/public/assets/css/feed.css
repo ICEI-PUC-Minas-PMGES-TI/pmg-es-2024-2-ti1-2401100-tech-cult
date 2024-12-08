@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #F4EEE4;
 }
 
 html,
@@ -288,6 +287,19 @@ main {
 .card-body p {
   background-color: #fff;
 }
+
+.card-date p {
+  background-color: #fff;
+}
+
+.card-rules {
+  background-color: #fff;
+}
+
+.card-date strong, .card-rules strong {
+  color: #FF4D53; /* Ajuste a cor para qualquer que seja a desejada */
+}
+
 
 .tag-container {
   margin-top: 10px;
