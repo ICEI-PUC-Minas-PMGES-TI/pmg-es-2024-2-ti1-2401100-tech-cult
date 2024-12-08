@@ -6,13 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("../../../db/eventos.json").then(response => response.json()),
     fetch("../../../db/usuarios.json").then(response => response.json())
   ])
-  .then(([eventos, usuarios]) => {
-    window.eventosData = eventos;
-    window.usuariosData = usuarios;
-    carregarEventosInteressantes(eventos, usuarios, usuarioLogado);
-  })
-  .catch(error => console.error("Erro ao carregar os dados:", error));
+    .then(([eventos, usuarios]) => {
+      window.eventosData = eventos;
+      window.usuariosData = usuarios;
+      carregarEventosInteressantes(eventos, usuarios, usuarioLogado);
+    })
+    .catch(error => console.error("Erro ao carregar os dados:", error));
 });
+
 
 function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
   const cardsContainer = document.querySelector(".card-deck");
@@ -59,11 +60,36 @@ function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
   });
 }
 
+// PESQUISA POR TAGS E POR TÍTULO
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("../../../db/eventos.json")
+    .then(response => response.json())
+    .then(data => {
+      mostrarEventos(data);
+    })
+    .catch(error => console.error("Erro ao carregar os dados:", error));
+});
+function mostrarEventos(data) {
+  const searchButton = document.querySelector('.search-btn');
+  searchButton.addEventListener('click', function () {
+    const searchInput = document.querySelector('.search-input').value.toLowerCase();
+    filtrarEventosPorTituloETag(data, searchInput);
+  });
+}
+function filtrarEventosPorTituloETag(eventos, term) {
+  const filteredEventos = eventos.filter(evento => {
+    const titleMatch = evento.nome.toLowerCase().includes(term);
+    const tagMatch = evento.tags.some(tag => tag.toLowerCase().includes(term));
+    return titleMatch || tagMatch;
+  });
+  carregarEventosInteressantes(filteredEventos, window.usuariosData, window.usuarioLogado);
+}
+
 function abrirModal(evento, usuarios, usuarioLogado) {
   const modal = document.getElementById('modal');
   modal.querySelector('.modal-left img').src = evento.imagem;
   modal.querySelector('.modal-right h2').textContent = evento.nome;
-  
+
   const modalContent = `
     <p><strong>Descrição:</strong> ${evento.descricao}</p>
     <p><strong>Data:</strong> ${evento.data}</p>
@@ -118,7 +144,7 @@ function abrirModal(evento, usuarios, usuarioLogado) {
       modal.querySelector('.principal-avatar').textContent = "Sem imagem de perfil";
     }
   }
-  
+
   modal.style.display = 'flex';
 }
 
@@ -181,3 +207,4 @@ function salvarComentarioNoServidor(eventoId, comentario, userId) {
       console.error("Erro ao salvar comentário no servidor:", error)
     );
 }
+
