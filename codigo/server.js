@@ -322,65 +322,6 @@ app.get("/api/usuarios/:usuarioId", (req, res) => {
   });
 });
 
-// Endpoint para obter comentários de um evento específico
-app.get("/api/eventos/:id/comentarios", (req, res) => {
-  lerEventos((err, eventos) => {
-    if (err) {
-      console.error("Erro ao ler os eventos:", err);
-      return res
-        .status(500)
-        .json({ error: "Erro ao ler o arquivo de eventos" });
-    }
-
-    const evento = eventos.find(e => e.id === parseInt(req.params.id));
-    if (evento) {
-      res.json(evento.comentarios || []);
-    } else {
-      res.status(404).send("Evento não encontrado");
-    }
-  });
-});
-
-// Endpoint para adicionar um comentário a um evento específico
-app.post("/api/eventos/:id/comentarios", (req, res) => {
-  const novoComentario = req.body.comentario;
-  const usuario = req.body.usuario;
-
-  if (!novoComentario || !usuario) {
-    return res.status(400).json({ error: "Comentário ou usuário não fornecido." });
-  }
-
-  lerEventos((err, eventos) => {
-    if (err) {
-      console.error("Erro ao ler os eventos:", err);
-      return res
-        .status(500)
-        .json({ error: "Erro ao ler o arquivo de eventos" });
-    }
-
-    const evento = eventos.find(e => e.id === parseInt(req.params.id));
-    if (evento) {
-      if (!evento.comentarios) {
-        evento.comentarios = [];
-      }
-      evento.comentarios.push({
-        texto: novoComentario,
-        usuario: usuario,
-        data: new Date().toISOString()
-      });
-
-      salvarEventos(eventos, (err) => {
-        if (err) {
-          return res.status(500).json({ error: "Erro ao salvar o comentário" });
-        }
-        res.status(201).json({ message: "Comentário adicionado" });
-      });
-    } else {
-      res.status(404).send("Evento não encontrado");
-    }
-  });
-});
-
 // Inicia o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);

@@ -1,46 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Carregar eventos e usuários dos arquivos JSON
+  // Variável para simular o estado de login do usuário
+  const usuarioLogado = true; // Mude para false se quiser simular um usuário deslogado
+
   Promise.all([
     fetch("../../../db/eventos.json").then(response => response.json()),
     fetch("../../../db/usuarios.json").then(response => response.json())
   ])
   .then(([eventos, usuarios]) => {
-    // Armazena os dados globalmente para uso na pesquisa
     window.eventosData = eventos;
     window.usuariosData = usuarios;
-    carregarEventosInteressantes(eventos, usuarios);
-
-    // Configurar o botão de pesquisa
-    const searchButton = document.querySelector('.search-btn');
-    searchButton.addEventListener('click', function () {
-      const searchInput = document.querySelector('.search-input').value.toLowerCase();
-      filtrarEventosPorTituloETag(eventos, usuarios, searchInput);
-    });
+    carregarEventosInteressantes(eventos, usuarios, usuarioLogado);
   })
   .catch(error => console.error("Erro ao carregar os dados:", error));
 });
 
-function carregarEventosInteressantes(eventos, usuarios) {
+function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
   const cardsContainer = document.querySelector(".card-deck");
   cardsContainer.innerHTML = ''; // Limpar eventos anteriores
 
   eventos.forEach((evento, index) => {
     const card = document.createElement("div");
     card.className = "card";
-    card.dataset.index = index; // Armazena o índice do evento para referência
+    card.dataset.index = index;
 
     const tagsHTML = evento.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
 
-    // Encontrar informações do criador do evento
     const creator = usuarios.find(user => user.id === parseInt(evento.usuarioId));
     let creatorName = "Desconhecido";
     let creatorLink = "#";
     if (creator) {
       creatorName = creator.nome;
-      creatorLink = `../visualizar_perfil/usuario${creator.id}.html`; // Ajuste essa URL conforme sua estrutura
+      creatorLink = `../visualizar_perfil/usuario${creator.id}.html`;
     }
 
-    // Estrutura do card com os dados do evento
     card.innerHTML = `
       <img class="card-img-top" src="${evento.imagem}" alt="${evento.nome}">
       <div class="card-body">
@@ -59,33 +51,54 @@ function carregarEventosInteressantes(eventos, usuarios) {
                   <p>${evento.hora}</p>
               </div>
           </div>
+          <div class="creator-info">
+              <a href="${creatorLink}" class="creator-link">${creatorName}</a>
+          </div>
       </div>
     `;
 
-    // Adiciona o evento de clique ao card para abrir o modal
-    card.addEventListener('click', () => abrirModal(evento, usuarios));
+    card.addEventListener('click', () => abrirModal(evento, usuarios, usuarioLogado));
     cardsContainer.appendChild(card);
   });
 }
 
-function abrirModal(evento, usuarios) {
+function abrirModal(evento, usuarios, usuarioLogado) {
   const modal = document.getElementById('modal');
   modal.querySelector('.modal-left img').src = evento.imagem;
   modal.querySelector('.modal-right h2').textContent = evento.nome;
   
-  // Atualizar o modal com dados adicionais do evento
   const modalContent = `
     <p><strong>Descrição:</strong> ${evento.descricao}</p>
     <p><strong>Data:</strong> ${evento.data}</p>
     <p><strong>Regras:</strong> ${evento.regras}</p>
+    <div class="comments-section">
+      <h3 class="bold">Comentários</h3>
+      <div class="comments-list"></div>
+      ${usuarioLogado ? `
+        <div class="comment-input">
+          <input type="text" placeholder="Adicione um comentário...">
+          <button id="submit-comment" class="bold">Publicar</button>
+        </div>` : '<p>Você precisa estar logado para comentar.</p>'}
+    </div>
   `;
   modal.querySelector('.comment-section').innerHTML = modalContent;
 
-  // Encontrar informações do criador do evento
+  document.getElementById('submit-comment')?.addEventListener('click', () => {
+    const commentInput = modal.querySelector('.comment-input input');
+    const newComment = commentInput.value.trim();
+    if (newComment) {
+      const commentList = modal.querySelector('.comments-list');
+      const commentElement = document.createElement('p');
+      commentElement.textContent = newComment;
+      commentList.appendChild(commentElement);
+      commentInput.value = '';
+    }
+  });
+
   const creator = usuarios.find(user => user.id === parseInt(evento.usuarioId));
   if (creator) {
     modal.querySelector('.agent-info a').textContent = creator.nome;
-    modal.querySelector('.agent-info a').href = `../visualizar_perfil/usuario${creator.id}.html`; // Link para o perfil
+    modal.querySelector('.agent-info a').href = `../visualizar_perfil/usuario${creator.id}.html`;
     if (creator.imagemPerfil) {
       modal.querySelector('.principal-avatar').innerHTML = `<img src="${creator.imagemPerfil}" alt="Foto de perfil de ${creator.nome}">`;
     } else {
@@ -96,24 +109,21 @@ function abrirModal(evento, usuarios) {
   modal.style.display = 'flex';
 }
 
-// Fechar o modal ao clicar no botão de fechar
 document.querySelector('.close').addEventListener('click', function () {
   document.getElementById('modal').style.display = 'none';
 });
 
-// Fechar o modal ao clicar fora dele
 window.addEventListener('click', function (event) {
   if (event.target === document.getElementById('modal')) {
     document.getElementById('modal').style.display = 'none';
   }
 });
 
-// Função para filtrar eventos
 function filtrarEventosPorTituloETag(eventos, usuarios, term) {
   const filteredEventos = eventos.filter(evento => {
     const titleMatch = evento.nome.toLowerCase().includes(term);
     const tagMatch = evento.tags.some(tag => tag.toLowerCase().includes(term));
     return titleMatch || tagMatch;
   });
-  carregarEventosInteressantes(filteredEventos, usuarios);
+  carregarEventosInteressantes(filteredEventos, usuarios, true);
 }
