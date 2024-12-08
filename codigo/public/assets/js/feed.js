@@ -76,6 +76,7 @@ function mostrarEventos(data) {
     filtrarEventosPorTituloETag(data, searchInput);
   });
 }
+
 function filtrarEventosPorTituloETag(eventos, term) {
   const filteredEventos = eventos.filter(evento => {
     const titleMatch = evento.nome.toLowerCase().includes(term);
