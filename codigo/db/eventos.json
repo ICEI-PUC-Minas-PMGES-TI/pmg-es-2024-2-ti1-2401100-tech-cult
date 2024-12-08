@@ -29,7 +29,8 @@
     ],
     "imagem": "http://localhost:3000/uploads/1733615052246.jpg",
     "usuarioId": "2",
-    "id": 2
+    "id": 2,
+    "comentarios": []
   },
   {
     "nome": "Amar o Snoopy",
@@ -44,6 +45,13 @@
     ],
     "imagem": "http://localhost:3000/uploads/1733616105031.webp",
     "usuarioId": "4",
-    "id": 3
+    "id": 3,
+    "comentarios": [
+      {
+        "comentario": "Adoro assistir esse desenho no Bom Dia & Cia!",
+        "userId": "2",
+        "data": "2024-12-08T13:19:57.605Z"
+      }
+    ]
   }
 ]
