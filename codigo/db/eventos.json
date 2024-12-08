@@ -30,5 +30,20 @@
     "imagem": "http://localhost:3000/uploads/1733615052246.jpg",
     "usuarioId": "2",
     "id": 2
+  },
+  {
+    "nome": "Amar o Snoopy",
+    "local": "Snoopylandia",
+    "data": "2024-12-10",
+    "hora": "10:00",
+    "descricao": "Evento para ficar falando sobre o snoopy",
+    "regras": "tem que amar muito o esnupi",
+    "tags": [
+      "snoopy",
+      "esnupi"
+    ],
+    "imagem": "http://localhost:3000/uploads/1733616105031.webp",
+    "usuarioId": "4",
+    "id": 3
   }
 ]

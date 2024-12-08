@@ -49,8 +49,10 @@ function abrirModal(evento) {
   const modal = document.getElementById('modal');
   modal.querySelector('.modal-left img').src = evento.imagem;
   modal.querySelector('.modal-right h2').textContent = evento.nome;
-  modal.querySelector('.comment-section').textContent = evento.descricao; // Exemplo de uso, adicionar mais se necessário
+  modal.querySelector('.comment-section').textContent = evento.descricao;
   modal.style.display = 'flex';
+
+  
 }
 
 // Fechar o modal ao clicar no botão de fechar
@@ -112,6 +114,8 @@ function carregarEventosInteressantes(eventos) {
       <div class="card-body">
           <h4 class="bold">${evento.nome}</h4>
           <p class="card-text">${evento.descricao}</p>
+          <p class="card-date"><strong>Data:</strong> ${evento.data}</p>
+          <p class="card-rules"><strong>Regras:</strong> ${evento.regras}</p>
           <div class="tag-container">${tagsHTML}</div>
           <div class="location-info">
               <div class="location-address flex">
