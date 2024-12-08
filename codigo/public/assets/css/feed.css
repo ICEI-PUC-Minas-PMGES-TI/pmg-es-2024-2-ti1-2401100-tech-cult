@@ -54,8 +54,6 @@ p {
 /* Estilo do cabeçalho */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 50px;
   background-color: #fff4f4;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
@@ -105,6 +103,10 @@ nav ul li a:hover {
   color: #fff;
 }
 
+.navbar {
+  justify-content: center;
+}
+
 .navbar .perfil-icon {
   display: flex;
   background-color: #532059;
@@ -119,6 +121,10 @@ nav ul li a:hover {
 
 .navbar .perfil-icon img {
   height: 32px;
+}
+
+.icon-perfil {
+  border-radius: 50%;
 }
 
 /* Main */
