@@ -116,6 +116,8 @@ O projeto foi desenvolvido usando as metodologias Scrum e Kanban, tendo como pri
 
 <p align="center"><img alt="Trello do Culturar" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/trello-culturar.png"/></p>
 
+<p align="center"><img alt="GitHub Projects do Culturar" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/backlog-github-projects.png"/></p>
+
 ## Referências Bibliográficas
 
 GOMES, Leandro. A falta de acesso a cultura na sociedade brasileira,
