@@ -104,6 +104,9 @@ app.post("/api/events/save", (req, res) => {
       // O ID do usuário é atribuído do frontend
       evento.usuarioId = evento.usuarioId;
 
+      // Inicializa o campo de comentários
+      evento.comentarios = evento.comentarios || [];
+
       eventosExistentes.push(evento);
     });
 
@@ -322,7 +325,72 @@ app.get("/api/usuarios/:usuarioId", (req, res) => {
   });
 });
 
+// Endpoint para salvar um comentário no evento
+app.post("/api/comments/save", (req, res) => {
+  const { eventoId, comentario, userId } = req.body;
+
+  // Verifica se os campos obrigatórios estão presentes
+  if (!eventoId || !comentario || !userId) {
+    return res.status(400).json({ error: "Campos obrigatórios faltando!" });
+  }
+
+  lerEventos((err, eventos) => {
+    if (err) {
+      console.error("Erro ao ler eventos:", err);
+      return res
+        .status(500)
+        .json({ error: "Erro ao ler o arquivo de eventos" });
+    }
+
+    // Encontra o evento pelo ID
+    const evento = eventos.find((e) => e.id === eventoId);
+    if (!evento) {
+      return res.status(404).json({ error: "Evento não encontrado!" });
+    }
+
+    // Adiciona o comentário ao evento
+    if (!evento.comentarios) {
+      evento.comentarios = []; // Garante que o campo 'comentarios' esteja presente
+    }
+    evento.comentarios.push({ comentario, userId, data: new Date() }); // Adiciona a data junto com o comentário
+
+    // Salva os eventos atualizados no arquivo
+    salvarEventos(eventos, (err) => {
+      if (err) {
+        console.error("Erro ao salvar eventos:", err);
+        return res.status(500).json({ error: "Erro ao salvar os eventos" });
+      }
+
+      // Envia a resposta de sucesso
+      res.status(200).json({ message: "Comentário salvo com sucesso!" });
+    });
+  });
+});
+
+// Endpoint para listar os comentários de um evento
+app.get("/api/comments/:eventoId", (req, res) => {
+  const eventoId = parseInt(req.params.eventoId);
+
+  lerEventos((err, eventos) => {
+    if (err) {
+      console.error("Erro ao ler eventos:", err);
+      return res
+        .status(500)
+        .json({ error: "Erro ao ler o arquivo de eventos" });
+    }
+
+    const evento = eventos.find((e) => e.id === eventoId);
+
+    if (!evento) {
+      return res.status(404).json({ error: "Evento não encontrado!" });
+    }
+
+    // Retorna os comentários do evento
+    res.status(200).json(evento.comentarios || []);
+  });
+});
+
 // Inicia o servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
