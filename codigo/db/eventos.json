@@ -13,7 +13,19 @@
     ],
     "imagem": "http://localhost:3000/uploads/1733614837506.jpeg",
     "usuarioId": "2",
-    "id": 1
+    "id": 1,
+    "comentarios": [
+      {
+        "comentario": "amei",
+        "userId": "4",
+        "data": "2024-12-08T14:32:38.483Z"
+      },
+      {
+        "comentario": "amei",
+        "userId": "4",
+        "data": "2024-12-08T14:35:04.815Z"
+      }
+    ]
   },
   {
     "nome": "Cava uma falta",
@@ -51,6 +63,11 @@
         "comentario": "Adoro assistir esse desenho no Bom Dia & Cia!",
         "userId": "2",
         "data": "2024-12-08T13:19:57.605Z"
+      },
+      {
+        "comentario": "amei",
+        "userId": "4",
+        "data": "2024-12-08T14:25:52.585Z"
       }
     ]
   }
