@@ -220,7 +220,6 @@ app.post("/api/login", (req, res) => {
     res.status(200).json({
       message: "Login realizado com sucesso!",
       usuario: {
-        // Alteração: retornando os dados dentro do objeto 'usuario'
         id: usuario.id, // ID do usuário
         nome: usuario.nome, // Nome do usuário
         email: usuario.email, // Email do usuário
@@ -229,8 +228,99 @@ app.post("/api/login", (req, res) => {
   });
 });
 
-// Servindo arquivos estáticos (CSS, JS, imagens, HTML)
-app.use(express.static(path.join(__dirname, "..", "public")));
+// Endpoint para editar o perfil do usuário
+app.post("/api/editarPerfil", upload.single("imagemPerfil"), (req, res) => {
+  const { nome, bio, localizacao, usuarioId } = req.body; // Recupera os dados do corpo da requisição
+  const imagemPerfil = req.file ? req.file.filename : null; // Recupera o nome da imagem, se enviada
+
+  if (!usuarioId) {
+    return res.status(400).json({ error: "ID do usuário não fornecido." });
+  }
+
+  // Lê o arquivo de usuários
+  lerUsuarios((err, usuarios) => {
+    if (err) {
+      console.error("Erro ao ler os usuários:", err);
+      return res
+        .status(500)
+        .json({ error: "Erro ao ler os dados dos usuários" });
+    }
+
+    // Busca o usuário pelo ID
+    const usuario = usuarios.find((u) => u.id === parseInt(usuarioId));
+
+    if (!usuario) {
+      return res.status(404).json({ error: "Usuário não encontrado." });
+    }
+
+    // Atualiza as informações do usuário
+    usuario.nome = nome || usuario.nome; // Atualiza ou mantém o nome
+    usuario.bio = bio || usuario.bio; // Atualiza ou mantém a bio
+    usuario.localizacao = localizacao || usuario.localizacao; // Atualiza ou mantém a localização
+
+    // Se houver uma imagem de perfil, atualiza o campo da imagem
+    if (imagemPerfil) {
+      usuario.imagemPerfil = `http://localhost:3000/uploads/${imagemPerfil}`;
+    }
+
+    // Salva os dados atualizados no arquivo usuarios.json
+    salvarUsuarios(usuarios, (err) => {
+      if (err) {
+        console.error("Erro ao salvar os usuários:", err);
+        return res
+          .status(500)
+          .json({ error: "Erro ao salvar as alterações do perfil" });
+      }
+
+      // Envia o usuário atualizado como resposta
+      res.status(200).json({
+        message: "Perfil atualizado com sucesso!",
+        usuario: {
+          id: usuario.id,
+          nome: usuario.nome,
+          email: usuario.email,
+          bio: usuario.bio,
+          localizacao: usuario.localizacao,
+          imagemPerfil: usuario.imagemPerfil,
+        },
+      });
+    });
+  });
+});
+
+// Endpoint para obter o perfil de um usuário específico
+app.get("/api/usuarios/:usuarioId", (req, res) => {
+  const usuarioId = parseInt(req.params.usuarioId); // Pega o ID do usuário da URL
+
+  // Lê o arquivo de usuários
+  lerUsuarios((err, usuarios) => {
+    if (err) {
+      console.error("Erro ao ler os usuários:", err);
+      return res
+        .status(500)
+        .json({ error: "Erro ao ler os dados dos usuários" });
+    }
+
+    // Busca o usuário pelo ID
+    const usuario = usuarios.find((u) => u.id === usuarioId);
+
+    if (!usuario) {
+      return res.status(404).json({ error: "Usuário não encontrado." });
+    }
+
+    // Retorna as informações do usuário
+    res.status(200).json({
+      usuario: {
+        id: usuario.id,
+        nome: usuario.nome,
+        email: usuario.email,
+        bio: usuario.bio,
+        localizacao: usuario.localizacao,
+        imagemPerfil: usuario.imagemPerfil, // Retorna a URL da imagem de perfil
+      },
+    });
+  });
+});
 
 // Inicia o servidor
 app.listen(PORT, () => {
