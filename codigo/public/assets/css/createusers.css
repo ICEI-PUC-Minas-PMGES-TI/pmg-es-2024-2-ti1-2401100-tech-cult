@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', Arial, sans-serif;
 }
+
 body {
     height: 100vh;
     font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@ body {
 
 header {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 10px 50px;
     background-color: #fff4f4;
@@ -26,7 +27,7 @@ header {
 .logo {
     width: 64px;
     height: auto;
-    margin-right: 50px; 
+    margin-right: 50px;
 }
 
 nav {
@@ -57,27 +58,33 @@ nav ul li a:hover {
 nav ul .ativo {
     background-color: #FF4D53;
 }
+
 /* Estilo do contêiner da imagem de perfil */
-.navbar .perfil-icon { 
-  display: flex;
-  background-color: #ff4d53;
-  margin-left: 50px;
-  border-radius: 100%;
-  padding: 7px 7px 1px 7px;  /* Padding original */
+.navbar .perfil-icon {
+    display: flex;
+    background-color: #ff4d53;
+    margin-left: 50px;
+    border-radius: 100%;
+    padding: 7px 7px 1px 7px;
+    /* Padding original */
 }
 
 /* Estilo da imagem de perfil com padding e tamanho padrão */
 .navbar .perfil-icon img {
-  height: 32px;  /* Tamanho original */
-  width: auto;   /* Tamanho original */
-  border-radius: 50%;  /* Imagem redonda */
-  object-fit: cover;
-  vertical-align: middle;
+    height: 32px;
+    /* Tamanho original */
+    width: auto;
+    /* Tamanho original */
+    border-radius: 50%;
+    /* Imagem redonda */
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .navbar .perfil-icon:hover {
     background-color: #FF4D53;
 }
+
 /* Seção do formulário */
 main {
     display: flex;
@@ -189,40 +196,44 @@ main {
     padding: 16px;
     font-size: 16px;
     border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /* Dropdown Button */
-  .formulario select {
+.formulario select {
     margin-bottom: 15px;
     padding: 12px;
     border-radius: 5px;
@@ -230,9 +241,9 @@ main {
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
-  }
+}
 
-  .formulario label {
+.formulario label {
     margin-bottom: 10px;
     padding: 8px;
     border-radius: 5px;
@@ -240,9 +251,9 @@ main {
     font-weight: bold;
     outline: none;
     transition: border-color 0.3s;
-  }
+}
 
-  #signup-button {
+#signup-button {
     background-color: #ffa041;
     color: #fff;
     border: none;
@@ -253,5 +264,113 @@ main {
     margin-top: 10px;
     transition: background-color 0.3s;
 }
+
+/* Menu Toggle para dispositivos móveis */
+.menu-toggle {
+    display: none;
+}
+
+/* Ajustes para telas maiores */
+@media screen and (min-width: 601px) {
+    header {
+      justify-content: center;
+    }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  
+    nav {
+      flex-grow: 1;
+      justify-content: center;
+    }
+  
+    nav ul {
+      justify-content: center;
+    }
+  }
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      background-color: #532059;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.5rem;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .navbar.active .menu-toggle {
+        margin-top: 50px;
+    }
+  
+    .logo,
+    .menu-toggle,
+    .perfil-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: row;
+      width: 100%;
+      background-color: #fff4f4;
+      max-height: 400px;
+      gap: 10px;
+    }
+  
+    nav ul li a {
+      width: auto;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: #fff;
+      background-color: #532059;
+    }
+  
+    .navbar.active ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar.active ul li a {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      border-radius: 0;
+      color: #333;
+      background-color: #fff4f4;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  
+    .navbar.active ul li a:hover {
+      background-color: #FF4D53;
+      color: #fff;
+    }
+  }
