@@ -35,6 +35,10 @@ O Culturar é projetado para atender jovens e adultos de áreas periféricas e r
 Os educadores e agentes culturais - professores, artistas e promotores culturais - podem compartilhar eventos, conteúdos e iniciativas com suas comunidades.
 A plataforma é pensada para ser inclusiva, acessível e intuitiva, garantindo que diferentes públicos possam se beneficiar das oportunidades culturais disponíveis.
 
+## Vídeo de Apresentação do Projeto
+
+🎬 Clique [aqui](https://youtube.com/shorts/R8FajdtP9e4?feature=share) para assistir o nosso vídeo!
+
 ## Personas
 
 <p align="center"><img alt="Persona 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/persona-01.jpg" width=600/></p>
