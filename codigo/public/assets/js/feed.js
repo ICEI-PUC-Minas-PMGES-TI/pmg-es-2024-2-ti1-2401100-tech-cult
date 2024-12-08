@@ -51,9 +51,6 @@ function carregarEventosInteressantes(eventos, usuarios, usuarioLogado) {
                   <p>${evento.hora}</p>
               </div>
           </div>
-          <div class="creator-info">
-              <a href="${creatorLink}" class="creator-link">${creatorName}</a>
-          </div>
       </div>
     `;
 
