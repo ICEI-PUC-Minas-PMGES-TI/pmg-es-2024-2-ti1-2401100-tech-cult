@@ -87,14 +87,6 @@ nav ul .ativo {
   margin-right: 60px;
 }
 
-.profile-pic img {
-  width: 160px;
-  height: auto;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  margin-top: 14px;
-}
 .text-content {
   max-width: 600px;
 }
@@ -122,6 +114,13 @@ nav ul .ativo {
   align-items: center;
   text-align: space-between;
   font-weight: bold;
+}
+
+.local img {
+  height: 20px;
+  width: auto;
+  margin-right: 3px;
+  margin-bottom: 3.5px;
 }
 
 .localizacao {
