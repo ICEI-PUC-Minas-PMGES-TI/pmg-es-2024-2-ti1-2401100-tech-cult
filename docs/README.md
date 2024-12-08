@@ -3,25 +3,37 @@
 
 # Introdução
 
-O Brasil enfrenta uma disparidade no acesso à cultura, especialmente nas áreas periféricas e rurais. Muitos brasileiros têm dificuldade em participar de eventos culturais, acessar bibliotecas e centros culturais, e consumir arte de maneira geral. A tecnologia pode ser um facilitador no acesso à cultura, promovendo a democratização do conhecimento e o engajamento cultural.
+No Brasil, o acesso à cultura ainda é um privilégio restrito a determinados grupos. Em muitas comunidades periféricas e rurais, participar de eventos culturais, frequentar bibliotecas e centros culturais, ou mesmo consumir arte de forma acessível é um desafio. Essa realidade perpetua desigualdades sociais e limita o potencial de desenvolvimento humano.
+
+A tecnologia pode ser uma poderosa ferramenta para enfrentar esse problema, tornando a cultura mais acessível, promovendo a inclusão social e incentivando o engajamento cultural em diferentes contextos.
 
 ## Problema
 
-A falta de acesso à cultura resulta em exclusão social, dificultando o desenvolvimento intelectual e emocional de parte da população. Eventos culturais, bibliotecas, galerias de arte e museus, frequentemente, estão concentrados em áreas urbanas e são inacessíveis para comunidades mais afastadas, seja por distância geográfica ou por falta de recursos financeiros.
+A desigualdade no acesso à cultura exclui milhões de brasileiros de oportunidades essenciais para o crescimento intelectual, emocional e social. Eventos culturais, museus, galerias de arte e bibliotecas estão frequentemente concentrados em áreas urbanas, inacessíveis para muitas comunidades devido a barreiras geográficas e financeiras.
+
+Esse cenário reforça um ciclo de exclusão que impede que uma parcela significativa da população se beneficie das riquezas culturais disponíveis.
 
 ## Objetivos
 
-O objetivo deste projeto é desenvolver uma aplicação web que conecte os cidadãos a oportunidades culturais, oferecendo uma plataforma acessível onde possam encontrar eventos culturais gratuitos ou a preços acessíveis, além de disponibilizar conteúdos educacionais e artísticos online.
+O Culturar tem como propósito principal desenvolver uma aplicação web que:
+
+- Conecte cidadãos a oportunidades culturais: centralize e divulgue eventos gratuitos ou de baixo custo.
+- Fomente a inclusão social e cultural: amplie o alcance de iniciativas culturais, beneficiando especialmente comunidades periféricas e rurais.
+
+Ao cumprir esses objetivos, buscamos democratizar o acesso à cultura e criar uma ponte entre artistas, agentes culturais e o público.
 
 ## Justificativa
 
-A cultura é um elemento essencial na formação de cidadãos conscientes e críticos. No entanto, o acesso à cultura ainda é limitado para grande parte da população brasileira. Ao propor uma solução tecnológica, visa-se criar um ambiente que facilite o acesso a atividades culturais, fortalecendo o impacto positivo que a cultura pode ter na sociedade.
+A cultura desempenha um papel fundamental na formação de cidadãos críticos, conscientes e engajados. No entanto, milhões de brasileiros ainda enfrentam barreiras que limitam seu acesso a experiências culturais. Essas barreiras não apenas privam as pessoas de lazer e aprendizado, mas também perpetuam desigualdades sociais e econômicas.
+
+O Culturar surge como uma resposta a essa realidade. Ao utilizar a tecnologia para superar limitações geográficas e financeiras, o projeto visa criar um ambiente inclusivo que valorize a diversidade cultural e fortaleça o impacto positivo da cultura na sociedade.
 
 
 ## Público-Alvo
 
-O público-alvo principal da aplicação são jovens e adultos que vivem em áreas periféricas e rurais com pouco acesso a atividades culturais, além de professores e educadores que desejam promover a cultura em suas comunidades.
-
+O Culturar é projetado para atender jovens e adultos de áreas periféricas e rurais, pessoas com pouco ou nenhum acesso a atividades culturais, que buscam alternativas gratuitas ou acessíveis.
+Os educadores e agentes culturais - professores, artistas e promotores culturais - podem compartilhar eventos, conteúdos e iniciativas com suas comunidades.
+A plataforma é pensada para ser inclusiva, acessível e intuitiva, garantindo que diferentes públicos possam se beneficiar das oportunidades culturais disponíveis.
 
 ## Personas
 
