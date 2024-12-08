@@ -77,7 +77,11 @@ A plataforma é pensada para ser inclusiva, acessível e intuitiva, garantindo q
 <p align="center"><img alt="Persona 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/Userflow.png"/></p>
 
 ## Wireframes
-<a href="h[ttps://www.figma.com/design/AtERkdTTcbSxXVRLa6dXWR/Untitled?node-id=12-527&t=jCjKjBCQm7NMpeAr-1](https://www.figma.com/design/k6IRqJH1CruCCed745YxQo/Culturar?node-id=0-1&node-type=canvas&t=fMLqvr4mnNwPd850-0)" target="_blank">Protótipo</a>
+<a href="https://www.figma.com/design/k6IRqJH1CruCCed745YxQo/Culturar?node-id=0-1&node-type=canvas&t=4tHU9Ym9TEgNkqUr-0" target="_blank">Protótipo</a>
+
+Senha de acesso: puc-culturar
+
+🚀 Várias mudanças surgiram ao longo do projeto. Não esqueça de conferir o resultado final executando o projeto na sua máquina! ;)
 
 ### Home
 <p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home.png"/></p>
