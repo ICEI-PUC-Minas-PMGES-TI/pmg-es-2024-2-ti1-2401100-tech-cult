@@ -1,80 +1,35 @@
 [
   {
-    "nome": "Kaká foi Rei",
-    "local": "Campo de futebol",
-    "data": "2024-12-12",
-    "hora": "21:00",
-    "descricao": "Kaká foi uma lenda nos gramados ",
-    "regras": "É necessario reverenciar o Kaká ao passar do lado dele",
+    "nome": "Encontro de Culinária Mineira",
+    "local": "Praça da Liberdade - Belo Horizonte / MG",
+    "data": "2024-12-20",
+    "hora": "10:00",
+    "descricao": "Venha se deliciar nas barraquinhas de comida mineira. Você vai encontrar as principais comidas típicas de Minas Gerais!",
+    "regras": "Proibido fumar na área das barraquinhas\nProibido entrada com bebidas alcoólicas",
     "tags": [
-      "Rei",
-      "Melhor",
-      "Futebol"
+      "gastronomia",
+      "comida mineira",
+      "feira"
     ],
-    "imagem": "http://localhost:3000/uploads/1733614837506.jpeg",
+    "imagem": "http://localhost:3000/uploads/1733689040168.jpeg",
     "usuarioId": "2",
     "id": 1,
-    "comentarios": [
-      {
-        "comentario": "amei",
-        "userId": "4",
-        "data": "2024-12-08T14:32:38.483Z"
-      },
-      {
-        "comentario": "amei",
-        "userId": "4",
-        "data": "2024-12-08T14:35:04.815Z"
-      }
-    ]
+    "comentarios": []
   },
   {
-    "nome": "Cava uma falta",
-    "local": "Santiago Bernabéu",
-    "data": "2024-12-12",
-    "hora": "20:00",
-    "descricao": "Cava uma falta que é gol",
-    "regras": "É necessario que vc cave uma falta para que o ronaldinho possa fazer seu gol",
+    "nome": "Aula de Frevo",
+    "local": "Mercado Novo",
+    "data": "2025-01-01",
+    "hora": "14:50",
+    "descricao": "Venha aprender a dançar frevo",
+    "regras": "Calçado fechado",
     "tags": [
-      "Gol",
-      "Falta",
-      "Bruxo"
+      "frevo",
+      "dança"
     ],
-    "imagem": "http://localhost:3000/uploads/1733615052246.jpg",
+    "imagem": "http://localhost:3000/uploads/1733689381021.jpeg",
     "usuarioId": "2",
     "id": 2,
-    "comentarios": [
-      {
-        "comentario": "teste",
-        "userId": "4",
-        "data": "2024-12-08T17:24:42.049Z"
-      }
-    ]
-  },
-  {
-    "nome": "Amar o Snoopy",
-    "local": "Snoopylandia",
-    "data": "2024-12-10",
-    "hora": "10:00",
-    "descricao": "Evento para ficar falando sobre o snoopy",
-    "regras": "tem que amar muito o esnupi",
-    "tags": [
-      "snoopy",
-      "esnupi"
-    ],
-    "imagem": "http://localhost:3000/uploads/1733616105031.webp",
-    "usuarioId": "4",
-    "id": 3,
-    "comentarios": [
-      {
-        "comentario": "Adoro assistir esse desenho no Bom Dia & Cia!",
-        "userId": "2",
-        "data": "2024-12-08T13:19:57.605Z"
-      },
-      {
-        "comentario": "amei",
-        "userId": "4",
-        "data": "2024-12-08T14:25:52.585Z"
-      }
-    ]
+    "comentarios": []
   }
 ]
