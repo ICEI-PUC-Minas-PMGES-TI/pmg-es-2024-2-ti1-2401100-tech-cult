@@ -21,6 +21,10 @@ header {
   margin-right: 50px;
 }
 
+.navbar {
+  width: 100%;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -84,13 +88,11 @@ nav ul .ativo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-right: 60px;
 }
 
 .profile-pic {
   width: 200px;
   height: 200px;
-  background-color: #fff4f4;
   border-radius: 50%;
   margin-right: 60px;
 }
@@ -278,4 +280,178 @@ nav ul .ativo {
   color: #fff;
   border: none;
   font-weight: bold;
+}
+
+/* Menu Toggle para dispositivos móveis */
+.menu-toggle {
+  display: none;
+}
+
+/* Ajustes para telas maiores */
+@media screen and (min-width: 601px) {
+  header {
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    background-color: #532059;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .navbar.active .menu-toggle {
+      margin-top: 50px;
+  }
+
+  .logo,
+  .menu-toggle,
+  .perfil-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    background-color: #fff4f4;
+    max-height: 400px;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    width: auto;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #532059;
+  }
+
+  .navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar.active ul li a {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    border-radius: 0;
+    color: #333;
+    background-color: #fff4f4;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .navbar.active ul li a:hover {
+    background-color: #FF4D53;
+    color: #fff;
+  }
+}
+
+
+/* Media Queries para telas pequenas */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .profile-pic {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff4f4;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .navbar.active ul {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  nav ul li a {
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foto_perfil {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-content h1 {
+    font-size: 24px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
+  .meus-eventos {
+    flex-direction: column;
+    align-items: center;
+  }
 }
