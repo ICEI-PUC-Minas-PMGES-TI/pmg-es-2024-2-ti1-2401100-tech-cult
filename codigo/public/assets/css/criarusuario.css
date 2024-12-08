@@ -65,6 +65,27 @@ nav ul .ativo {
     margin-left: 30px; 
 }
 
+/* Estilo do contêiner da imagem de perfil */
+.navbar .perfil-icon { 
+  display: flex;
+  background-color: #ff4d53;
+  margin-left: 50px;
+  border-radius: 100%;
+  padding: 7px 7px 1px 7px;  /* Padding original */
+}
+
+/* Estilo da imagem de perfil com padding e tamanho padrão */
+.navbar .perfil-icon img {
+  height: 32px;  /* Tamanho original */
+  width: auto;   /* Tamanho original */
+  border-radius: 50%;  /* Imagem redonda */
+  object-fit: cover;
+}
+
+.navbar .perfil-icon:hover {
+    background-color: #FF4D53;
+}
+
 /* ---------------- */
 
 /* formulario */
