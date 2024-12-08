@@ -11,6 +11,7 @@ body {
     background-color: #F4EEE4;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -21,6 +22,7 @@ header {
     background-color: #fff4f4;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     width: 64px;
     height: auto;
@@ -61,21 +63,30 @@ nav ul li a:hover {
     color: #fff;
 }
 
+.navbar {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 /* Estilo do contêiner da imagem de perfil */
-.navbar .perfil-icon { 
-  display: flex;
-  background-color: #ff4d53;
-  margin-left: 50px;
-  border-radius: 100%;
-  padding: 7px 7px 1px 7px;  /* Padding original */
+.navbar .perfil-icon {
+    display: flex;
+    background-color: #ff4d53;
+    margin-left: 50px;
+    border-radius: 100%;
+    padding: 7px 7px 1px 7px;
+    /* Padding original */
 }
 
 /* Estilo da imagem de perfil com padding e tamanho padrão */
 .navbar .perfil-icon img {
-  height: 32px;  /* Tamanho original */
-  width: auto;   /* Tamanho original */
-  border-radius: 50%;  /* Imagem redonda */
-  object-fit: cover;
+    height: 32px;
+    /* Tamanho original */
+    width: auto;
+    /* Tamanho original */
+    border-radius: 50%;
+    /* Imagem redonda */
+    object-fit: cover;
 }
 
 .navbar .perfil-icon:hover {
@@ -275,77 +286,131 @@ footer {
     }
 }
 
-/* Ajustes para dispositivos móveis */
+/* Exemplo de ajuste no menu para dispositivos móveis */
 @media screen and (max-width: 600px) {
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        background-color: #532059;
-        padding: 10px;
-        border-radius: 5px;
-        color: white;
-        font-size: 1.5rem;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo, .menu-toggle, .perfil-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     nav ul {
-        display: none;
-        flex-direction: row;
-        width: 100%;
-        background-color: #fff4f4;
-        max-height: 400px;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        width: auto;
-        text-align: center;
-        padding: 5px 10px;
-        border-radius: 20px;
-        color: #fff;
-        background-color: #532059;
+        max-height: 0;
+        /* Inicialmente oculto */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
     .navbar.active ul {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar.active ul li a {
-        width: 100%;
-        text-align: left;
-        padding: 15px;
-        border-radius: 0;
-        color: #333;
-        background-color: #fff4f4;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    .navbar.active ul li a:hover {
-        background-color: #FF4D53;
-        color: #fff;
+        max-height: 200px;
+        /* Ajuste conforme necessário */
     }
 }
 
+/* Exemplo de ajuste nos cards para telas menores */
+@media screen and (max-width: 480px) {
+    .card {
+        margin: 10px auto;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 120px;
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+/* Ajustes gerais no corpo do texto */
+@media screen and (max-width: 768px) {
+
+    h1,
+    h2 {
+        font-size: 2rem;
+        /* Ajuste conforme necessário */
+    }
+
+    p {
+        font-size: 1rem;
+        /* Ajuste menor para melhor leitura */
+    }
+}
+
+/* Esconder o botão de menu toggle em telas maiores */
+.menu-toggle {
+    display: none;
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      background-color: #532059;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.5rem;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo,
+    .menu-toggle,
+    .perfil-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: row;
+      width: 100%;
+      background-color: #fff4f4;
+      max-height: 400px;
+      gap: 10px;
+    }
+  
+    nav ul li a {
+      width: auto;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: #fff;
+      background-color: #532059;
+    }
+  
+    .navbar.active ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar.active ul li a {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      border-radius: 0;
+      color: #333;
+      background-color: #fff4f4;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  
+    .navbar.active ul li a:hover {
+      background-color: #FF4D53;
+      color: #fff;
+    }
+  }

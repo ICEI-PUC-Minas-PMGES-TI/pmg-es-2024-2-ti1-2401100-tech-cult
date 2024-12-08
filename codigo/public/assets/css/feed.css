@@ -344,6 +344,19 @@ main {
   .card-body {
     padding: 15px;
   }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-right {
+    padding: 10px;
+  }
+
+  .comment-section h3 {
+    font-size: 18px;
+  }
 }
 
 /* Informações do evento */
@@ -438,6 +451,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow: auto;
+  z-index: 1000;
 }
 
 .modal-content {
@@ -448,6 +462,7 @@ main {
   border-radius: 10px;
   overflow: hidden;
   display: flex;
+  max-height: 80vh;
 }
 
 .modal-left {
@@ -457,7 +472,7 @@ main {
 
 .modal-left img {
   height: 659px;
-  width: 460px;
+  width: 100%;
   object-fit: cover;
   border-radius: 30px 0 0 30px;
 }
@@ -996,5 +1011,18 @@ main {
 
   .card-body {
     padding: 10px;
+  }
+
+  .comment-section h3 {
+    font-size: 16px;
+  }
+
+  .close-button {
+    margin-top: -5px;
+    margin-right: -10px;
+  }
+
+  #modal-image {
+    display: none;
   }
 }
