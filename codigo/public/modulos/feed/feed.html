@@ -63,52 +63,41 @@
         </section>
 
         <div class="load-btn-section flex">
-            <button class="load-btn bold">Carregar mais</button>
+            <button class="load-btn bold" id="load-more">Carregar mais</button>
         </div>
 
+        <!-- Modal de exibição de evento -->
         <div id="modal" class="modal flex">
             <div class="modal-left flex">
-                <img src="" alt="Imagem do Evento">
+                <img src="" alt="Imagem do Evento" id="modal-image">
             </div>
 
             <div class="modal-right flex">
                 <div class="close-button flex white-bg">
-                    <span class="close">X</span>
+                    <span class="close" id="close-modal">X</span>
                 </div>
-                <h2 class="bold"></h2> <!-- Título do evento -->
+                <h2 class="bold" id="modal-title"></h2> <!-- Título do evento -->
                 
                 <div class="agent">
-                    <div class="principal-avatar"></div>
+                    <div class="principal-avatar" id="agent-avatar"></div>
                     <div class="agent-info">
-                        <a href="../visualizar_perfil/visualizacao_de_perfil.html">Agente Cultural</a>
+                        <a href="../visualizar_perfil/visualizacao_de_perfil.html" id="agent-name">Agente Cultural</a>
                         <img src="../../assets/images/feed/verified-symbol.png" alt="Símbolo de verificado">
                     </div>
                 </div>
 
                 <div class="comment-section">
-                </div>
-
-                <div class="comments flex">
-                    <!-- Comentários podem ser dinamicamente carregados aqui se necessário -->
-                </div>
-                <div class="engagement-area white-bg flex">
-                    <div class="white-bg heart-svg bold">
-                        <svg class="white-bg" width="40" height="40" viewBox="0 0 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.81163 10.7949C7.51814 10.0884 8.35689 9.52795 9.27999 9.14558C10.2031 8.76321 11.1925 8.56641 12.1916 8.56641C13.1908 8.56641 14.1802 8.76321 15.1033 9.14558C16.0264 9.52795 16.8651 10.0884 17.5716 10.7949L20 13.2233L22.4283 10.7949C23.8554 9.36807 25.7908 8.56655 27.8089 8.56671C29.8269 8.56686 31.7623 9.36868 33.1891 10.7958C34.616 12.2229 35.4175 14.1583 35.4174 16.1764C35.4172 18.1944 34.6154 20.1297 33.1883 21.5566L30.76 23.9833L30.7816 24.0049L20.0216 34.7666L20 34.7449L19.9783 34.7666L9.2183 24.0049L9.23997 23.9833L6.81163 21.5566C6.10486 20.8501 5.5442 20.0112 5.16168 19.088C4.77916 18.1647 4.58228 17.1751 4.58228 16.1758C4.58228 15.1764 4.77916 14.1868 5.16168 13.2636C5.5442 12.3403 6.10486 11.5015 6.81163 10.7949Z"
-                                stroke="black" stroke-width="1.5" stroke-linejoin="round" />
-                        </svg>
+                    <h3 class="bold">Comentários</h3>
+                    <div class="comments-list" id="comments-list">
+                        <!-- Comentários serão inseridos aqui dinamicamente -->
                     </div>
 
-                    <div class="white-bg comment-svg">
-                        <svg class="white-bg" width="40" height="40" viewBox="0 0 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.5 30.625C20.0959 30.625 22.6335 29.8552 24.7919 28.413C26.9503 26.9709 28.6325 24.921 29.6259 22.5227C30.6193 20.1244 30.8792 17.4854 30.3728 14.9394C29.8664 12.3934 28.6163 10.0548 26.7808 8.21923C24.9452 6.38366 22.6066 5.13363 20.0606 4.6272C17.5146 4.12077 14.8756 4.38069 12.4773 5.37409C10.079 6.36749 8.02916 8.04975 6.58696 10.2081C5.14477 12.3665 4.375 14.9041 4.375 17.5C4.375 19.67 4.9 21.716 5.83333 23.5185L4.375 30.625L11.4815 29.1667C13.284 30.1 15.3315 30.625 17.5 30.625Z"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <!-- Campo de inserção de comentário -->
+                    <div class="comment-input">
+                        <input type="text" id="comment-input" placeholder="Adicione um comentário...">
+                        <button id="submit-comment" class="bold">Publicar</button>
                     </div>
+                    <p id="comment-login-warning" style="display:none;">Você precisa estar logado para comentar.</p>
                 </div>
             </div>
         </div>
@@ -118,15 +107,69 @@
     <script src="../../assets/js/feed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-    <script>
-        function toggleMenu() {
-            const navbar = document.querySelector('.navbar');
-            console.log("Toggle acionado"); // Confirma a execução
-            navbar.classList.toggle('active');
-        }
     </script>
+    <script>
+        // Função para exibir o modal com os dados do evento
+        function openModal(event) {
+            const modal = document.getElementById("modal");
+            document.getElementById("modal-title").innerText = event.title;
+            document.getElementById("modal-image").src = event.image;
+            document.getElementById("agent-name").innerText = event.agentName;
+            document.getElementById("agent-avatar").style.backgroundImage = `url(${event.agentAvatar})`;
 
+            // Carregar comentários do evento
+            loadComments(event.id);
+
+            modal.style.display = "flex"; // Exibir o modal
+        }
+
+        // Função para carregar comentários do evento
+        function loadComments(eventId) {
+            // Exemplo de carregamento de comentários (isso deve ser substituído por uma chamada real ao backend)
+            const comments = [
+                "Excelente evento! Muito interessante!",
+                "Fiquei sabendo tarde, mas gostei da temática."
+            ];
+
+            const commentsList = document.getElementById("comments-list");
+            commentsList.innerHTML = ""; // Limpar a lista antes de adicionar novos
+
+            comments.forEach(comment => {
+                const commentElement = document.createElement("div");
+                commentElement.classList.add("comment");
+                commentElement.innerText = comment;
+                commentsList.appendChild(commentElement);
+            });
+        }
+
+        // Fechar o modal
+        document.getElementById("close-modal").addEventListener("click", () => {
+            document.getElementById("modal").style.display = "none";
+        });
+
+        // Função para carregar mais eventos
+        document.getElementById("load-more").addEventListener("click", () => {
+            // Adicionar mais eventos (simulação)
+            alert("Carregar mais eventos...");
+        });
+
+        // Função para enviar um novo comentário
+        document.getElementById("submit-comment").addEventListener("click", () => {
+            const commentInput = document.getElementById("comment-input");
+            const comment = commentInput.value;
+
+            if (comment.trim()) {
+                const newComment = document.createElement("div");
+                newComment.classList.add("comment");
+                newComment.innerText = comment;
+
+                document.getElementById("comments-list").appendChild(newComment);
+                commentInput.value = ""; // Limpar campo de comentário
+            } else {
+                alert("Por favor, escreva um comentário.");
+            }
+        });
+    </script>
 </body>
 
 </html>
