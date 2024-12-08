@@ -9,7 +9,10 @@
     "id": 2,
     "nome": "João Andrade Reis",
     "email": "joaozinho@gmail.com",
-    "senha": "joao1234"
+    "senha": "joao1234",
+    "bio": "Oi! Eu sou o João. Eu adoro jogar videogame, brincar com meus amigos e assistir desenhos. Meu sonho é ser um inventor quando crescer!",
+    "localizacao": "São Paulo",
+    "imagemPerfil": "http://localhost:3000/uploads/1733620386381.webp"
   },
   {
     "id": 3,
