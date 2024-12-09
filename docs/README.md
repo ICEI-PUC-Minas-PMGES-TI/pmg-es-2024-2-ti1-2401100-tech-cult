@@ -123,13 +123,14 @@ Esta tela contém as informações dos participantes do projeto, incluindo links
 
 Na tela de cadastro o usuário pode criar uma conta para poder criar eventos!
 
-<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-login.png"/></p>
+<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-cadastro.png"/></p>
 
 ### Tela de Login
 
 Na tela de login o usuário pode acessar a sua conta com as credenciais de acesso.
 
-<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-cadastro.png"/></p>
+<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-login.png"/></p>
+
 
 ### Perfil do Usuário
 
