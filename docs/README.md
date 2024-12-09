@@ -88,27 +88,41 @@ Senha de acesso: puc-culturar
 🚀 Várias mudanças surgiram ao longo do projeto. Não esqueça de conferir o resultado final executando o projeto na sua máquina! ;)
 
 ### Home
-<p align="center"><img alt="Wireframe da Home" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home.png"/></p>
+<p align="center"><img alt="Home - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-01.png"/></p>
 
-### Login
+<p align="center"><img alt="Home - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-02.png"/></p>
 
-<p align="center"><img alt="Wireframe de Login" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-02-login.png"/></p>
+<p align="center"><img alt="Home - 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-03.png"/></p>
 
-<p align="center"><img alt="Wireframe de Login - Esqueceu a Senha" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wirefarem-03-login.png"/></p>
-
-### Cadastro
-
-<p align="center"><img alt="Wireframe de Cadastro" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-04-cadastro.png"/></p>
+<p align="center"><img alt="Home - 04" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-04.png"/></p>
 
 ### Feed
 
-<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-05-feed.png"/></p>
+<p align="center"><img alt="Feed - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-feed-01.png"/></p>
 
-<p align="center"><img alt="Wireframe do Feed" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-06-evento-selecionado.png"/></p>
+<p align="center"><img alt="Feed - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-feed-02.png"/></p>
 
-### Sobre Nós
+<p align="center"><img alt="Feed - 03" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-feed-03.png"/></p>
 
-<p align="center"><img alt="Wireframe Sobre Nós" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-07-sobre-nos.png"/></p>
+### Sobre nós
+
+<p align="center"><img alt="Sobre Nós - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-sobre-01.png"/></p>
+
+<p align="center"><img alt="Sobre Nós - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-sobre-02.png"/></p>
+
+### Cadastro de Usuário
+
+<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-login.png"/></p>
+
+### Tela de Login
+
+<p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-cadastro.png"/></p>
+
+### Perfil do Usuário
+
+<p align="center"><img alt="Perfil - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-perfil-01.png"/></p>
+
+<p align="center"><img alt="Perfil - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-perfil-02.png"/></p>
 
 ## Gestão de Projetos
 
