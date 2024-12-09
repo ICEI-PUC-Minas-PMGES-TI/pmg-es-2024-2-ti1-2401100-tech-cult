@@ -88,6 +88,9 @@ Senha de acesso: puc-culturar
 🚀 Várias mudanças surgiram ao longo do projeto. Não esqueça de conferir o resultado final executando o projeto na sua máquina! ;)
 
 ### Home
+
+Essa é a tela principal, onde o usuário encontra uma breve descrição do projeto
+
 <p align="center"><img alt="Home - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-01.png"/></p>
 
 <p align="center"><img alt="Home - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-home-02.png"/></p>
@@ -98,6 +101,10 @@ Senha de acesso: puc-culturar
 
 ### Feed
 
+No feed o usuário encontra os eventos postados pelos agentes culturais. Através da barra de pesquisa é possível pesquisar eventos através de tags ou por título.
+
+Ao clicar em um evento, é aberto o modal com as suas informações. Também é possível visualizar quem postou o evento e acessar o perfil da pessoa.
+
 <p align="center"><img alt="Feed - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-feed-01.png"/></p>
 
 <p align="center"><img alt="Feed - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-feed-02.png"/></p>
@@ -106,23 +113,48 @@ Senha de acesso: puc-culturar
 
 ### Sobre nós
 
+Esta tela contém as informações dos participantes do projeto, incluindo links para o GitHub e LinkedIn de cada um.
+
 <p align="center"><img alt="Sobre Nós - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-sobre-01.png"/></p>
 
 <p align="center"><img alt="Sobre Nós - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-sobre-02.png"/></p>
 
 ### Cadastro de Usuário
 
+Na tela de cadastro o usuário pode criar uma conta para poder criar eventos!
+
 <p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-login.png"/></p>
 
 ### Tela de Login
+
+Na tela de login o usuário pode acessar a sua conta com as credenciais de acesso.
 
 <p align="center"><img alt="Cadastro de Usuários" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-cadastro.png"/></p>
 
 ### Perfil do Usuário
 
+No perfil o usuário tem a opção de editar seu perfil, alterando sua foto, biografia e localização. Nesta tela também é possível acessar a central de cadastramento de eventos.
+
 <p align="center"><img alt="Perfil - 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-perfil-01.png"/></p>
 
 <p align="center"><img alt="Perfil - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-perfil-02.png"/></p>
+
+### Criação de eventos
+
+Nesta tela o usuário pode personalizar as informações do evento, como:
+
+- Imagem do evento
+- Título
+- Local
+- Data
+- Horário de Início
+- Descrição
+- Regras do Evento
+- Tags
+
+<p align="center"><img alt="Criar Eventos- 01" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-criar-evento-01.png"/></p>
+
+<p align="center"><img alt="Perfil - 02" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-tech-cult/blob/master/docs/assets/images/wireframe-criar-evento-02.png"/></p>
 
 ## Gestão de Projetos
 
