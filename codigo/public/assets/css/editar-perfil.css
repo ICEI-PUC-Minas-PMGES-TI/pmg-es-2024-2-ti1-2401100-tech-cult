@@ -73,6 +73,9 @@ nav ul .ativo {
     padding: 40px 20px;
 }
 
+.icon-perfil {
+    vertical-align: middle;
+}
 
 /* -------- */
 
@@ -84,6 +87,22 @@ nav ul .ativo {
     border-radius: 10px;
     padding-right: 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-preview-container img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.imagem-preview-container {
+    display: flex;
+    max-width: 200px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
 }
 
 .edit-profile-form .form-group {
