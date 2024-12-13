@@ -1,6 +1,6 @@
 cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: Culturar
+message: "Please cite this software using these metadata."
+title: "Culturar"
 authors:
   - family-names: Felicio Teixeira
     given-names: Anna Chandra
@@ -12,18 +12,18 @@ authors:
     given-names: Tiago
   - family-names: Correia Andaluz
     given-names: Yurajyánay
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: de Faria Barros
+  - family-names: de Faria Barros
     given-names: Diego Augusto
-  - name-suffix: Professor
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Carneiro Aramuni
+  - family-names: Carneiro Aramuni
     given-names: João Paulo
-- name-suffix: Professor
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Soares de Andrade
+  - family-names: Soares de Andrade
     given-names: Michelle Hanne
+    name-suffix: Professor
+    affiliation: PUC Minas
 keywords:
   - Cultura
   - Eventos
